@@ -1,0 +1,95 @@
+//display shopping cart css
+ul, li {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+select {
+  border:1px solid #ccc;
+}
+.cartTopLink {
+  margin-bottom:15px; 
+} 
+.shoppingCartWrapper {
+  .cartItems {
+    margin-bottom:15px;
+    height:120px;
+    width:100%;
+    padding:10px;
+    border:1px dashed #ccc;
+    //cart product image
+    .productCartImage {
+      height:80px;
+      width:80px;
+      background-size:cover;
+    }
+  }
+}
+//welcome page css
+.welcomePageWrapper {
+  .welcomePageColumn {
+    width:33.3%;
+    height:455px;
+    border:1px dashed #ccc;
+  }
+  //login form css
+  .login {
+    font-size:15px;
+    .row {
+      margin-top:15px;
+    }
+  }
+  //express check section out css
+  .expressCheckOut {
+    input[type="submit"] {
+      border:none;
+      background:transparent;
+      font-size:17px;
+    }
+  }
+}
+//check out page css
+.checkOutWrapper, .shipPaySelectionWrapper {
+  .orderDetailWrapper {
+    margin:20px 0;
+    ul {
+      float:left;
+      clear:both;
+      li {
+        border:1px dashed #ccc;
+        padding:7px;
+        width:200px;
+        float:left;
+      }
+    }
+  }
+}  
+.checkOutWrapper, .shipPaySelectionWrapper {  
+  //ship to bill to css
+  form.shipToBillTo {
+    margin-top:20px;
+    .shipToBillToWrapper { margin-bottom:20px; }
+    .shipTo, .billTo {
+      width:400px;
+    }
+      .form_row {
+        height:30px;
+        margin-bottom:10px;
+        clear:both;
+        label {
+          font-size:14px;
+          float:left; }
+        input {
+          height:30px;
+          width:260px;
+          float:right; }
+        select {
+          width:260px;
+          float:right; }
+      }
+      input[type="submit"] {
+        font-size:15px;
+        padding:5px;
+      }
+    }
+}

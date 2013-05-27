@@ -1,0 +1,11 @@
+<!--DELETE PRODUCT POP UP-->
+<div class="popUp_delete deleteSubCategory_popUp deleteSubCategoryDialog">
+	<span class="deleteText fc_starfish_gray8 fwB">Are you sure you want to <span class="fc_starfish_red">DELETE</span> this Subcategory?</span>
+	<div id="button_container" class="clearfix">
+		<form method="POST" action="/articles/subcategory/delete/<?=$this->_get('subcategory')->__get('subcategory_id')?>">
+			<input id="subcategory_id" type="hidden" value="">
+			<input class="yes fleft delete_subcategory_confirm pointer mTs" title="Delete this subcategory" type="submit" name="delete_subcategory" value=" ">
+			<span class="no fright keep_article pointer mTs closeDialog" title="Keep this subcategory"></span>
+		</form>
+	</div>
+</div>

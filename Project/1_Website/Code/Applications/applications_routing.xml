@@ -1,0 +1,114 @@
+<applications>
+	<application>
+		<application_id>Products</application_id>
+		<floating_url_name>NOTUSED</floating_url_name>
+		<requires_login>no</requires_login>
+		<has_main_layout>no</has_main_layout>
+			<controller default="true">
+				<controller_id>products</controller_id>
+				<url_name>products</url_name>
+				<link_text>Products</link_text>
+			</controller>
+	</application>			
+<!-- ******************************		Electronic Commece Application Routing    ***************************** -->
+	<application>
+		<application_id>Commerce</application_id>
+		<floating_url_name>shop</floating_url_name>
+		<requires_login>no</requires_login>
+		<has_main_layout>no</has_main_layout>
+				<controller default="true">
+					<controller_id>showCart</controller_id>
+					<url_name>cart</url_name>
+				</controller>
+				<controller>
+					<controller_id>checkout</controller_id>
+					<url_name>checkout</url_name>
+				</controller>
+				<controller>
+					<controller_id>welcome</controller_id>
+					<url_name>welcome</url_name>
+				</controller>
+				<controller>
+					<controller_id>orderDetails</controller_id>
+					<url_name>order-details</url_name>
+				</controller>
+				
+				<controller>
+					<controller_id>shippingPayment</controller_id>
+					<url_name>shipping-payment-selection</url_name>
+				</controller>
+				<controller>
+					<controller_id>paymentInfo</controller_id>
+					<url_name>payment-info</url_name>
+				</controller>
+				<!--
+				<controller>
+					<controller_id>billingAddress</controller_id>
+					<url_name>billing</url_name>
+				</controller>
+				<controller>
+					<controller_id>deliveryAddress</controller_id>
+					<url_name>delivery</url_name>
+				</controller>
+				<controller>
+					<controller_id>orderDetails</controller_id>
+					<url_name>order-details</url_name>
+				</controller>
+				<controller>
+					<controller_id>deliveryOptions</controller_id>
+					<url_name>delivery_options</url_name>
+				</controller>
+				<controller>
+					<controller_id>payment</controller_id>
+					<url_name>payment</url_name>
+				</controller>
+				<controller>
+					controller_id>receipt</controller_id>
+					<url_name>receipt</url_name>
+				</controller>
+				-->
+	</application>	
+	
+	<application>
+		<application_id>User_Account</application_id>
+		<floating_url_name>user</floating_url_name>
+		<requires_login>no</requires_login>
+		<has_main_layout>no</has_main_layout>
+				<controller default="true">
+					<controller_id>login</controller_id>
+					<url_name>login</url_name>
+					<link_text>Login</link_text>
+				</controller>
+				<controller>
+					<controller_id>logout</controller_id>
+					<url_name>logout</url_name>
+					<link_text>Logout</link_text>
+				</controller>
+				<controller>
+					<controller_id>registration</controller_id>
+					<url_name>register</url_name>
+					<link_text>Register</link_text>
+				</controller>
+				<controller>
+					<controller_id>forgot_password</controller_id>
+					<url_name>forgot_password</url_name>
+					<link_text>Forgot Password</link_text>
+				</controller>
+				<controller>
+					<controller_id>profile</controller_id>
+					<url_name>profile</url_name>
+					<link_text>Profile</link_text>
+				</controller>
+	</application>	
+	<application>
+		<application_id>Search</application_id>
+		<floating_url_name>search</floating_url_name>
+		<requires_login>no</requires_login>
+		<has_main_layout>no</has_main_layout>
+				<controller default="true">
+					<controller_id>search</controller_id>
+					<url_name>search</url_name>
+					<link_text>Search</link_text>
+				</controller>
+	</application>		
+</applications>

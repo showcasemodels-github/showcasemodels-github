@@ -1,0 +1,187 @@
+<div id="billing-address" class="address-container">
+	<div class="form-title">Billing Address</div>
+	<div id="billing-content-area">
+	<?php 
+		if(count($this->getBilling()) !== 0):
+		foreach($this->getBilling() as $billing){
+			?>
+			<div class="address-row" value="<?=$billing->getAddressID() ?>" type="billing" >
+				<div>
+					<ul class="fleft">
+						<li>
+							<label>Street Address</label><br>
+							<div class="address_field"><?=$billing->getAddress() ?></div>
+							<div class="editor_clicker">
+								<span class="error" name="street_address">This field is required.</span>
+								<input type="text" value="<?=$billing->getAddress() ?>" field="street_address" name="text_field" /><br>
+								<input type='button' name="btnSave" value="Save" /><input type='button' name="btnClose" value="X" /><br>
+							</div>
+						</li>
+						<li>
+							<label>Suburb</label><br>
+							<div class="address_field"><?=$billing->getCity() ?></div>
+							<div class="editor_clicker">
+								<span class="error" name="city">This field is required.</span>
+								<input type="text" value="<?=$billing->getCity() ?>" field="city" name="text_field" /><br>
+								<input type='button' name="btnSave" value="Save" /><input type='button' name="btnClose" value="X" /><br>
+								</div>
+						</li>
+						<li>
+						<label>State</label><br>
+							<div class="address_field"><?=$billing->getState() ?></div>
+							<div class="editor_clicker">
+								<span class="error" name="state">This field is required.</span>
+								<input type="text" value="<?=$billing->getState() ?>" field="state" name="text_field" /><br>
+								<input type='button' name="btnSave" value="Save" /><input type='button' name="btnClose" value="X" /><br>
+							</div>
+						</li>
+					</ul>
+					<ul class="fright">
+						<li>
+							<label>Country</label><br>
+							<div class="address_field"><?=$this->displayOptionSelected($this->getCountryOptions(),$billing->getCountry())?></div>
+							<div class="editor_clicker">
+								<span class="error" name="country">This field is required.</span>
+								<?=$this->displayCountryInput($billing->getCountry(),'text_field')?><br>
+								<input type='button' name="btnSave" value="Save" /><input type='button' name="btnClose" value="X" /><br>
+							</div>
+						</li>
+						<li>
+							<label>Post Code</label><br>
+							<div class="address_field"><?=$billing->getZip() ?>,</div>
+							<div class="editor_clicker">
+								<span class="error" name="zip">This field is required.</span>
+								<input type="text" value="<?=$billing->getZip() ?>" field="zip" name="text_field" /><br>
+								<input type='button' name="btnSave" value="Save" /><input type='button' name="btnClose" value="X" /><br>
+								</div>
+						</li>
+						<li>
+							<label>Phone</label><br>
+							<div class="address_field">T: <?=$billing->getPhone() ?></div>
+							<div class="editor_clicker">
+								<span class="error" name="phone">This field is required.</span>
+								<input type="text" value="<?=$billing->getPhone() ?>" field="phone" name="text_field" /><br>
+								<input type='button' name="btnSave" value="Save" /><input type='button' name="btnClose" value="X" /><br>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+				<div>
+									<?php 
+										if($billing->getIsDefaultBilling() == 0):
+									?>
+										<label><a href="/user/profile/default/<?=$billing->getAddressID() ?>">Set this as Default Billing Address</a></label>
+									<?php
+										elseif($billing->getIsDefaultBilling() == 1):
+									?>
+										<label>This is your Default Billing Address</label>
+									<?php endif;?>
+								</div>
+				
+			</div>
+			<?
+		}
+		else:
+			echo 'No Billing Addresses';
+		endif;
+	?>
+	</div>
+</div>
+
+
+<div id="delivery-address" class="address-container">
+	<div class="form-title">Delivery Address</div>
+	<div id="billing-content-area">
+	<?php 
+		if(count($this->getDelivery()) !== 0):
+		foreach($this->getDelivery() as $delivery){
+			?>
+			<div class="address-row" value="<?=$delivery->getAddressID() ?>" type="delivery" >
+				<div>
+					<ul class="fleft">
+						<li>
+							<label>Street Address</label><br>
+							<div class="address_field"><?=$delivery->getAddress() ?></div>
+							<div class="editor_clicker">
+								<span class="error" name="street_address">This field is required.</span>
+								<input type="text" value="<?=$delivery->getAddress() ?>" field="street_address" name="text_field" />
+								<input type='button' name="btnSave" value="Save" />
+								<input type='button' name="btnClose" value="X" />
+							</div>
+						</li>
+						<li>
+							<label>Suburb</label><br>
+							<div class="address_field"><?=$delivery->getCity() ?></div>
+							<div class="editor_clicker">
+								<span class="error" name="city">This field is required.</span>
+								<input type="text" value="<?=$delivery->getCity() ?>" field="city" name="text_field" />
+								<input type='button' name="btnSave" value="Save" />
+								<input type='button' name="btnClose" value="X" />
+							</div>
+						</li>
+						<li>
+							<label>State</label><br>
+							<div class="address_field"><?=$billing->getState() ?></div>
+							<div class="editor_clicker">
+								<input type="text" value="<?=$billing->getState() ?>" field="state" name="text_field" /><br>
+								<input type='button' name="btnSave" value="Save" /><input type='button' name="btnClose" value="X" /><br>
+							</div>
+						</li>
+					</ul>
+					<ul class="fright">
+						<li>
+							<label>Country</label><br>
+							<div class="address_field"><?=$this->displayOptionSelected($this->getCountryOptions(),$billing->getCountry())?></div>
+							<div class="editor_clicker">
+								<span class="error" name="country">This field is required.</span>
+								<?=$this->displayCountryInput($billing->getCountry(),'text_field')?><br>
+								<input type='button' name="btnSave" value="Save" />
+								<input type='button' name="btnClose" value="X" />
+							</div>
+						</li>
+						<li>
+							<label>Post Code</label><br>
+							<div class="address_field"><?=$billing->getZip() ?></div>
+							<div class="editor_clicker">
+								<span class="error" name="zip">This field is required.</span>
+								<input type="text" value="<?=$billing->getZip() ?>" field="zip" name="text_field" /><br>
+								<input type='button' name="btnSave" value="Save" /><input type='button' name="btnClose" value="X" /><br>
+								</div>
+						</li>
+						<li>
+							<label>Phone</label><br>
+							<div class="address_field">T: <?=$delivery->getPhone() ?></div>
+							<div class="editor_clicker">
+								<span class="error" name="phone">This field is required.</span>
+								<input type="text" value="<?=$delivery->getPhone() ?>" field="phone" name="text_field" />
+								<input type='button' name="btnSave" value="Save" />
+								<input type='button' name="btnClose" value="X" />
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+				<div>
+									<?php 
+										if($delivery->getIsDefaultDelivery() == 0):
+									?>
+										<label><a href="/user/profile/default/<?=$delivery->getAddressID() ?>">Set this as Default Delivery Address</a></label>
+									<?php
+										elseif($delivery->getIsDefaultDelivery() == 1):
+									?>
+										<label>This is your Default Delivery Address</label>
+									<?php endif;?>
+								</div>
+				
+			</div>
+			<?
+		}
+		else:
+			echo 'No Delivery Addresses';
+		endif;
+	?>
+	</div>
+</div>
+			
+			

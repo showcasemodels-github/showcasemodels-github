@@ -1,0 +1,130 @@
+//@import 'C:/WORKSPACE/showcasemodels/Project/1_Website/Design/Main_Layout/css/global';
+#wrapper {
+  width:100% !important;  
+}
+ //sliding banner css open
+.bannerWrapper {
+  height:500px;
+  width:100%;
+  background-repeat:no-repeat;
+  background-size:cover;
+  .slidingBanner {
+    width:1060px;
+    height:500px;
+    position:relative;
+    .bannerDetails {
+      left: 460px;
+      min-height: 240px;
+      position: absolute;
+      top:110px;
+      width:555px;
+      h1 { color:#fff; margin-bottom:15px; }
+      p { color:#fff; }
+    }
+    ul.slideIndicator {
+    bottom: 11px;
+    left: 50%;
+    width: 70px;
+    height: 10px;
+    margin-left: -35px;
+    position: absolute;
+      li.active {
+        background-color:#fff;
+      }
+      li {
+        float:left;
+        background-color:#A7A9AB;
+        margin-right:12px;
+        height:8px;
+        width:8px;
+        cursor:pointer;
+      }
+      li.last {
+        margin-right:0;
+      }
+    }
+  }
+}
+ //sliding banner css closing
+
+.midSectionWrapper {
+  position: relative;
+  margin-top:30px;
+  margin-bottom:60px;
+  width: 1060px;
+  height: auto;
+  overflow: auto;
+  //featured products left
+  .featuredProductWrapper {
+    width:670px;
+    h2 {
+      font-size:2.2em; }    
+    .featuredProduct {
+      border: 1px solid #CCCCCC;
+      width:auto;   
+      height:180px;
+      margin-top:10px;
+      padding:10px;
+        .productImage {
+          height:100%;
+          width:160px;
+          background-size:cover;
+          background-repeat:no-repeat;
+          border:1px solid #ccc;
+          margin-right:30px;
+        }
+        .productDesciptionWrapper  {
+          width:430px;
+          position:relative;
+          h3 { font-size:2.1em; }
+          span { font-size:2.1em; }
+          a { 
+            margin-top:30px;
+            clear:both; 
+          }
+        }
+    }   
+    .seeMoreProducts {
+      margin-top:15px;
+      font-size:2.1em;
+      color:#000;
+    }  
+  }
+  //other links right
+  .otherLinkWrapper {
+    width:340px;
+      .topLinks {
+        background-color:#F1F1F2;
+        padding:17px 17px 45px 17px;
+        h3 { 
+          font-size:2.1em; 
+          margin-bottom:13px;
+        }
+        p { font-size:1.4em; }
+        .otherLinks {
+          height:auto;
+          overflow:auto;
+          margin-top:35px;
+          .otherLinksDescription {
+            font-size:1.2em;
+            line-height:20px;
+            h4 { 
+              font-size:1.6em; 
+              margin-bottom:13px;
+            }            
+          }
+        }
+      }
+      .aboutWebsite {
+        margin-top:30px;
+        line-height: 30px;
+        background-image:url('/Project/1_Website/Design/Pages/primary/home/images/quoted-bg.png');
+        height: 207px;
+        width: auto;
+        font-size: 2.1em;
+        text-align: center;
+        padding: 20px;
+      }
+   }
+}
+

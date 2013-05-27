@@ -1,0 +1,56 @@
+/************************************** MAIN **************************************/
+@import 'C:/WORKSPACE/showcasemodels-local/Project/1_Website/Design/Main_Layout/css/global';
+body {
+  color:#404041;
+  p {
+    line-height:22px; 
+  }
+  a {
+    color:#404041;
+  }
+  #wrapper {
+    background-color:#ffffff;
+    margin:0 auto;  
+    width:100%;  
+    
+    section[id*='_container'] {
+      min-height: 300px;
+      width:auto;
+    }
+  }
+
+  //css for button with colors open
+  .btnOrLink {
+    padding:5px 10px;
+    font-weight:bold;
+    display:block !important;
+    color:#fff !important;
+    font-size:1.6em !important;
+    font-weight:bold !important;
+    text-align:center !important;   
+    border-radius:5px;
+  }
+  //color red
+  .bgRed {
+    background-color:#B12335;
+  }
+  .fontColorRed {
+    color:#B12335;
+  }
+  //color blue
+  .bgBlue {
+    background-color:#1E4596;
+  }
+  .fontColorBlue  {
+    color:#1E4596;
+  }  
+  //dark gray 
+  .fontDarkGray {
+    color:#404041;
+  }
+  //light gray
+  .fontLightGray {
+    color:#939597;
+  }
+  //css for button with colors closing 
+}

@@ -1,0 +1,64 @@
+<div id="product_editor" class="fleft pVl pRl pLm">
+<?//article_images::getImagePath(1);?>
+<?php $elements = $this->_get('article_elements');?>
+
+	<span class="pointer" id="addText">+Add Text</span>
+	<span class="pointer" id="add_photos">+Add Photo</span>
+	<!-- <span class="sprite pointer" id="addTest">Test</span> -->
+	
+	<div class="pBxxl" id="articleMainContainer">
+		<?if ($this->_get('article')->__get('article_id') != NULL):?>
+		<hr class="pHxl">
+		
+		<!-- need the class "editor" when article content is loaded on all textarea 
+		<textarea class="pAs expand editor" name="element[]"><?=$this->_get('article')->__get('intro')?></textarea> -->
+		<?php //print '<pre>';var_dump($elements);die;?>
+			<?php if ($elements):?>
+				<?foreach($elements as $element): ?> 
+					<?php if ($element->getArticleElementType() == 'image'):?>
+						<?php $image_id = $element->getArticleElementContent();?>
+									<div class="clearfix mTxl gallery_image posRel">
+										<div class="image_holder fleft mRl">
+											<div id="image_overflow">
+											   	<div id="img" style="background-image: url('<?php echo article_images::getImagePath($image_id);?>');"></div>
+											</div>
+										</div>
+									    <span class="show_photo_chooser productPhoto fleft pointer posAbs"></span>
+									    <span class="pointer delete_photo"></span>
+									    <input class="image_type" type="hidden" value="image" name="element[]">
+										<input class="image_id" type="hidden" value="<?php echo $image_id;?>" name="element[]">
+										<!-- <input class="gallery_image_id" type="hidden" value="0"> -->
+									</div>
+		
+					<?php elseif ($element->getArticleElementType() == 'text'):?>	
+							<textarea class="pAs editor" name="element[]"><?php echo $element->getArticleElementContent();?></textarea>
+					<?php endif;?>
+				<?endforeach;?>
+			<?php endif;?>
+		<?else:?>
+			<div class="fwB fc_starfish_gray3 pointer" id="noImage">No Article to display.</div>
+		<?endif;?>
+	</div>
+</div>
+
+<!-- USED FOR INSTANTIATING A NEW IMAGE -->
+		<div class="image_clone hide">
+			<div class="clearfix mTxl gallery_image posRel">
+				<div class="image_holder fleft mRl">
+					<div id="image_overflow">
+					   	<div id="img"></div>
+					</div>
+				</div>
+			    <span class="show_photo_chooser productPhoto fleft pointer posAbs"></span>
+			    <span class="pointer delete_photo"></span>
+				<input class="image_id" type="hidden" value="" name="element[]">
+				<input class="gallery_image_id" type="hidden" value="0">
+			</div>
+		</div>
+
+<!-- textarea must not have the class "editor" when adding textareas to avoid redunduncy in editor instantiation -->
+<div class="hide" id="textEditorClone">
+	<div class="clearfix mTxl posRel textEditorContainer">
+		<textarea class="pAs" name="element[]"><?=$this->_get('article')->__get('intro')?></textarea>	
+	</div>
+</div>

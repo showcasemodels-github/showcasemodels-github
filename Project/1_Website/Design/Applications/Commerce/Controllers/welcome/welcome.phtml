@@ -1,0 +1,36 @@
+<div class="welcomePageWrapper clearfix">
+	<div class="fleft welcomePageColumn">
+	<h5>
+		<a href="/user/register">Create new account</a>
+	</h5>
+	</div>
+	<div class="fleft welcomePageColumn">
+		<h5>Login</h5>
+		<form method="POST" class="login">
+			<div class="row clearfix">
+				<label>Username</label>
+				<input type="text" name="username" class="required"/>
+			</div>
+			<div class="row clearfix">
+				<label>Password</label>
+				<input type="password" name="password" class="required"/>
+			</div>
+			<?php if($this->getLoginError()) :?>
+			<div class="row clearfix">
+				<label>Invalid Username or Password</label>
+			</div>
+			<?php endif ?>
+			<div class="row clearfix">
+				<label><a href = "/user/forgot_password">Forgot Password?</a></label>
+			</div>
+			<div class="row clearfix">
+				<input type="submit" name="login" value="Login"/>
+			</div>
+		</form>	
+	</div>
+	<div class="fleft welcomePageColumn">
+		<form class="expressCheckOut" action="/shop/order-details" method="post">
+			<input type="submit" name="expressCheckOut" value="Express Check Out"/>
+		</form>	
+	</div>
+</div>

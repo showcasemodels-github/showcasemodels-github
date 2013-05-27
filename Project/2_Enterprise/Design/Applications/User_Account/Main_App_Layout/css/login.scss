@@ -1,0 +1,48 @@
+/*** Login Module ******************************************************************************************************************************/
+@import 'C:/WORKSPACE/starfish/Project/2_Enterprise/Design/Main_Layout/css/global';
+
+#login_container
+{
+  width: 250px;
+  #hello_text{
+    @include sprite(203px, 102px, -7px, -7px, 'no-hover',$loginHello);
+  }
+  #login-form{
+    table{
+      tbody{
+        tr{
+          #login_error{
+            line-height: 5px;
+          }
+          td{
+            input{
+              &[type='text'], &[type='password']{
+                height: 25px;
+                width: 230px;
+                background: $inputGray;
+                border-radius: 2px;
+                border: 1px;
+                padding: 0 5px;
+                margin: 12px 0;
+                &:focus{
+                  background: $inputFocus;
+                  outline:#36A9E1;
+                }
+              }
+            }
+            span{
+              color:#B1B1B1;
+              display:inline-block;
+              &#forgot_password{
+                color:$starfishBlue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+div.checker{
+  margin-top: -2px;
+}

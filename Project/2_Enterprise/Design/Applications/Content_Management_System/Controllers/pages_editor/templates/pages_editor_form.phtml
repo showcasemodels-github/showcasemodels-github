@@ -1,0 +1,53 @@
+<?$i = 1;$count = 0;?>
+<!--FOR PHOTO CHOOSER-->
+<form method="post" action="" class="clearfix">
+	<div class="hAuto overflow" id="editor_container">
+<!--XML NODES!-->
+	<?foreach($this->_get('array_of_xml') as $node):?>
+		<?if($node['name'] !== 'data' && $node['tag'] != 'END'):?>
+		
+		 <!--IF NODE IS AN IMAGE-->
+		  <?if($node['name'] === 'image_id'):$count++;?>
+			<div class="clearfix pTm image_group" id="node_<?=$i?>">
+				<div class="posRel clearfix">
+				<div class="image_holder fleft mRl">
+					 <div id="image_overflow">		
+						<div id="img" style="background-image:url(<?='http://'.$_SERVER['SERVER_NAME'].'/'.PHOTO_LIBRARY_DIRECTORY.'/'.$node['image_path']?>)"></div>
+					</div>
+				</div>
+					<input class="image_id" type="hidden" name="<?=$i?>" value="<?=$node['value']?>">
+					<span class="show_photo_chooser pointer fleft posAbs" id="node_<?=$i?>"></span>
+					</div>
+			</div>
+			<?$i++;?>
+		      
+		  <?else:$count = 0;?>
+			<div class="clearfix pTm">
+			<?$clean_description = array('_','editor')?>
+				<span class="element_description fleft pTxs"><?=str_replace($clean_description, ' ', $node['name'])?></span>
+				
+				<?if($node['value'] !== ''):?>
+				<div class="element_content fright">
+					<? if(!preg_match('/editor/i', $node['name'])):?>
+					<input type="text" class=" pHs w100 expand25-250"  name="<?=$i?>" value="<?=$node['value']?>"/>
+					<?else:?>
+					<textarea id="<?=$node['name'] ?>" class="editor"  name="<?=$i?>"><?=$node['value']?></textarea>
+					<?endif;?>
+				</div>
+				<?$i++;?>
+				<?endif;?>
+				
+			</div>
+			<?endif;?>	
+		
+		<?endif;?>
+	<?endforeach;?>
+	</div>
+	<input class=" mAl save" type="submit" name="save"/>
+</form>
+<div class="popupDialog imageId_error hide">
+    <span class="deleteText fc_starfish_gray8 fwB"><span class="fc_starfish_red">ERROR</span> retrieving albums, check image_id.</span>
+    <div id="button_container">
+         <span class="ok pointer mTs closeDialog" title="check XML file"></span>
+    </div>
+</div>

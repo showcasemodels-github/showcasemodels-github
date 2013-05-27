@@ -1,0 +1,13 @@
+<div id="<?=routes::getInstance()->getCurrentTopLevelPageID();?>_content_wrapper" class="clearfix">	
+	<div class="productListWrapper clearfix">
+		<? $array_of_products = $this->_get('array_of_products');  ?>
+		<? foreach($array_of_products as $products) : ?>
+				<div>
+					Product Title: <a href ="/<?=str_replace(' ','-',$products->__get('product_title')) ?>"><?=$products->__get('product_title') ?></a><br />
+					<div class="productImage" style="background-image:url('/Data/Images/<?=$products->__get('image_path'); ?>');"></div>
+					Description: <?=$products->__get('description') ?><br />
+					Price: <?=$products->__get('product_price') ?><br />
+				</div>
+		<? endforeach; ?>
+	</div>
+</div>

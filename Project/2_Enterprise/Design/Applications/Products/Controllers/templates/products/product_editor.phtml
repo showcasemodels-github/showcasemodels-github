@@ -1,0 +1,60 @@
+<div id="product_editor" class="fleft pVl pRl pLm">
+	<div class="pBxxl">
+		<?if ($this->_get('product')->__get('product_id') != NULL):?>
+		<div class="pBxxl mBxxl">
+			<div class="fleft" >
+			<h4 class="fc_starfish_gray4 mBs">Product Name</h4>
+			<input type="text" name="title" id="prod_name" value="<?=$this->_get('product')->__get('product_title')?>" />
+			</div><div class="fright mRl">
+			<h4 class="fc_starfish_gray4 mBs">Variation</h4>
+			<span id="prod_variation">1A</span>
+			</div>
+		</div>
+		<h4 class="fc_starfish_gray4 mBs">Product Description</h4>
+		<textarea  id="intro" class="pAs expand editor" name="intro"><?=$this->_get('product')->__get('description')?></textarea>
+		<h4 class="fc_starfish_gray4 mBs mTl">Product Price</h4>
+		<input type="text" id="intro" class="pAs" name="product_price" value="<?=$this->_get('product')->__get('product_price')?>"/>
+		<hr class="pHxl">
+		<div id="product_photos" class="fleft posRel">
+		<h4 class="fc_starfish_gray4 mBs fleft clearfix">Product Photos</h4><br /><br />
+		<span class="sprite" id="add_photos"></span>
+		
+		<?$i = 1;?>
+		<?foreach($this->_get('product_images') as $image):?>
+		<!--MAIN IMAGE-->
+			<div id="gallery_image_<?=$i?>" class="clearfix posRel mTxl">
+				<div class="image_holder fleft mRl">
+					<div id="image_overflow">
+					   	<div id="img" style="background-image:url(/Data/Images/<?=$image->__get('full_path')?>)"></div>
+					</div>
+				</div>
+	            <span class="show_photo_chooser productPhoto fleft sprite posAbs" id="gallery_image_<?=$i?>"></span>
+	            <span class="sprite delete_photo"></span>
+				<input class="image_id" type="hidden" name="image_id[]" value="<?=$image->__get('image_id')?>">
+				<input class="gallery_image_id" type="hidden" name="gallery_image_id[]" value="<?=$image->__get('product_image_id')?>">
+			</div>
+			<?$i++;?>
+		<?endforeach;?>
+			
+		</div>
+		
+		<?else:?>
+			<div class="fwB fc_starfish_gray3 pointer" id="noImage">No Product to display.</div>
+		<?endif;?>
+	</div>
+</div>
+
+<!-- USED FOR INSTANTIATING A NEW IMAGE -->
+<div class="hide image_clone">
+	<div class="clearfix mTxl gallery_image posRel">
+		<div class="image_holder fleft mRl">
+			<div id="image_overflow">
+			   	<div id="img"></div>
+			</div>
+		</div>
+	    <span class="show_photo_chooser productPhoto fleft sprite posAbs"></span>
+	    <span class="sprite delete_photo"></span>
+		<input class="image_id" type="hidden" value="">
+		<input class="gallery_image_id" type="hidden" value="0">
+	</div>
+</div>

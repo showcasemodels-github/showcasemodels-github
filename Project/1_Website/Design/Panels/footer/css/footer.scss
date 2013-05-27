@@ -1,0 +1,68 @@
+.extendedFooter {
+  height:455px;
+  width:100%;
+  background-color:#E8E9EA;
+  footer {
+    width:1060px;
+    height:455px;
+    padding-top:45px;
+    .footerLinkWrapper {
+      .linkColumn {
+        float:left;
+        width:245px;
+        min-height:100px;
+        h4 {
+          font-size:1.8em;
+          margin-bottom:30px;
+        }
+        ul {
+          li {
+            line-height:15px;
+            margin-bottom:20px;
+            font-size:1.4em;
+              a {
+                
+              }
+          }
+        }
+        h4.footerLogo {
+          height:60px;
+          width:280px;
+          background-size:100%;
+          background-repeat:no-repeat;
+          background-image:url('/Project/1_Website/Design/Main_Layout/images/logo-show-case-model.png');
+        }
+        .questionCall {
+          font-size:1.4em;
+          margin-bottom:20px;
+          span.contactNumber {
+            font-size:1.7em;
+            font-weight: bold;
+            color: #58585B;
+          }
+        }
+      }  
+    }
+  }
+  //footer bottom link css
+  .footerBottomWrapper {
+    height:45px;
+    width:100%;
+    background-color:#D1D2D4;
+      .footerBottomLinks {
+        height:100%;
+        width:1060px;
+          ul#tertiary_nav {
+            li {
+              float:left;
+              a {
+                color:#000;
+              }
+            }
+         }
+      }
+  }
+  //footer bottom link css
+}
+
+

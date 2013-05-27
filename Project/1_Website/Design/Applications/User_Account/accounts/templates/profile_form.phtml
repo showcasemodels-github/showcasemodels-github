@@ -1,0 +1,113 @@
+<div class="userProfile">
+	<h5>Ship to</h5>
+	First name: <?php echo $this->_get('shiptoFirstname'); ?><br />
+	Last name: <?php echo $this->_get('shiptoLastname'); ?><br />
+	Address: <?php echo $this->_get('shiptoAddress'); ?><br />
+	Address 2: <?php echo $this->_get('shiptoAddress_2'); ?><br />
+	City: <?php echo $this->_get('shiptoCity'); ?><br />
+	State: <?php echo $this->_get('shiptoState'); ?><br />
+	Other State: <?php echo $this->_get('shiptoOther_state'); ?><br />
+	Zip/Postal code: <?php echo $this->_get('shiptoZipcode'); ?><br />
+	Country: <?php echo $this->_get('shiptoCountry'); ?><br />
+	Phone no.: <?php echo $this->_get('shiptoPhone'); ?><br />
+	Fax no.: <?php echo $this->_get('shiptoFax'); ?><br />
+	Company: <?php echo $this->_get('shiptoCompany'); ?><br />
+	
+	<h5>Bill to</h5>
+	First name: <?php echo $this->_get('billtoFirstname'); ?><br />
+	Last name: <?php echo $this->_get('billtoLastname'); ?><br />
+	Address: <?php echo $this->_get('billtoAddress'); ?><br />
+	Address 2: <?php echo $this->_get('billtoAddress_2'); ?><br />
+	City: <?php echo $this->_get('billtoCity'); ?><br />
+	State: <?php echo $this->_get('billtoState'); ?><br />
+	Other State: <?php echo $this->_get('billtoOther_state'); ?><br />
+	Zip/Postal code: <?php echo $this->_get('billtoZipcode'); ?><br />
+	Country: <?php echo $this->_get('billtoCountry'); ?><br />
+	Phone no.: <?php echo $this->_get('billtoPhone'); ?><br />
+	Fax no.: <?php echo $this->_get('billtoFax'); ?><br />
+	Company: <?php echo $this->_get('billtoCompany'); ?><br />
+	<input type = "button" name = "editProfile" value = "Edit Profile" />
+</div>
+
+<form action = "" method = "POST">
+	<div class="editProfile" hidden>
+		<h5>Ship to</h5>
+		First name: <input type = "text" name = "edit_shiptoFirstname" placeholder = "<?=$this->_get('shiptoFirstname') ?>"><br />
+		Last name: <input type = "text" name = "edit_shiptoLastname" placeholder = "<?=$this->_get('shiptoLastname') ?>"><br />
+		Email Address: <input type = "text" name = "edit_shiptoEmail" placeholder = "<?=$this->_get('shiptoEmail') ?>"><br />
+		Address: <input type = "text" name = "edit_shiptoAddress" placeholder = "<?=$this->_get('shiptoAddress') ?>"><br />
+		Address 2: <input type = "text" name = "edit_shiptoAddress_2" placeholder = "<?=$this->_get('shiptoAddress_2') ?>"><br />
+		City: <input type = "text" name = "edit_shiptoCity" placeholder = "<?=$this->_get('shiptoCity') ?>"><br />
+		State: <?=$this->_get('edit_shiptoState'); ?><br />
+		Other State: <input type = "text" name = "edit_shiptoOther_state" placeholder = "<?=$this->_get('shiptoOther_state') ?>"><br />
+		Zip/Postal code: <input type = "text" name = "edit_shiptoZipcode" placeholder = "<?=$this->_get('shiptoZipcode') ?>"><br />
+		Country:<?=$this->_get('edit_shiptoCountry'); ?><br />
+		Phone no.: <input type = "text" name = "edit_shiptoPhone" placeholder = "<?=$this->_get('shiptoPhone') ?>"><br />
+		Fax no.: <input type = "text" name = "edit_shiptoFax" placeholder = "<?=$this->_get('shiptoFax') ?>"><br />
+		Company: <input type = "text" name = "edit_shiptoCompany" placeholder = "<?=$this->_get('shiptoCompany') ?>"><br />
+		
+		<h5>Bill to</h5>
+		First name: <input type = "text" name = "edit_billtoFirstname" placeholder = "<?=$this->_get('billtoFirstname') ?>"><br />
+		Last name: <input type = "text" name = "edit_billtoLastname" placeholder = "<?=$this->_get('billtoLastname') ?>"><br />
+		Email Address: <input type = "text" name = "edit_billtoEmail" placeholder = "<?=$this->_get('billtoEmail') ?>"><br />
+		Address: <input type = "text" name = "edit_billtoAddress" placeholder = "<?=$this->_get('billtoAddress') ?>"><br />
+		Address 2: <input type = "text" name = "edit_billtoAddress_2" placeholder = "<?=$this->_get('billtoAddress_2') ?>"><br />
+		City: <input type = "text" name = "edit_billtoCity" placeholder = "<?=$this->_get('billtoCity') ?>"><br />
+		State: <?=$this->_get('edit_billtoState'); ?><br />
+		Other State: <input type = "text" name = "edit_billtoOther_state" placeholder = "<?=$this->_get('billtoOther_state') ?>"><br />
+		Zip/Postal code: <input type = "text" name = "edit_billtoZipcode" placeholder = "<?=$this->_get('billtoZipcode') ?>"><br />
+		Country:<?=$this->_get('edit_billtoCountry'); ?><br />
+		Phone no.: <input type = "text" name = "edit_billtoPhone" placeholder = "<?=$this->_get('billtoPhone') ?>"><br />
+		Fax no.: <input type = "text" name = "edit_billtoFax" placeholder = "<?=$this->_get('billtoFax') ?>"><br />
+		Company: <input type = "text" name = "edit_billtoCompany" placeholder = "<?=$this->_get('billtoCompany') ?>"><br />
+		
+		<input type = "submit" name = "saveProfile" value = "Save" />
+	</div>
+</form>
+<br />
+
+
+<!-- past transactions... NOT USED -->
+<!-- <div> -->
+
+	<?// $product_title = $this->_get('array_of_product_titles') ?>
+	<?// $product_quantity = $this->_get('array_of_product_quantities') ?>
+	<?// $product_price = $this->_get('array_of_product_prices') ?>
+	<?// $total_price = $this->_get('array_of_total_price') ?>
+	<?// $products = $this->_get('array_of_number_of_products') ?> 
+	<?// $transactions = $this->_get('transactions') ?>
+	
+	<?// for($i=0;$i!=$transactions;$i++) { ?>
+<!-- 		<table> -->
+<!-- 			<tr> -->
+<!-- 				<td> -->
+<!-- 					Product -->
+<!-- 				</td> -->
+<!-- 				<td> -->
+<!-- 					Price -->
+<!-- 				</td> -->
+<!-- 				<td> -->
+<!-- 					Quantity -->
+<!-- 				</td> -->
+<!-- 				<td> -->
+<!-- 					Total Product Price -->
+<!-- 				</td> -->
+<!-- 			</tr> -->
+			<?// for($j=0;$j<=$products[$i];$j++) { ?>
+				<?// if($j != $products[$i]) : ?>
+<!-- 					<tr> -->
+<!-- 						<td><?//=$product_title[$i][$j] ?></td>  -->
+<!-- 						<td><?//=$product_price[$i][$j] ?></td>  -->
+<!-- 						<td><?//=$product_quantity[$i][$j] ?></td>  -->
+<!-- 						<td><?//=(int)$product_price[$i][$j]*$product_quantity[$i][$j] ?></td>  -->
+<!-- 					</tr> -->
+				<?// else : ?>
+<!-- 					<tr> -->
+<!-- 						<td colspan = "2">Total</td> -->
+<!-- 						<td><td><?//=$total_price[$i] ?></td></td>  -->
+<!-- 					</tr> -->
+				<?// endif; ?>
+			<?// } ?>
+<!-- 		</table> -->
+	<?// } ?>
+<!-- </div> -->

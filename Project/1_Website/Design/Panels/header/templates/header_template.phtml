@@ -1,0 +1,64 @@
+<header>
+	<div class="headerInnerWrapper mAuto">
+		<div class="clearfix">
+			<a href="/" class="showCaseLogo fleft"></a>
+			<div class="fright rightNavs">
+				<div class="clearfix secondaryNavWrapper">
+					<?=navigation::displayNavigationForPages('secondary'); ?>
+					<a href="">Question? Call</a>
+					<span class="fright contactNumber posRel">1-888-882-2323</span>
+				</div>
+				<div class="loginRegisterWrapper">
+					<ul class="">
+						<li>
+							<a href="/user/register">Log In/Register</a>
+						</li>
+						<li class="shoppingCartLink">
+							<a href="/shop/cart">CART</a>
+							<span class="show fright cartItemQuantity">0</span>
+						</li>
+					</ul>
+					<a href="/shop/cart" class="placeOrder btnOrLink bgBlue">Place Order</a>
+				</div>
+			</div>
+		</div>
+		<div class="primaryNavWrapper clearifx">
+			<ul id="primary_nav">
+				<li id="military">
+					<span>
+						<a id="military_nav" title="Military" accesskey="m" href="/military">Military</a>
+					</span>
+				</li>
+				<li id="private">
+					<span>
+						<a id="private_nav" title="Private" accesskey="p" href="/private">Private</a>
+					</span>
+				</li>
+				<li id="airlines">
+					<span>
+						<a id="airlines_nav" title="Airlines" accesskey="i" href="/airline">Airlines</a>
+					</span>
+				</li>
+				<li id="nasa">
+					<span>
+						<a id="nasa_nav" title="NASA" accesskey="n" href="/nasa">NASA</a>
+					</span>
+				</li>
+				<li id="maritime">
+					<span>
+						<a id="maritime_nav" title="Maritime" accesskey="r" href="/maritime">Maritime</a>
+					</span>
+				</li>			
+			</ul>
+			<form class="searchForm fright" action = "/search" method="POST">
+				<input type="text" name="search" class="posAbs"/>
+				<input type="submit" name="submit" class="posAbs btnOrLink bgRed" value="Search"/>
+			</form>	
+		</div>
+	</div>
+	%%PRODUCTS_NAVIGATION%%  
+</header>
+
+
+
+

@@ -1,0 +1,140 @@
+<?
+$user_account = $this->getUserAccount(); 
+$billing = $this->getBilling();
+$delivery = $this->getDelivery();
+?>
+			<div class="personal-container fleft">
+				
+				<h4>personal details</h4> <br/>
+				
+				<div class="personal-details">
+						<label>First Name</label><span class="error" name="first_name">This field is required.</span><br/>		
+						<div>
+							<div class="details_field"><p><?=$user_account->getFirstName() ?></p></div>
+							<div class="editor_clicker">
+								<input type="text" value="<?=$user_account->getFirstName() ?>" name="text_field" column="first_name" />
+								<input type='button' name="btnChange" value="Save" /><input type='button' name="btnClose" value="X" />
+							</div>
+						</div>
+				</div>
+				
+				<div class="personal-details">
+						<label>Surname</label><span class="error" name="last_name">This field is required.</span><br/>		
+						<div>
+							<div class="details_field"><p><?=$user_account->getLastName() ?></p></div>
+							<div class="editor_clicker">
+								<input type="text" value="<?=$user_account->getLastName() ?>" name="text_field" column="last_name" />
+								<input type='button' name="btnChange" value="Save" /><input type='button' name="btnClose" value="X" />
+							</div>
+						</div>
+						
+				</div>	
+				
+				<div class="personal-details">
+						<label>Email</label><span class="error" name="email">This field is required.</span><br/>
+						<div>
+							<div class="details_field"><p><?=$user_account->getEmail() ?></p></div>
+							<div class="editor_clicker">
+								<input type="text" value="<?=$user_account->getEmail() ?>" name="text_field" column="email" />
+								<input type='button' name="btnChange" value="Save" /><input type='button' name="btnClose" value="X" />
+							</div>
+						</div>
+				</div>
+					
+				<div class="personal-details">
+						
+						<label>Password</label><span class="error" name="password">This field is required.</span><br/>
+						<div>
+							<div class="details_field"><label>******</label></div>
+							<div class="editor_clicker">
+								<input type="password" value="" name="text_field" column="password" />
+								<input type='button' name="btnChange" value="Save" /><input type='button' name="btnClose" value="X" />
+							</div>
+						</div>
+				</div>
+				<!-- 	
+				<div class="personal-details">
+						
+						<label>Suburb</label><br/>
+						<div>
+							<div class="details_field"><p><?=$user_account->getSuburb() ?></p></div>
+							<div class="editor_clicker">
+								<input type="text" value="<?=$user_account->getSuburb() ?>"name="text_field" column="suburb" />
+								<input type='button' name="btnChange" value="Save" /><input type='button' name="btnClose" value="X" />
+							</div>
+						</div>
+				</div>
+					
+				<div class="personal-details">
+						
+						<label>Phone</label><br/>
+						<div>
+							<div class="details_field"><p><?=$user_account->getMobile() ?></p></div>
+							<div class="editor_clicker">
+								<input type="text" value="<?=$user_account->getMobile() ?>"name="text_field" column="mobile" />
+								<input type='button' name="btnChange" value="Save" /><input type='button' name="btnClose" value="X" />
+							</div>
+						</div>
+				</div>-->
+				
+			</div>		<br/>
+			
+			
+			<div class="personal-container fleft">
+				<h4>address details<span><a href="/user/profile/addresses">Edit Your Addresses</a></span></h4><br/>
+					<div class="personal-details">
+							<label>Billing Address</label><br/>
+							<div>
+							<?if($billing !== FALSE):?>
+								<div class="address-content-chooser" type="billing">
+									<?
+										$address_array = array();
+										
+										foreach($billing as $key=>$address)
+											if(($key == 'city' || $key == 'state' || $key == 'country' || $key == 'zip') && $address != '')
+												$address_array[] = $address;
+									?>
+									<p id="billing_completeAddress"><?=$billing['street_address']?><br><?=implode(' ',$address_array)?></p>
+									<p id="billing_phone"> T: <?=$billing['phone']?></p>
+								</div>
+							<?else: ?>
+								<p>No Billing Address.</p>
+							<?endif; ?>
+							</div>
+							<div class="billing_selector">
+							<div><input type="image" src="/Project/Design/1_Website/Main_Layout/images/save.png" name="saveSelect"/></div>
+						</div>
+					</div>
+					
+				<div class="personal-details">
+						<label>Delivery Address</label><br/>
+						<div>
+						<?if($delivery !== FALSE):?>
+							<div class="address-content-chooser" type="delivery">
+									<?
+										$address_array = array();
+										
+										foreach($delivery as $key=>$address)
+											if(($key == 'city' || $key == 'state' || $key == 'country' || $key == 'zip') && $address != '')
+												$address_array[] = $address;
+									?>
+								<p id="delivery_completeAddress"><?=$delivery['street_address']?><br><?=implode(' ',$address_array)?></p>
+								<p id="delivery_phone"> T: <?=$delivery['phone']?></p>
+							</div>
+						<?else: ?>
+								<p>No Delivery Address.</p>
+						<?endif; ?>
+						</div>
+						<div class="delivery_selector">
+							<div><input type="image" src="/Project/Design/1_Website/Main_Layout/images/save.png" name="saveSelect"/></div>
+						</div>
+				</div>
+					
+				
+				
+			</div>	
+			
+			
+			
+			
+			

@@ -1,0 +1,27 @@
+<!-- USED FOR INSTANTIATING A NEW IMAGE -->
+<div class="hide" id="imageCloneContainer">
+	<div class="fleft posRel" id="product_photos">
+		<div class="image_clone">
+			<div class="clearfix mTxl gallery_image posRel">
+				<div class="image_holder fleft mRl">
+					<div id="image_overflow">
+					   	<div id="img"></div>
+					</div>
+				</div>
+			    <span class="show_photo_chooser productPhoto fleft pointer posAbs"></span>
+			    <span class="pointer delete_photo"></span>
+			    <input class="image_type" type="hidden" value="image" name="element[]">
+				<input class="image_id" type="hidden" value="" name="element[]">
+				<!-- <input class="gallery_image_id" type="hidden" value="0"> -->
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- textarea must not hova the class "editor" when adding textareas to avoid redunduncy in editor instantiation -->
+<div class="hide" id="textEditorClone">
+	<div class="clearfix mTxl posRel textEditorContainer">
+		<input class="image_id" type="hidden" value="text" name="element[]">	
+		<textarea class="pAs expand " name="element[]"><?=$this->_get('article')->__get('intro')?></textarea>
+	</div>
+</div>

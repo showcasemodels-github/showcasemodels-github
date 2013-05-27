@@ -1,0 +1,62 @@
+<?if ($this->_get('product')->__get('product_id') != NULL):?>
+	<!--div class="editable w100 pos_rel pBxs hAuto">
+			<h3 class="expand30-150 fs-l fwB fc_starfish_gray5 mBs"><?=$this->_get('product')->__get('product_title')?></h3>
+	</div-->
+			<span class="fs-s fc_starfish_gray9 fwB">Variation</span>
+			<div id="header_actions" class="pointer fleft">
+				<div class="sprite fleft" id="variation">
+					<span>1A</span>
+					<div id="available_variationsContainer" class="hide">
+						<ul id="available_variation" class="unstyled">
+							<li id="add_variationContainer"><span title="add new variation" id="add_variation">ADD VARIATION</span><span class="add_variation sprite"></span></li>
+							<?for($i=0; $i<=5; $i++):?>
+							<li class="variation_list">
+								<div class="fleft delete_variation">
+									<form method="POST">
+										<!-- <input type="hidden" name="album_id" value="">
+										<input type="hidden" name="size_id" value=""> -->
+										<input class="fc_starfish_gray6 fwB" type="submit" name="view_size" value="variation <?= $i;?>">
+									</form>
+								</div>
+								<div class="fright edit_variation">
+									<span title="edit variation" class="fc_starfish_gray7 resize">edit | </span>
+									<span title="delete variation" class="fc_starfish_gray7 deleteVariation">x</span>
+								</div>
+								<div class="popUp_delete">
+									<span class="deleteText fc_starfish_gray8">Are you sure you want to <span class="fc_starfish_red">DELETE</span> this variation?</span>
+									<div id="button_container">
+										<form class="delete_image_size" method="POST">
+											<!-- <input type="hidden" name="size_id" value=""> -->
+											<input class="yes fleft mTs" title="delete this size" type="submit" name="delete_size" value=" ">
+											<span class="no keep_size pointer mTs fright" title="keep this album"></span>
+										</form>
+									</div>
+								</div>
+							</li>
+							<?endfor;?>
+						</ul>
+					</div>
+				</div>
+			</div>
+	<table class="fc_starfish_gray7 mTxl">
+		
+		<tr class="fs-s">
+			<td><span class="fc_starfish_gray9 fwB" >Metadata Tags</span></td>
+		</tr>
+		<tr>
+			<td><textarea class="fc_starfish_gray3 expand30-150" name="tags" title="edit / add tags"><?=$this->_get('tags')?></textarea></td>
+		</tr>
+		<tr class="fs-s">
+			<td><span class="fc_starfish_gray9 fwB">URL</span></td>
+		</tr>
+		<tr>
+			<td><input class="fc_starfish_gray3 validate[required]" title="edit product permalink" type="text" name="permalink" value="<?=$this->_get('product')->__get('permalink')?>"></td>
+		</tr>
+		
+	</table>
+<div class="fright sideBar_actionsContainer mTl">
+	<input id="product_type" type="hidden" value="<?=routes::getInstance()->getCurrentTopLevelPageID();?>">
+	<input class="saveChanges fleft" type="submit" name="edit_product" value=" ">
+	<span class="delete pointer fright deleteProduct"></span>
+</div>
+<?endif;?>

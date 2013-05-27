@@ -1,0 +1,12 @@
+<?$dimension =getimagesize('Data/Images/'.$this->_get('album')->__get('album_folder').'/'.$this->_get('size')->__get('dimensions').'/'.$this->_get('image')->__get('filename').$this->_get('image')->__get('filename_ext')) ?>
+<span 	id="<?=$this->_get('image')->__get('image_id')?>"
+		data-src="/Data/Images/<?=$this->_get('album')->__get('album_folder')?>/<?=$this->_get('size')->__get('dimensions')?>_thumb/<?=$this->_get('image')->__get('filename')?><?=$this->_get('image')->__get('filename_ext')?>"
+		data-title="<?=$this->_get('image')->__get('filename')?>"
+		data-alt="<?=$this->_get('image')->__get('image_caption')?>"
+		class="sprite fleft  pointer chosen_image"
+		data-height="<?=$dimension[1]?>"
+		data-width="<?=$dimension[0]?>"
+		title="use selected image"
+		>
+		</span>
+<span class="fleft sprite close_photo_chooser pointer"></span>

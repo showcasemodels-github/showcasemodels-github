@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<?=metaData::getInstance()->getMetaData(); ?>
+		||global_css||
+		||local_css||	 	
+		||global_javascript_top||
+		<script type="text/javascript">
+			%%GOOGLE_ANALYTICS%%
+			||local_javascript_top||
+		</script>
+		<!-- script for social media plugin -->
+		<script type="text/javascript">var switchTo5x=true;</script>
+		<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+		<script type="text/javascript">stLight.options({publisher: "51507e57-15d8-49b2-bb2b-a5395d0b5959", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>						
+</head> 
+<body <?=$this->getIdForPage(); ?>> 
+		<section id="wrapper">	
+			%%HEADER_CONTENT%%	
+			<section id="<?=routes::getInstance()->getCurrentTopLevelPageID()?>_container" class="clearfix">
+				%%MAIN_CONTENT%% 
+			</section>		
+		</section>
+		%%FOOTER_CONTENT%%
+		||dialogues||
+		||global_javascript_bottom||
+		<script type="text/javascript">
+			Cufon.now();
+			||local_javascript_bottom||
+			
+		</script>
+</body>
+</html>

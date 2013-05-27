@@ -1,0 +1,109 @@
+#wrapper {
+  width: 100% !important; }
+
+.bannerWrapper {
+  height: 500px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .bannerWrapper .slidingBanner {
+    width: 1060px;
+    height: 500px;
+    position: relative; }
+    .bannerWrapper .slidingBanner .bannerDetails {
+      left: 460px;
+      min-height: 240px;
+      position: absolute;
+      top: 110px;
+      width: 555px; }
+      .bannerWrapper .slidingBanner .bannerDetails h1 {
+        color: #fff;
+        margin-bottom: 15px; }
+      .bannerWrapper .slidingBanner .bannerDetails p {
+        color: #fff; }
+    .bannerWrapper .slidingBanner ul.slideIndicator {
+      bottom: 11px;
+      left: 50%;
+      width: 70px;
+      height: 10px;
+      margin-left: -35px;
+      position: absolute; }
+      .bannerWrapper .slidingBanner ul.slideIndicator li.active {
+        background-color: #fff; }
+      .bannerWrapper .slidingBanner ul.slideIndicator li {
+        float: left;
+        background-color: #A7A9AB;
+        margin-right: 12px;
+        height: 8px;
+        width: 8px;
+        cursor: pointer; }
+      .bannerWrapper .slidingBanner ul.slideIndicator li.last {
+        margin-right: 0; }
+
+.midSectionWrapper {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  width: 1060px;
+  height: auto;
+  overflow: auto; }
+  .midSectionWrapper .featuredProductWrapper {
+    width: 670px; }
+    .midSectionWrapper .featuredProductWrapper h2 {
+      font-size: 2.2em; }
+    .midSectionWrapper .featuredProductWrapper .featuredProduct {
+      border: 1px solid #cccccc;
+      width: auto;
+      height: 180px;
+      margin-top: 10px;
+      padding: 10px; }
+      .midSectionWrapper .featuredProductWrapper .featuredProduct .productImage {
+        height: 100%;
+        width: 160px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 1px solid #cccccc;
+        margin-right: 30px; }
+      .midSectionWrapper .featuredProductWrapper .featuredProduct .productDesciptionWrapper {
+        width: 430px;
+        position: relative; }
+        .midSectionWrapper .featuredProductWrapper .featuredProduct .productDesciptionWrapper h3 {
+          font-size: 2.1em; }
+        .midSectionWrapper .featuredProductWrapper .featuredProduct .productDesciptionWrapper span {
+          font-size: 2.1em; }
+        .midSectionWrapper .featuredProductWrapper .featuredProduct .productDesciptionWrapper a {
+          margin-top: 30px;
+          clear: both; }
+    .midSectionWrapper .featuredProductWrapper .seeMoreProducts {
+      margin-top: 15px;
+      font-size: 2.1em;
+      color: #000; }
+  .midSectionWrapper .otherLinkWrapper {
+    width: 340px; }
+    .midSectionWrapper .otherLinkWrapper .topLinks {
+      background-color: #F1F1F2;
+      padding: 17px 17px 45px 17px; }
+      .midSectionWrapper .otherLinkWrapper .topLinks h3 {
+        font-size: 2.1em;
+        margin-bottom: 13px; }
+      .midSectionWrapper .otherLinkWrapper .topLinks p {
+        font-size: 1.4em; }
+      .midSectionWrapper .otherLinkWrapper .topLinks .otherLinks {
+        height: auto;
+        overflow: auto;
+        margin-top: 35px; }
+        .midSectionWrapper .otherLinkWrapper .topLinks .otherLinks .otherLinksDescription {
+          font-size: 1.2em;
+          line-height: 20px; }
+          .midSectionWrapper .otherLinkWrapper .topLinks .otherLinks .otherLinksDescription h4 {
+            font-size: 1.6em;
+            margin-bottom: 13px; }
+    .midSectionWrapper .otherLinkWrapper .aboutWebsite {
+      margin-top: 30px;
+      line-height: 30px;
+      background-image: url("/Project/1_Website/Design/Pages/primary/home/images/quoted-bg.png");
+      height: 207px;
+      width: auto;
+      font-size: 2.1em;
+      text-align: center;
+      padding: 20px; }

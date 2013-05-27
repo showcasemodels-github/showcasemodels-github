@@ -1,0 +1,20 @@
+<div class="popupDialog product_dialog addArticleDialog">
+<h3><img src="/Project/2_Enterprise/Design/Main_Layout/images/otherImages/plus.png" />Create New Article</h3>
+	<div class="subCategory_entity">
+		<form method="POST" action="/articles/article/add">
+			<div class="mBl">
+				<strong>Article Title</strong><input class="validate[required,maxlength[45]] fright subCategory_entityTitle" type="text" name="title" maxlength="45">
+			</div>
+			<div>
+				<strong>Url</strong><input class="fright subCategory_entityDescription" name="article_url" readonly="true"/>
+			</div>
+			<div id="button_container" class="fright mRs mTxl">
+				<input name="article_type" type="hidden" value="<?=routes::getInstance()->getCurrentTopLevelPageID();?>">
+				<input name="category_id" type="hidden" value="">
+				<input name="subcategory_id" type="hidden" value="">
+				<input type="submit" class="save fleft mRs mTs" name="add_article" value=" ">
+				<span class="mTs fleft pointer cancel closeDialog" title="cancel"></span>
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,140 @@
+//** for reference go to http://sass-lang.com ***********************************************************************//
+
+
+$hover : 'hover';
+
+//** STARFISH COLOR SCHEME ***********************************************************************//
+
+//Primary colors
+$starfishRed    :#BF1E2D;
+$starfishBlue   :#2AACE3;
+$starfishGreen  :#7EBA41;
+$starfishOrange :#F05A28;
+$starfishPurple :#673292;
+$gray           :#939597;
+
+//secondary colors
+$grayHeadings   :#373837;
+$darkGray       :#221F20;
+$lightGray      :#EDECEC;
+$linkGray       :#58585B;
+$inputGray      :#CCCCCC;
+$inputFocus     :#EDEDED;
+
+
+//** SPRITES AND BACKGROUNDS SCHEME ***********************************************************************//
+  
+// you can add as many sprites as you deem necessary and use this to override the
+// default spriteImage source
+
+$defaultSprite        : '/Project/2_Enterprise/Design/Main_Layout/images/sprites/Enterprise-sprites.png';
+$loginHello           : '/Project/2_Enterprise/Design/Main_Layout/images/login/hello_text.png';
+$applicationSidebar   : '/Project/2_Enterprise/Design/Main_Layout/images/backgrounds/application_sidebar.png';
+$sideNavBackground    : '/Project/2_Enterprise/Design/Main_Layout/images/backgrounds/side_navigation_background.png';
+$contentColumnSidebar : '/Project/2_Enterprise/Design/Main_Layout/images/backgrounds/content_column_sidebar.png';
+$navBackground        : '/Project/2_Enterprise/Design/Panels/header/images/navigation_background.png';
+$navUlBackground      : '/Project/2_Enterprise/Design/Panels/header/images/navigation_ul_background.png';
+$loading              : '/Project/2_Enterprise/Design/Main_Layout/images/otherImages/loader.png';
+
+//** COMMON CLASS DECLARATION ***********************************************************************//
+  
+  // doing things this way groups Classes and IDs with the same css content
+.sprite {
+  border: none;
+  font-size:0px;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.defaultSprite{
+  background-image: url($defaultSprite);
+}
+
+.applicationSidebarBackground{
+  background-image: url($applicationSidebar);
+}
+
+
+  // USING THE SPRITES AND BACKGROUNDS
+  // $width and $height - defines the image dimensions
+  // $x and $y - defines the image coordinates
+  // $hover  - is used for hover effects
+  //         - you can turn this hover effect off by passing 'no-hover'
+  // $img    - defines the source
+  //         - you can easily override this to use a different source by passing a different variable from the SPRITES SCHEME above
+
+
+@mixin sprite($width, $height, $x, $y, $hover:$hover, $img:$defaultSprite) {
+  @extend .sprite;
+  width: $width !important;
+  height: $height !important;
+  background-position: $x $y;
+  
+  @if($img == $defaultSprite){
+    @extend .defaultSprite;
+  }
+  @else{
+    background-image: url($img);
+  }
+  
+  @if $hover != 'no-hover'{
+    &:active {
+      background-position: $x $y + $height;
+    }
+  }
+}
+
+@mixin buttonSprite($width,$height,$x,$y,$img:$defaultSprite){
+  @extend .sprite;
+  width: $width;
+  height: $height;
+  background-position: $x $y;
+  
+  @if($img == $defaultSprite){
+    @extend .defaultSprite;
+  }
+  @else{
+    background-image: url($img);
+  }
+}
+
+@mixin centerElement($width, $height) {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: $height;
+  width: $width;
+}
+
+
+
+// Always set variables to null if it does not contain a value; only applicable to certain backgrounds
+// eg. @include background(null,null,$sideNavBackground,repeat-x)
+
+@mixin background($width,$height,$src,$repeat:no-repeat){
+  @content;
+  
+  @if($width != null){
+    width:$width;
+  }
+  @if($height != null){
+    height:$height;
+  }
+  
+  @if($src == $applicationSidebar){
+    @extend .applicationSidebarBackground;
+  }
+  @else{
+    background:{
+      image:url($src);
+    }
+  }
+  
+  background:{
+      repeat:$repeat;
+    }
+}
+
+

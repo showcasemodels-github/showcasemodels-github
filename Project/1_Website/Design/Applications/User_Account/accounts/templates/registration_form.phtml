@@ -1,0 +1,126 @@
+<div class="fleft">
+</div>
+<div class="fright">
+	<h5>Register</h5>
+	<form method="POST" class="registration">
+		<div class="row clearfix">
+			<label>Username</label>
+			<input type="text" name="username" class="required"/>
+		</div>
+		<div class="row clearfix">
+			<label>Password</label>
+			<input type="password" name="password" id="password" class="required"/>
+		</div>
+		<div class="row clearfix">
+			<label>Confirm password</label>
+			<input type="password" name="reTypePassword"/>
+		</div>
+		<div class="row clearfix"> 
+			<label>Email</label>
+			<input type="email" name="email" class="required" />
+		</div>
+		<!-- ship to -->
+		<h6>Ship to</h6>
+		<div class="row clearfix">
+			<label>First name</label>
+			<input type="text" name="shiptoFirstname" class="required" />
+		</div>
+		<div class="row clearfix">
+			<label>Last name</label>
+			<input type="text" name="shiptoLastname" class="required" />
+		</div>
+		<div class="row clearfix">
+			<label>Phone no.</label>
+			<input type="text" name="shiptoPhone" class="required" />
+		</div>
+		<div class="row clearfix">
+			<label>*Fax no.</label>
+			<input type="text" name="shiptoFax" />
+		</div>
+		<div class="row clearfix">
+			<label>*Company</label>
+			<input type="text" name="shiptoCompany" />
+		</div>
+		<div class="row clearfix">
+			<label>Address</label>
+			<input type="text" name="shiptoAddress" class="required" />
+		</div>
+		<div class="row clearfix">
+			<label>*Address 2</label>
+			<input type="text" name="shiptoAddress_2" />
+		</div>
+		<div class="row clearfix">
+			<label>City</label>
+			<input type="text" name="shiptoCity" class="required" />
+		</div>
+		<div class="row clearfix">
+			<label>State</label>
+			<?=$this->_get('shiptoState') ?>
+		</div>
+		<div class="row clearfix">
+			<label>*Other State</label>
+			<input type="text" name="shiptoOther_state" class="required" />
+		</div>
+		<div class="row clearfix">
+			<label>Zip/Postal Code</label>
+			<input type="text" name="shiptoZipcode" class="required" />
+		</div>
+		<div class="row clearfix">
+			<label>Country</label>
+			<?=$this->_get('shiptoCountry') ?>
+		</div>
+		<!-- bill to -->
+		<h6>Bill to</h6>
+		<div class="row clearfix">
+			<label>First name</label>
+			<input type="text" name="billtoFirstname" class="required" />
+		</div>
+		<div class="row clearfix">
+			<label>Last name</label>
+			<input type="text" name="billtoLastname" class="required" />
+		</div>
+		<div class="row clearfix">
+			<label>Phone no.</label>
+			<input type="text" name="billtoPhone" class="required" />
+		</div>
+		<div class="row clearfix">
+			<label>*Fax no.</label>
+			<input type="text" name="billtoFax" />
+		</div>
+		<div class="row clearfix">
+			<label>*Company</label>
+			<input type="text" name="billtoCompany" />
+		</div>
+		<div class="row clearfix">
+			<label>Address</label>
+			<input type="text" name="billtoAddress" class="required" />
+		</div>
+		<div class="row clearfix">
+			<label>*Address 2</label>
+			<input type="text" name="billtoAddress_2" />
+		</div>
+		<div class="row clearfix">
+			<label>City</label>
+			<input type="text" name="billtoCity" class="required" />
+		</div>
+		<div class="row clearfix">
+			<label>State</label>
+			<?=$this->_get('billtoState') ?>
+		</div>
+		<div class="row clearfix">
+			<label>*Other State</label>
+			<input type="text" name="billtoOther_state" class="required" />
+		</div>
+		<div class="row clearfix">
+			<label>Zip/Postal Code</label>
+			<input type="text" name="billtoZipcode" class="required" />
+		</div>
+		<div class="row clearfix">
+			<label>Country</label>
+			<?=$this->_get('billtoCountry') ?>
+		</div>
+		<div class="row clearfix">
+			<input type="submit" name="register" value="register"/>
+		</div>
+	</form>
+</div>

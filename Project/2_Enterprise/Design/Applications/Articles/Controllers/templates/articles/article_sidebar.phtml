@@ -1,0 +1,43 @@
+<?if ($this->_get('article')->__get('article_id') != NULL):?>
+	<div class="editable w100 pos_rel pBxs hAuto">
+			<textarea maxlength="45" class="expand30-150 mTs fs-xl fwB fc_starfish_gray9 productTitleEditor" title="edit title" name="title" placeholder="Place title here"><?=$this->_get('article')->__get('article_title')?></textarea>
+	</div>
+	<table class="fc_starfish_gray7 mTxl">
+		<tr class="fs-s">
+			<td><span class="fc_starfish_gray9 fwB">Status</span></td>
+		</tr>
+		<tr>
+			<td>
+				<select name="status" title="publish or unpublish this article">
+					<option value="published" <?=$this->_get('article')->__get('status') == 'published' ? 'selected' : ''?>>Published</option>
+					<option value="unpublished" <?=$this->_get('article')->__get('status') == 'unpublished' ? 'selected' : ''?>>Unpublished</option>
+				</select>
+			</td>
+		</tr>
+		<tr class="fs-s">
+			<td><span class="fc_starfish_gray9 fwB">Metadata Tags</span></td>
+		</tr>
+		<tr>
+			<td><textarea class="fc_starfish_gray3 expand30-150" name="tags" title="edit / add tags"><?=$this->_get('tags')?></textarea></td>
+		</tr>
+		<tr class="fs-s">
+			<td><span class="fc_starfish_gray9 fwB">Author</span></td>
+		</tr>
+		<tr>
+			<td><textarea class="fc_starfish_gray3 expand30-150" name="author" title="edit / add author"></textarea></td>
+		</tr>
+		<tr class="fs-s">
+			<td><span class="fc_starfish_gray9 fwB">URL</span></td>
+		</tr>
+		<tr>
+			<td><input class="fc_starfish_gray3 validate[required]" title="edit article permalink" type="text" name="permalink" value="<?=$this->_get('article')->__get('permalink')?>"></td>
+		</tr>
+		
+		
+	</table>
+<div class="fright sideBar_actionsContainer mTl">
+	<input id="article_type" type="hidden" value="<?=routes::getInstance()->getCurrentTopLevelPageID();?>">
+	<input class="sprite fleft saveChanges" type="submit" name="edit_article" value=" ">
+	<span id="deleteArticle" class="sprite pointer fright deleteArticle openDialog"></span>
+</div>
+<?endif;?>

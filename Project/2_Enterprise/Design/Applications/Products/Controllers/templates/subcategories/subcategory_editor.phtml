@@ -1,0 +1,10 @@
+<div id="product_editor" class="fleft pVl pRl pLm">
+	<div class="pBxxl">
+	<?if($this->_get('subcategory')->__get('description') != NULL):?>
+		<h4 class="fc_starfish_gray4 mBs mTxl">Description</h4>
+		<textarea  id="brief" class="pAs expand htmlbox" name="description"><?=$this->_get('subcategory')->__get('description')?></textarea>
+	<?else:?>
+		<h1 id="noImage"><?=$this->_get('subcategory')->__get('subcategory_title')?></h1>
+	<?endif;?>
+	</div>
+</div>

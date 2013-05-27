@@ -1,0 +1,201 @@
+//@import 'C:/WORKSPACE/showcasemodels/Project/1_Website/Design/Main_Layout/css/global';
+ul, li {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+header {
+  height:185px;
+  width:100%;  
+  padding-top:50px;
+  clear:both;
+  margin:0 auto 35px auto;
+  //logo css
+  .headerInnerWrapper {
+  height:100%;
+  width:1060px;
+  position:relative;
+  }
+  a.showCaseLogo {
+    width:394px;
+    height:73px;
+    background-image:url('/Project/1_Website/Design/Main_Layout/images/logo-show-case-model.png');
+  } 
+  .rightNavs {
+    position:relative;
+    width:435px;
+    top:-15px;
+    a { 
+      float:left; 
+      color:#000;
+      font-weight: bold;
+      font-size:1.4em;
+    }    
+    //secondary navs css opening
+    .secondaryNavWrapper {
+      margin-bottom:15px;
+      color:#000;
+      ul#secondary_nav {
+        li {
+          float:left;
+          a {
+            padding-right:15px;
+          }
+        }
+      }
+      span.contactNumber {
+        top:-6px;
+        font-size:2.3em;
+        font-weight:bold;
+        color:#58585B;
+      }
+    } 
+    //secondary navs css closing
+    //login register links place order css
+    div.loginRegisterWrapper {
+      border-radius: 5px 5px 5px 5px;
+      height:auto;
+      overflow:auto;
+      background-color:#E8E9EA; 
+      ul {
+        li {
+          float:left;
+          padding-top:11px;
+          height:40px;
+          border-right:1px solid #fff;
+          a {
+            padding-left:15px;
+            padding-right:15px;
+          }
+        }
+        li.shoppingCartLink {
+          width:130px;
+          cursor:pointer;
+          span.cartItemQuantity {
+            background-image: url("/Project/1_Website/Design/Main_Layout/images/shop-cart-icon.png");
+            font-size:1.5em;;
+            height: 27px;
+            padding-left: 34px;
+            padding-top: 4px;
+            position: relative;
+            right: 10px;
+            top: -4px;
+            width: 60px;
+          }
+        }
+      }
+      a.placeOrder {
+        height: 30px;
+        margin-left: 18px;
+        margin-top: 5px;
+        width: 135px;
+      }       
+    }
+    //login register links place order css
+  }
+   //primary nav css
+  .primaryNavWrapper {
+    position:absolute;
+    bottom:0;
+    background-color:#E8E9EA;
+    height:41px;
+    width:100%;
+     ul#primary_nav {
+       float:left;
+       li {
+         height:41px;
+         float:left;
+         padding-top:12px;
+         border-right:1px solid #fff;
+           a {
+            color: #204497;
+            font-size:2.0em;
+            font-weight: bold;
+            padding-left: 25px;
+            padding-right: 25px;  
+           }
+        }
+        li#products {
+          display:none;
+        }
+     }
+     //primary nav css
+    form.searchForm {
+      width:295px;
+      height:30px;
+      position:relative;
+      top:5px;
+      right:5px;
+        input[type="text"] {
+          width:280px;
+          height:30px;
+        }
+        input[type="submit"] {
+          width:72px;
+          height:30px;
+          top:0; right:0;
+        }
+     }     
+  }   
+  //product drop down navigation css//
+  .productNavigationWrapper {
+    display:none;
+    position:relative;
+    width:100%;
+    height:370px;
+    background-color:#204497;
+    z-index:3;
+    .productNavigation {
+      height:370px;
+      width:1060px;
+      position:relative;
+      
+        .categoryWrapper {
+          width: 1060px;
+          height: 230px;
+          position: absolute;
+          overflow: hidden;
+          top: 0;
+          border-bottom: 1px solid #fff;
+            .subCategoryTable {
+              width:100%;
+              height:100%;
+              td {
+                padding:40px 0 35px 20px;
+                ul {
+                  li {
+                    margin-bottom:20px;
+                    a {
+                      color:#fff;
+                      font-size:1.8em;
+                      font-family: 'AvenirLTStd-Roman';
+                    }
+                  }
+                }
+              }
+            }
+        } 
+        .active {
+          z-index:5;
+        }
+        .headerBottomLinks {
+          position:absolute;
+          bottom:0;
+          height:115px;
+          width:100%;
+          color:#fff;
+          div { margin-top:24px; }
+          p { font-size:1.8em; }
+          a { 
+            font-size:1.8em;
+            text-decoration:underline;
+            float:left;
+            margin-right:30px;
+            color:#fff;
+          }
+        }
+    }
+  }    
+}
+
+

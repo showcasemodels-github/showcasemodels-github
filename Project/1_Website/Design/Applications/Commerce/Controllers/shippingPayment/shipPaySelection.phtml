@@ -1,0 +1,139 @@
+<div class="shipPaySelectionWrapper">
+	<h5>SHIPPING/PAYMENT SELECTION</h5>
+
+	<form action="/shop/payment-info" method = "POST" class="paymentInfo">
+		<div class="clearfix mVl">
+			<div class="fleft">
+				<h5 class="mBm">ship to</h5>
+				<div>
+					<input type="hidden" name="name" value="<?=$this->_get('shipFullName'); ?>"/>
+					<b>Name : </b> <?=$this->_get('shipFullName'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="shipEmail" value="<?=$this->_get('shipEmail'); ?>"/>
+					<b>Email : </b><?=$this->_get('shipEmail'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="shipPhone" value="<?=$this->_get('shipPhone'); ?>" />
+					<b>Phone number : </b><?=$this->_get('shipPhone'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="shipFax" value="<?=$this->_get('shipFax'); ?>" />
+					<b>Fax number : </b><?=$this->_get('shipFax'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="shipCompany" value="<?=$this->_get('shipCompany'); ?>" />
+					<b>Company : </b><?=$this->_get('shipCompany'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="shipAddress" value="<?=$this->_get('shipAddress'); ?>" />
+					<b>Address : </b><?=$this->_get('shipAddress'); ?>
+				</div>
+			</div>
+			<div class="fright">
+				<h5 class="mBm">bill to</h5>
+				<div>
+					<input type="hidden" name="name" value="<?=$this->_get('billFullName'); ?>"/>
+					<b>Name : </b> <?=$this->_get('billFullName'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="billEmail" value="<?=$this->_get('billEmail'); ?>"/>
+					<b>Email : </b><?=$this->_get('billEmail'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="billPhone" value="<?=$this->_get('billPhone'); ?>" />
+					<b>Phone number : </b><?=$this->_get('billPhone'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="billFax" value="<?=$this->_get('billFax'); ?>" />
+					<b>Fax number : </b><?=$this->_get('billFax'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="billCompany" value="<?=$this->_get('billCompany'); ?>" />
+					<b>Company : </b><?=$this->_get('billCompany'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="billAddress" value="<?=$this->_get('billAddress'); ?>" />
+					<b>Address : </b><?=$this->_get('billAddress'); ?>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clearfix orderDetailWrapper">
+		<ul class="cartItems cartItems_<?=$item->product_id;?>">
+			<li>Product title</li>
+			<li>quantity</li>
+			<li>price</li>
+			<li>total price</li>
+		</ul>
+		<? 
+			$shoppingCart = $this->_get('shoppingCart');
+			foreach ($shoppingCart->items as $item) {
+		?>
+			<ul class="cartItems cartItems_<?=$item->product_id;?>">
+				<li>
+					<?=$item->product_title; ?>
+				</li>
+				<li>
+					<?=$item->quantity; ?>
+				</li>
+				<li>
+					<?=$item->price;?>
+				</li>
+				<li>
+					<?=number_format(($item->quantity * $item->price),2); ?>
+				</li>
+			</ul>
+		<?	
+			}
+		?>	
+	</div>
+	<div class="clearfix">
+		<h5 class="numberOfItems fleft mRl">
+			TOTAL ITEM: <?=$shoppingCart->getNumberOfItems(true); ?>
+		</h5>
+		<h5>	
+			TOTAL PRICE: <?=number_format($shoppingCart->getTotalPrice(),2); ?>
+		</h5>
+	</div>
+		<? if(authorization::areWeLoggedIn()) : ?>
+		<div class="clearfix">
+			<div class="form_row">
+				<label class="bold" for="ShippingMethod">Ship Via:</label>
+				<select id="ShippingMethod" name="ShippingMethod">
+					<option value="Free Shipping">Free Shipping ($0.00)</option>
+					<option value="UPS Ground">UPS Ground ($18.00)</option>
+					<option value="UPS Hawaii / Canada / Alaska / Outside Continental US">UPS Hawaii / Canada / Alaska / Outside Continental US ($45.00)</option>
+					<option value="USPS Priority Mail">USPS Priority Mail ($65.00)</option>
+					<option value="UPS 2nd Day Air">UPS 2nd Day Air ($70.00)</option>
+					<option value="UPS 3 Day Select">UPS 3 Day Select ($35.00)</option>
+				</select>
+			</div>
+			<? else : ?>
+			<div class="clearfix">
+			<div class="form_row">
+				<label class="bold" for="ShippingMethod">Ship Via:</label>
+				<select id="ShippingMethod" name="ShippingMethod">
+					<option value="USPS Priority Mail">USPS Priority Mail ($65.00)</option>
+					<option value="UPS 2nd Day Air">UPS 2nd Day Air ($70.00)</option>
+				</select>
+			</div>
+			<? endif; ?>
+			<div class="form_row">
+				<label class="bold" for="PaymentMethod">Pay With:</label>
+				<select id="PaymentMethod" name="PaymentMethod">
+					<option value="American Express">American Express</option>
+					<option value="Diners Club">Diners Club</option>
+					<option value="Discover">Discover</option>
+					<option value="JCB">JCB</option>
+					<option value="MasterCard">MasterCard</option>
+					<option value="Visa">Visa</option>
+					<option value="PayPal">PayPal</option>
+				</select>
+			</div>	
+		</div>
+		<div class="cleartix">
+			<input type="submit" name="proceedToPaymentInfo" value="PROCEED TO PAYMENT INFO"/>
+		</div>
+	</form>		
+</div>

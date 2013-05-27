@@ -1,0 +1,37 @@
+<a href="<?=$_SERVER['REQUEST_URI']?>">Add Subcategory</a>
+<table style="width:30%; margin:30px 0px 0px 30px; border:1px solid black;">
+	<tr>
+		<td>Title </td>
+		<td><input type="text" name="title" value="Product 1"></td>
+	</tr>
+	<tr>
+		<td>Description </td> 
+		<td><input type="text" name="product_code" value="P001"></td>
+	</tr>
+</table>
+<a href="<?=$_SERVER['REQUEST_URI']?>">Save</a>
+
+
+<br/>
+<br />
+<br />
+Subcategory Listing
+<table style="width:30%; margin:30px 0px 0px 30px; border:1px solid black;">
+	<thead>
+		<tr>
+			<td>Title</td>
+			<td>Description</td>
+		</tr>
+	</thead>
+	<tbody>
+	<?php for($i = 1; $i < 5; $i++):?>
+		<tr>
+			<td>Subcategory <?=$i?></td>
+			<td>This is description <?=$i?></td>
+		</tr>
+	<?php endfor?>
+	</tbody>
+</table>
+<br/>
+
+

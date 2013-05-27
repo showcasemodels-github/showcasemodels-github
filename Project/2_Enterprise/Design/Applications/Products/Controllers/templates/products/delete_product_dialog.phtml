@@ -1,0 +1,11 @@
+<!--DELETE PRODUCT POP UP-->
+<div class="popUp_delete deleteArticle_popUp">
+	<span class="deleteText fc_starfish_gray8 fwB">Are you sure you want to <span class="fc_starfish_red">DELETE</span> this Product?</span>
+	<div id="button_container" class="clearfix">
+		<form method="POST" action="/products/product/delete/<?=$this->_get('product')->__get('product_id')?>">
+			<input name="product_type" type="hidden" value="<?=routes::getInstance()->getCurrentTopLevelPageID();?>">
+			<input class="yes fleft delete_subcategory_confirm pointer mTs" title="Delete this product" type="submit" name="delete_product" value=" ">
+			<span class="no fright keep_product pointer mTs" title="Keep this product"></span>
+		</form>
+	</div>
+</div>

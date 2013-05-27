@@ -1,0 +1,21 @@
+<div class="popupDialog product_dialog addArticle_popUp"> 
+<h3><img src="/Project/2_Enterprise/Design/Main_Layout/images/otherImages/plus.png" />Add a New Product</h3>
+	<div class="subCategory_entity">
+		<form method="POST" action="/products/product/add">
+			<div class="mBxl">
+				<strong>Product Title</strong><input class="validate[required,maxlength[45]] fright subCategory_entityTitle" type="text" name="title" maxlength="45">
+			</div>
+			<div class="mBxl">
+				<strong>URL</strong><input class="fright subCategory_entityDescription" type="text" name="product_url" disabled="disabled"/>
+			</div>
+			<div id="button_container" class="fright mRs mBs">
+				<input name="product_type" type="hidden" value="<?=routes::getInstance()->getCurrentTopLevelPageID();?>">
+				<input name="category_id" type="hidden" value="">
+				<input name="subcategory_id" type="hidden" value="">
+				<input type="submit" class="save fleft mRs mTs" name="add_product" value=" ">
+				<span class="mTs fleft pointer cancel" title="cancel"></span>
+			</div>
+		</form>
+	</div>
+</div>
+

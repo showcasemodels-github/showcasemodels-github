@@ -1,0 +1,59 @@
+<div class="cartTopLink clearfix">
+	<h5 class="fleft">SHOPPING CART</h5>
+</div>
+<div class="shoppingCartWrapper">
+	<? $shoppingCart = $this->_get('shopping_cart'); ?>
+	<? 	if (empty($shoppingCart->items)) { ?>
+		<h2>shopping cart is empty</h2>
+	<? } else { ?>
+	<form action = "/shop/checkout" method = "POST">
+		<? foreach ($shoppingCart->items as $item) { ?>
+			<div class="cartItems cartItems_<?=$item->product_id;?>">
+				<input type = "hidden" name = "product_id[]" value = '<?=$item->product_id ?>'>
+				<div class="fleft">
+					<?=$item->product_name; ?>
+					<input type = "hidden" name = "title[]" value = '<?=str_replace(' ', '-', $item->product_name)?>'>
+				</div>
+				<div class="productCartImage fleft" style="background-image:url('/Data/Images/<?=image::selectImageFullPath($item->product_id); ?>');"></div>
+				<div class="fleft">
+					QUANTITY: <?=$item->quantity ?>	
+				</div>
+				<div class="fleft mLm">
+					PRICE: <?=$item->price;?>
+					<input type = "hidden" name = "price[]" value = '<?=$item->price ?>'>
+				</div>
+				<div class="fleft mLm">
+					TOTAL PRICE: <?=number_format(($item->price * $item->quantity),2);?>
+					<input type = "hidden" name = "price[]" value = '<?=$item->price ?>'>
+				</div>
+				<div class="fleft mLm">
+					<span id = "<?=$item->product_id ?>" class="updateFromCart" style="cursor:pointer;">Update Quantity</span>
+				</div>
+				<div class="fleft mLm">
+					<span id = "<?=$item->product_id ?>" class="removeFromCart" style="cursor:pointer;">Remove From Cart</span>
+				</div>
+			</div><br>
+		<?	} ?>
+			<div class="clearfix">
+				
+				<h5 class="numberOfItems fleft mRl">
+					TOTAL ITEM: <?=$shoppingCart->getNumberOfItems(true); ?>
+				</h5>
+				<h5>	
+					TOTAL PRICE: <?=number_format($shoppingCart->getTotalPrice(),2); ?>
+					<input type = "hidden" name = "total" value = '<?=$shoppingCart->getTotalPrice() ?>'>
+				</h5>
+				
+				<h5 class="fright">
+					<input type = "submit" name = "tocheckout" value = "PROCEED TO CHECK OUT" />
+				</h5>
+			</div>
+	</form>
+	<? } ?>
+</div>
+
+
+
+
+
+			

@@ -1,0 +1,11 @@
+<!--DELETE PRODUCT POP UP-->
+<div class="popUp_delete deleteCategory_popUp deleteCategoryDialog">
+	<span class="deleteText fc_starfish_gray8 fwB">Are you sure you want to <span class="fc_starfish_red">DELETE</span> this Category?</span>
+	<div id="button_container" class="clearfix">
+		<form method="POST" action="/articles/category/delete/<?=$this->_get('category')->__get('category_id')?>">
+			<input id="category_id" type="hidden" value="">
+			<input class="yes fleft delete_subcategory_confirm pointer mTs" title="Delete this category" type="submit" name="delete_category" value=" ">
+			<span class="no fright keep_article pointer mTs closeDialog" title="Keep this category"></span>
+		</form>
+	</div>
+</div>

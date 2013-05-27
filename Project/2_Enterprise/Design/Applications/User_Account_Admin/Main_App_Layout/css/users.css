@@ -1,0 +1,84 @@
+#outer_wrapper{font-size: 12px;}
+
+/*		Sidebar		*/
+#users_sidebar{
+	font-size: 12px;
+}
+	input[name='date_started']{
+		float:left;
+		width:60px;
+	}
+	input[name='date_ended']{
+		float:right;
+		width:60px;
+	}
+	#users_sidebar select{
+		width: 150px;
+	}
+	
+.center{
+	text-align: center;
+}
+
+
+/*		Content Table		*/
+
+#content-header{
+	height: 20px;
+	width: 97%;
+	padding: 20px 0px;
+	}
+	#content-header label{font-size: 20px;}
+	input[value='DELETE']
+	{
+		float: right;
+	}
+th{
+		color:#BE1E2D;
+	}
+
+#registered_users table{
+	padding:0;
+	border-spacing: 0 !important;
+	}
+	#registered_users table tr{
+		height:30px;
+		}
+	#registered_users table tr:first-child{
+		background-image: linear-gradient(bottom, rgb(211,212,214) 17%, rgb(243,242,243) 64%);
+		background-image: -o-linear-gradient(bottom, rgb(211,212,214) 17%, rgb(243,242,243) 64%);
+		background-image: -moz-linear-gradient(bottom, rgb(211,212,214) 17%, rgb(243,242,243) 64%);
+		background-image: -webkit-linear-gradient(bottom, rgb(211,212,214) 17%, rgb(243,242,243) 64%);
+		background-image: -ms-linear-gradient(bottom, rgb(211,212,214) 17%, rgb(243,242,243) 64%);
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0.17, rgb(211,212,214)),
+			color-stop(0.64, rgb(243,242,243))
+		);
+		}
+		#registered_users table tr th:first-child,#registered_users table tr td:first-child
+			{
+			padding-left:15px;
+			text-align:left !important;
+			font-weight:bold;
+			}
+		#registered_users table tr th,#registered_users table tr td
+			{
+			text-align:center;
+			}
+		#registered_users table tr td
+			{
+			border-bottom:1px solid #ccc;
+			padding:0px 13px;
+			}
+		#registered_users th{
+			width: 110px;
+		}
+		#registered_users th:first-child{
+			width: 40px;
+		}
+		#registered_users th:nth-of-type(6){
+			width: 300px;
+		}

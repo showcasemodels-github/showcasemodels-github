@@ -1,0 +1,18 @@
+<div class="popupDialog product_dialog addSubCategoryDialog">
+<h3><img src="/Project/2_Enterprise/Design/Main_Layout/images/otherImages/plus.png" />Create New Subcategory</h3>
+	<div class="subCategory_entity">
+		<form method="POST" action="/articles/subcategory/add">
+			<div class="mBl">
+				<strong>Subcategory Title</strong><input class="validate[required,maxlength[45]] fright subCategory_entityTitle" type="text" name="title" maxlength="45">
+			</div>
+			<div>
+				<strong>Url</strong><input class="fright subCategory_entityDescription" name="subcategory_url" readonly="true"/>
+			</div>
+			<div id="button_container" class="fright mRs mTxl">
+				<input type="hidden" name="category_id" value="">
+				<input type="submit" class="save fleft mRs mTs" name="add_subcategory" value="">
+				<span class="cancel mTs fleft pointer closeDialog cancel" title="cancel"></span>
+			</div>
+		</form>
+	</div>
+</div>

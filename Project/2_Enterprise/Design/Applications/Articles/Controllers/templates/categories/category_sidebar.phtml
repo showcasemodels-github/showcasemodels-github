@@ -1,0 +1,19 @@
+<?if ($this->_get('category') != NULL):?>
+<div class="editable w100 pos_rel pBxs hAuto">
+		<textarea maxlength="45" class="expand30-150 mTs fs-xl fwB fc_starfish_gray9 productTitleEditor" name="title" placeholder="Place title here"><?=$this->_get('category')->__get('category_title')?></textarea>
+</div>
+<table class="fc_starfish_gray7 mTxl">
+	<tr class="fs-s">
+		<td><span class="fc_starfish_gray9 fwB">URL</span></td>
+	</tr>
+	<tr>
+		<td><input class="fc_starfish_gray3" type="text" name="category_url" value="<?=$this->_get('category')->__get('category_url')?>"></td>
+	</tr>
+	
+</table>
+
+<div class="fright sideBar_actionsContainer mTl">
+	<input class="saveChanges fleft" type="submit" name="edit_category" value=" ">
+	<span id="deleteCategory" class="delete pointer fright deleteCategory openDialog"></span>
+</div>
+<?endif;?>

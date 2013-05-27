@@ -1,0 +1,31 @@
+<table style="width:30%; margin:30px 0px 0px 30px; border:1px solid black;">
+	<tr>
+		<td>Title </td>
+		<td><input type="text" name="title" value="Product 1"></td>
+	</tr>
+	<tr>
+		<td>Product Code</td> 
+		<td><input type="text" name="product_code" value="P001"></td>
+	</tr>
+	<tr>
+		<td>Description</td> 
+		<td> <input type="text" name="description" value="This is a description"></td>
+	</tr>
+	<tr>
+		<td>Price</td> 
+		<td> <input type="text" name="price" value="$100.00"></td>
+	</tr>
+	<tr>
+		<td>Category</td> 
+		<td>
+			<select>
+				<option>Category 1</option>
+				<option>Category 2</option>
+				<option>Category 3</option>
+				<option>Category 4</option>
+			</select>
+		</td>
+	</tr>
+</table>
+<br/>
+<a href="<?=$_SERVER['REQUEST_URI']?>">Save</a>

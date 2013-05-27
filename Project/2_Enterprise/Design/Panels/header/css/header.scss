@@ -1,0 +1,53 @@
+/************************************** HEADER **************************************/
+@import 'C:/WORKSPACE/starfish/Project/2_Enterprise/Design/Main_Layout/css/global';
+
+  #header {
+    #welcome_section{
+      margin:20px auto;
+      span{
+        display:inline-block;
+      }
+      a{
+        color:white;
+      }
+    }
+    #navigation{
+      padding:4px;
+      border-radius:4px;
+      @include background(100%,64px,$navBackground,repeat);
+      #slider_container{
+        #primary_nav{
+          margin:0;
+          padding:0;
+          border-radius:8px;
+          overflow:hidden;
+          @include background(100%,56px,$navUlBackground,repeat);
+          li{
+            @include sprite(114px, 100%, -997px, -82px,'no-hover');
+            text-align:center;
+            margin-left:1px;
+            float: left;
+            &:active,&.active{
+              background-position: -883px -82px;
+              a{
+                color:#4E4E4E;
+              }
+            }
+            &.last{
+              margin-right:1px;
+            }
+            a{
+              text-decoration:none;
+              padding:19px 0;
+              float: left;
+              color:white;
+              font-size:12px;
+              font-weight:bold;
+              width: 116px;
+              overflow:hidden;
+            }
+          }
+        }
+      }
+    }
+  }

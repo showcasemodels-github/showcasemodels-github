@@ -1,0 +1,100 @@
+<!-- ******************************		NOTES    ***************************** -->
+<!-- Navigational links are grouped together into how they will be grouped together on the page							--> 
+<!-- Primary Navigation are the most important links of the website 													-->
+<!-- if you dont want the home page link on the primary navigation because its the logo then put it in the SXXDD 		-->
+
+<!-- *******************************	OPTIONS   ****************************************************-->
+<!-- default ="true display default page for website-->
+<!-- language ="en" -->
+<!-- frontend ="hide" if set to page - folder is not required in Design-->
+<!-- cms ="hide" hide page from CMS side navigation-->
+<!-- xml ="default" display default xml page for CMS-->
+<!-- **************************************************************************************************-->
+<pages>
+	<!-- PRIMARY -->
+	<navigation_group>
+		<navigation_group_id>primary</navigation_group_id>
+		<page xml ="default" default="true">
+				<page_id>home</page_id>
+				<url_name>home</url_name>
+				<link_title>HOME</link_title>
+				<link_text>HOME</link_text>
+		</page>
+		<!--
+				<page>
+					<page_id>military</page_id>
+					<url_name>military</url_name>
+					<link_title>Military</link_title>
+					<link_text>Military</link_text>
+				</page>	
+				<page>
+					<page_id>private</page_id>
+					<url_name>private</url_name>
+					<link_title>Private</link_title>
+					<link_text>Private</link_text>
+				</page>	
+				<page>
+					<page_id>airlines</page_id>
+					<url_name>airlines</url_name>
+					<link_title>Airlines</link_title>
+					<link_text>Airlines</link_text>
+				</page>
+				<page>
+					<page_id>nasa</page_id>
+					<url_name>nasa</url_name>
+					<link_title>NASA</link_title>
+					<link_text>NASA</link_text>
+				</page>
+				<page>
+					<page_id>maritime</page_id>
+					<url_name>maritime</url_name>
+					<link_title>Maritime</link_title>
+					<link_text>Maritime</link_text>
+				</page>
+		-->
+		<page>
+			<page_id>products</page_id>
+			<url_name>products</url_name>
+			<link_title>Products</link_title>
+			<link_text>Products</link_text>
+		</page>	
+	</navigation_group>
+	<!-- SECONDARY -->
+	<navigation_group>
+		<navigation_group_id>secondary</navigation_group_id>
+		<page>
+			<page_id>about_us</page_id>
+			<url_name>about-us</url_name>
+			<link_title>About Us</link_title>
+			<link_text>About Us</link_text>
+		</page>		
+		<page>
+			<page_id>help</page_id>
+			<url_name>help</url_name>
+			<link_title>Help</link_title>
+			<link_text>Help</link_text>
+		</page>
+	</navigation_group>
+	<!-- TERTIARY -->
+	<navigation_group>
+		<navigation_group_id>tertiary</navigation_group_id>
+		<page>
+			<page_id>help</page_id>
+			<url_name>help</url_name>
+			<link_title>Help</link_title>
+			<link_text>Help</link_text>
+		</page>
+		<page>
+			<page_id>privacy_policy</page_id>
+			<url_name>privacy-policy</url_name>
+			<link_title>Privacy Policy</link_title>
+			<link_text>Privacy Policy</link_text>
+		</page>		
+		<page>
+			<page_id>site_index</page_id>
+			<url_name>site-index</url_name>
+			<link_title>Site Index</link_title>
+			<link_text>Site Index</link_text>
+		</page>		
+	</navigation_group>
+</pages>

@@ -1,0 +1,11 @@
+<!--DELETE PRODUCT POP UP-->
+<div class="popUp_delete deleteArticle_popUp deleteArticleDialog">
+	<span class="deleteText fc_starfish_gray8 fwB">Are you sure you want to <span class="fc_starfish_red">DELETE</span> this Article?</span>
+	<div id="button_container" class="clearfix">
+		<form method="POST" action="/articles/article/delete/<?=$this->_get('article')->__get('article_id')?>">
+			<input name="article_type" type="hidden" value="<?=routes::getInstance()->getCurrentTopLevelPageID();?>">
+			<input class="yes fleft delete_subcategory_confirm pointer mTs" title="Delete this article" type="submit" name="delete_article" value=" ">
+			<span class="no fright keep_article pointer mTs closeDialog" title="Keep this article"></span>
+		</form>
+	</div>
+</div>

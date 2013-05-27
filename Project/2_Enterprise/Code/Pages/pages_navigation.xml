@@ -1,0 +1,44 @@
+<pages>
+<!-- ******************************		ENTERPRISE Primary Navigation    ***************************** -->
+	<navigation_group>
+		<navigation_group_id>primary</navigation_group_id>
+		
+		<!-- ***************************************************************************************** -->
+		<page  default="true">
+				<page_id>image_library</page_id>
+				<url_name>image_library</url_name>
+				<link_title>Manage the images that are used in your website</link_title>
+				<link_text>Photo Library</link_text>
+		</page>
+		<!-- ***************************************************************************************** -->
+		<page>
+				<page_id>cms</page_id>
+				<url_name>cms</url_name>
+				<link_title>Edit the content of your static pages</link_title>
+				<link_text>Content Manager</link_text>
+		</page>
+		<!-- ***************************************************************************************** -->
+		<page>
+				<page_id>articles</page_id>
+				<url_name>articles</url_name>
+				<link_title>Manage and organize your articles</link_title>
+				<link_text>Articles</link_text>
+		</page>
+		<!-- ***************************************************************************************** -->
+		<page>
+				<page_id>products</page_id>
+				<url_name>products</url_name>
+				<link_title>Manage and organize your products</link_title>
+				<link_text>Products</link_text>
+		</page>
+		<!-- ***************************************************************************************** -->
+		<page>
+                <page_id>settings</page_id>
+                <url_name>settings</url_name>
+                <link_title>Edit settings</link_title>
+                <link_text>Settings</link_text>
+        </page>
+        <!-- ***************************************************************************************** -->
+	</navigation_group>
+	
+</pages>

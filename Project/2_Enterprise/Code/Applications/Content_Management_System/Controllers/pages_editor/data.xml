@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<data>
+	<metadata>
+		<page_title_element>Lucerne Luxe - Breitling Jet Team</page_title_element>
+		<meta_title>The Breitling Jet Team</meta_title>
+		<meta_keywords>breitling, the breitling team,swiss watch,aerial display</meta_keywords>
+		<meta_description>As exclusive distributors of the Swiss watch brand (Breitling) in the Philippines, Lucerne soars high in aviation history by treating the Filipino audience to an awe-inspiring aerial display from the world-renowned Breitling Jet Team.</meta_description>
+	</metadata>
+	
+	<homepage>
+		<content_left>
+			<heading>THE BREITLING JET TEAM</heading>
+			<paragraph_1>As exclusive distributors of the Swiss watch brand (Breitling) in the Philippines, Lucerne soars high in aviation history by treating the Filipino audience to an awe-inspiring aerial display from the world-renowned Breitling Jet Team.</paragraph_1>
+			<paragraph_2><![CDATA[The Breitling Jet Team, comprising over 15 technicians and staff along with 8 seasoned pilots with an accumulated 50,000 hours of flight experience create aviation history as the first civilian jet team to perform an aerial display in the Philippines.<br><br>Joining the celebration of everything that flies, The Breitling Jet Team lands in high-style for the 18th Philippine International Air Balloon Fiesta at the Omni Aviation Grounds, Clark Freeport Zone. The world's largest professional civilian jet team will showcase their breathtaking aerobatics on February 21-24 marking the country as the first stop of their South East Asian tour.]]></paragraph_2>
+		</content_left>
+		
+		<content_right>
+			<gallery>
+				<images>
+					<image><filename>gallery-large-image-home.jpg</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>Tokunaga-Breitling-SA-3-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>Tokunaga-Breitling-SA-1-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>Tokunaga-Breitling-SA-2-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>Tokunaga-Breitling-SA-6-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>Tokunaga-Breitling-SA-7-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>-Breitling-SA-5jpg-home-5ac43759e779e1e77455.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>-Breitling-SA-Athens-1-home-f512b4f0ce233db6222f.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>--Breitling-SA-bww--bjt-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>-Breitling-SA-Turkey-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>-Breitling-SA-A380-2-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>reitling-(Prague-5)-copy-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>-Breitling-SA-Jordan-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>-Breitling-SA-Jordan-2-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>-Breitling-SA-Israel-1-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>-Breitling-SA-Israel-2-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>Breitling-SA-5-sm-home-8e7cd7b9cb48344c913b.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>reitling-(Prague-3)-copy-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>-Breitling-SA-Israel-3-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>-Breitling-SA-Lebanon-1-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>-Breitling-SA-Jordan-1-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>-Breitling-SA-Jordan-3-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>-Breitling-SA-A380-1-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>-Breitling-SA-Lebanon-2-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>ecinski-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>-Breitling-SA-4-home-c228f23f92327581ff80.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>-Breitling-SA-Turkey-home.png</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+					<image><filename>gallery-large-image-home.jpg</filename><group>image gallery_group</group><image_alt>fill_this</image_alt></image>
+				</images>
+				<videos>
+					<video>
+						<image><filename>video-preview-1-home.png</filename><group>video image previews_group</group><image_alt>fill_this</image_alt></image>
+						<video_source>http://player.vimeo.com/video/57140545</video_source>
+					</video>
+					<video>
+						<image><filename>video-preview-3-home.png</filename><group>video image previews_group</group><image_alt>fill_this</image_alt></image>
+						<video_source>https://www.facebook.com/video/embed?video_id=10151238483533215</video_source>
+					</video>
+				</videos>
+			</gallery>
+			<flights>
+				<flight_schedules>
+					<schedule_1><![CDATA[FEBRUARY 21 THURSDAY<br>8:30AM]]></schedule_1>
+					<schedule_2><![CDATA[FEBRUARY 23 SATURDAY<br>8:30AM]]></schedule_2>
+					<schedule_3><![CDATA[FEBRUARY 24 SUNDAY<br>8:30AM]]></schedule_3>
+				</flight_schedules>
+				<flight_location><![CDATA[18TH PHILIPPINE<br>INTERNATIONAL HOT AIR<br>BALLOON FIESTA, OMNI AVIATION GROUNDS, CLARK<br>FREEPORT ZONE]]></flight_location>
+			</flights>
+		</content_right>
+	</homepage>
+	<map>
+		<image><filename>map-home.jpg</filename><group>map_group</group><image_alt>fill_this</image_alt></image>
+	</map>
+</data>

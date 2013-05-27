@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html>
+<head>
+	<?=metaData::getInstance()->getMetaData(); ?>
+		||global_css||
+		||global_javascript_top||
+		||local_css||	
+		
+		<script type="text/javascript">
+			||local_javascript_top||
+		</script>
+		
+</head>
+<body <?=$this->getIdForPage(); ?>>
+
+		<div id="wrapper" class="clearfix">
+			%%HEADER_CONTENT%%
+			
+			<div id="<?=routes::getInstance()->getCurrentTopLevelPageID()?>_container" class="clearfix">
+				%%MAIN_CONTENT%%
+			</div>
+			
+			%%FOOTER_CONTENT%%
+		</div>
+	
+		
+		||dialogues||
+		||global_javascript_bottom||
+		
+		<!--Myk placed this here because for some reason some JavaScripts don't behave properly when cached -->
+		%%JAVASCRIPTS%%
+		
+		<script type="text/javascript">
+			||local_javascript_bottom||
+		</script>
+</body>
+</html>

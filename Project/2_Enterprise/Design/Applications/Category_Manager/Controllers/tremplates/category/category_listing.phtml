@@ -1,0 +1,22 @@
+<table style="width:70%; margin:30px 0px 0px 30px; border:1px solid black;">
+	<thead>
+		<tr>
+			<td>Title</td>
+			<td>Description</td>
+			<td>No of Products</td>
+			<td>Action</td>
+		</tr>
+	</thead>
+
+<?$i=1;?>	
+	<tbody>
+	<?for($i = 1; $i<5; $i++):?>
+		<tr>
+			<td>Category <?=$i?></td>
+			<td>This is description <?=$i?></td>
+			<td><?=$i?></td>
+			<td><a href="/category-manager/category/edit?category_id=<?=$i?>">edit</a></td>
+		</tr>
+	<?endfor?>
+	</tbody>
+</table>

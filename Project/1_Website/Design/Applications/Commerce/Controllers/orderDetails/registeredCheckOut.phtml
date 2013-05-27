@@ -1,0 +1,158 @@
+<div class="checkOutWrapper">
+	<h5>Order Details</h5>
+	<div class="clearfix orderDetailWrapper">
+		<ul>
+			<li>Product title</li>
+			<li>quantity</li>
+			<li>price</li>
+			<li>total price</li>
+		</ul>
+		<? $shoppingCart = $this->_get('shopping_cart'); 
+			foreach ($shoppingCart->items as $item) { ?>
+			<ul class="cartItems cartItems_<?=$item->product_id;?>">
+				<li>
+					<?=$item->product_title; ?>
+				</li>
+				<li>
+					<?=$item->quantity; ?>
+				</li>
+				<li>
+					<?=$item->price;?>
+				</li>
+				<li>
+					<?=number_format(($item->quantity * $item->price),2); ?>
+				</li>
+			</ul>
+		<?	
+			}
+		?>	
+	</div>
+	<div class="clearfix">
+		<h5 class="numberOfItems fleft mRl">
+			TOTAL ITEM: <?=$shoppingCart->getNumberOfItems(true); ?>
+		</h5>
+		<h5>	
+			TOTAL PRICE: <?=$shoppingCart->getTotalPrice(); ?>
+		</h5>
+	</div>
+	
+	<form class="shipToBillTo" method="POST" action="/shop/shipping-payment-selection">
+	<div class="clearfix shipToBillToWrapper"><!-- SHIP TO -->
+		<div class="shipTo fleft">
+			<div class="form_row">
+				<label class="required" for="ShipFirstName">First Name:</label>
+				<input id="ShipFirstName" class="textfield" type="text" value="<?=$this->_get('firstname'); ?>" name="ShipFirstName">
+			</div>
+			<div class="form_row">
+				<label class="required" for="ShipLastName">Last Name:</label>
+				<input id="ShipLastName" class="textfield" type="text" value="<?=$this->_get('lastname'); ?>" name="ShipLastName">
+			</div>
+			<div class="form_row invalid">
+				<label class="required" for="ShipEmail">Email Address:</label>
+				<input id="ShipEmail" class="textfield" type="text" value="<?=$this->_get('email'); ?>" name="ShipEmail">
+			</div>
+			<div class="form_row invalid">
+				<label class="required" for="ShipPhone">Phone Number:</label>
+				<input id="ShipPhone" class="textfield" type="text" value="<?=$this->_get('phone'); ?>" name="ShipPhone">
+			</div>
+			<div class="form_row">
+				<label class="italic" for="ShipFax">Fax Number:</label>
+				<input id="ShipFax" class="textfield" type="text" value="<?=$this->_get('fax'); ?>" name="ShipFax">
+			</div>
+			<div class="form_row">
+				<label class="italic" for="ShipCompany">Company:</label>
+				<input id="ShipCompany" class="textfield" type="text" value="<?=$this->_get('company'); ?>" name="ShipCompany">
+			</div>
+			<div class="form_row">
+				<label class="required" for="ShipAddress1">Address:</label>
+				<input id="ShipAddress1" class="textfield" type="text" value="<?=$this->_get('address'); ?>" name="ShipAddress1">
+			</div>
+			<div class="form_row">
+				<label class="italic" for="ShipAddress2">Address 2:</label>
+				<input id="ShipAddress2" class="textfield" type="text" value="<?=$this->_get('address_2'); ?>" name="ShipAddress2">
+			</div>
+			<div class="form_row">
+				<label class="required" for="ShipCity">City:</label>
+				<input id="ShipCity" class="textfield" type="text" value="<?=$this->_get('city'); ?>" name="ShipCity">
+			</div>
+			<div class="form_row">
+				<label class="required" for="ShipStateSelect">State/Province:</label>
+				<select id="ShipStateSelect" name="ShipStateSelect">
+				</select>
+			</div>
+			<div class="form_row">
+				<label class="italic" for="ShipState">Other State/Province:</label>
+				<input id="ShipState" class="textfield" type="text" value="" name="ShipState">
+			</div>
+			<div class="form_row">
+				<label class="required" for="ShipZip">Zip/Postal Code:</label>
+				<input id="ShipZip" class="textfield" type="text" value="<?=$this->_get('zipcode'); ?>" name="ShipZip">
+			</div>
+			<div class="form_row">
+				<label class="required" for="ShipCountry">Country:</label>
+				<select id="ShipCountry" name="ShipCountry">
+				</select>
+			</div>		
+		</div><!-- BILL TO -->
+		<div class="billTo fright">
+			<div class="form_row">
+				<label class="required" for="BillFirstName">First Name:</label>
+				<input id="BillFirstName" class="textfield" type="text" value="<?=$this->_get('firstname'); ?>" name="BillFirstName">
+			</div>
+			<div class="form_row">
+				<label class="required" for="BillLastName">Last Name:</label>
+				<input id="BillLastName" class="textfield" type="text" value="<?=$this->_get('lastname'); ?>" name="BillLastName">
+			</div>
+			<div class="form_row">
+				<label class="required" for="BillEmail">Email Address:</label>
+				<input id="BillEmail" class="textfield" type="text" value="<?=$this->_get('email'); ?>" name="BillEmail">
+			</div>
+			<div class="form_row">
+				<label class="required" for="BillPhone">Phone Number:</label>
+				<input id="BillPhone" class="textfield" type="text" value="<?=$this->_get('phone'); ?>" name="BillPhone">
+			</div>
+			<div class="form_row">
+				<label class="italic" for="BillFax">Fax Number:</label>
+				<input id="BillFax" class="textfield" type="text" value="<?=$this->_get('fax'); ?>" name="BillFax">
+			</div>
+			<div class="form_row">
+				<label class="italic" for="BillCompany">Company:</label>
+				<input id="BillCompany" class="textfield" type="text" value="<?=$this->_get('company'); ?>" name="BillCompany">
+			</div>
+			<div class="form_row">
+				<label class="required" for="BillAddress1">Address:</label>
+				<input id="BillAddress1" class="textfield" type="text" value="<?=$this->_get('address'); ?>" name="BillAddress1">
+			</div>
+			<div class="form_row">
+				<label class="italic" for="BillAddress2">Address 2:</label>
+				<input id="BillAddress2" class="textfield" type="text" value="<?=$this->_get('address_2'); ?>" name="BillAddress2">
+			</div>
+			<div class="form_row">
+				<label class="required" for="BillCity">City:</label>
+				<input id="BillCity" class="textfield" type="text" value="<?=$this->_get('city'); ?>" name="BillCity">
+			</div>
+			<div class="form_row">
+				<label class="required" for="BillStateSelect">State/Province:</label>
+				<select id="BillStateSelect" name="BillStateSelect">
+				</select>
+			</div>
+			<div class="form_row">
+				<label class="italic" for="BillState">Other State/Province:</label>
+				<input id="BillState" class="textfield" type="text" value="" name="BillState">
+			</div>
+			<div class="form_row">
+				<label class="required" for="BillZip">Zip/Postal Code:</label>
+				<input id="BillZip" class="textfield" type="text" value="<?=$this->_get('zipcode'); ?>" name="BillZip">
+			</div>
+			<div class="form_row">
+				<label class="required" for="BillCountry">Country:</label>
+				<select id="BillCountry" name="BillCountry">
+				</select>
+			</div>		
+		</div>
+	</div>
+	<div class="clearfix">
+		<input type="submit" name="proceedToShippingPayment" class="fright" value="PROCEED TO SHIPPING/PAYMENT SELECTION"/>
+	</div>	
+	</form>
+</div>

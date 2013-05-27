@@ -1,0 +1,127 @@
+<div class="shipPaySelectionWrapper">
+	
+	<form action="" class="shipPaySelection">
+		<div class="clearfix mVl">
+			<div class="fleft">
+				<h5 class="mBm">ship to</h5>
+				<div>
+					<input type="hidden" name="name" value="<?=$this->_get('shipFullName'); ?>"/>
+					<b>Name : </b> <?=$this->_get('shipFullName'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="shipEmail" value="<?=$this->_get('shipEmail'); ?>"/>
+					<b>Email : </b><?=$this->_get('shipEmail'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="shipPhone" value="<?=$this->_get('shipPhone'); ?>" />
+					<b>Phone number : </b><?=$this->_get('shipPhone'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="shipFax" value="<?=$this->_get('shipFax'); ?>" />
+					<b>Fax number : </b><?=$this->_get('shipFax'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="shipCompany" value="<?=$this->_get('shipCompany'); ?>" />
+					<b>Company : </b><?=$this->_get('shipCompany'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="shipAddress" value="<?=$this->_get('shipAddress'); ?>" />
+					<b>Address : </b><?=$this->_get('shipAddress'); ?>
+				</div>
+			</div>
+			<div class="fright">
+				<h5 class="mBm">bill to</h5>
+				<div>
+					<input type="hidden" name="name" value="<?=$this->_get('billFullName'); ?>"/>
+					<b>Name : </b> <?=$this->_get('billFullName'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="billEmail" value="<?=$this->_get('billEmail'); ?>"/>
+					<b>Email : </b><?=$this->_get('billEmail'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="billPhone" value="<?=$this->_get('billPhone'); ?>" />
+					<b>Phone number : </b><?=$this->_get('billPhone'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="billFax" value="<?=$this->_get('billFax'); ?>" />
+					<b>Fax number : </b><?=$this->_get('billFax'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="billCompany" value="<?=$this->_get('billCompany'); ?>" />
+					<b>Company : </b><?=$this->_get('billCompany'); ?>
+				</div>
+				<div>
+					<input type="hidden" name="billAddress" value="<?=$this->_get('billAddress'); ?>" />
+					<b>Address : </b><?=$this->_get('billAddress'); ?>
+				</div>
+			</div>
+		</div>
+		
+		<h5>PAYMENT INFORMATION</h5>
+		<div class="clearfix orderDetailWrapper">
+			<ul class="cartItems cartItems_<?=$item->product_id;?>">
+				<li>Product title</li>
+				<li>quantity</li>
+				<li>price</li>
+				<li>total price</li>
+			</ul>
+			<? $total = ''; ?>
+			<? $shoppingCart = $this->_get('shoppingCart'); ?>
+			<? foreach ($shoppingCart->items as $item) { ?>
+				<ul class="cartItems cartItems_<?=$item->product_id;?>">
+					<li>
+						<?=$item->product_title; ?>
+					</li>
+					<li>
+						<?=$item->quantity; ?>
+					</li>
+					<li>
+						<?=$item->price;?>
+					</li>
+					<li>
+						<?=number_format(($item->price * $item->quantity),2) ?>
+					</li>
+					<? $total += $item->price * $item->quantity ?>
+				</ul>
+			<?	
+				}
+			?>
+				<ul class="cartItems cartItems_<?=$item->product_id;?>">
+					<li></li>
+					<li></li>
+					<li><?=$this->_get('shipping_method') ?>:</li>
+					<li><?=$this->_get('shippingCost') ?></li>
+				</ul class="cartItems cartItems_<?=$item->product_id;?>">	
+				<ul class="cartItems cartItems_<?=$item->product_id;?>">
+					<li></li>
+					<li></li>
+					<li>Sales Tax:</li>
+					<li>haha</li>
+				</ul>
+
+		</div>
+		<div class="clearfix">
+			<h5 class="numberOfItems fleft mRl">
+				TOTAL ITEM: <?=$shoppingCart->getNumberOfItems(true); ?>
+			</h5>
+			<h5>	
+				TOTAL PRICE: <?=number_format($shoppingCart->getTotalPrice(),2); ?>
+			</h5>
+		</div>
+		
+		<div class="clearfix">
+			<div class="form_row">
+				<h5>Payment Method: <?=$this->_get('payment_method') ?></h5>
+				First Name on Card: <input type = 'text' name = 'firstname'><br />
+				Last Name on Card: <input type = 'text' name = 'lastname'><br />
+				Card Number: <input type = 'text' name = 'cardnumber'><br />
+				Expiration Date: <input type = 'text' name = 'firstname'><br /> 
+				CVV2: <input type = 'text' name = 'firstname'> (This is a 3 or 4 digit number displayed on the front or back of your credit card)<br />
+			</div>	
+		</div>
+		<div class="cleartix">
+			<input type="submit" name="" value="CONTINUE"/>
+		</div>
+	</form>		
+</div>

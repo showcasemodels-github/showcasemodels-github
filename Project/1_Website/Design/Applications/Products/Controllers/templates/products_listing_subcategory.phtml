@@ -1,0 +1,30 @@
+<div class="productsMainWrapper mAuto">
+	<div class="categoryDetailes clearfix">
+		<h1>Subcategories</h1>
+		<p>These are selection of models of military planes and helicopters throughout the ages</p>
+	</div>
+	
+	<div class="bannerWrapper">
+		<img src="/Project/1_Website/Design/Applications/Products/Controllers/images/banner-for-products.png" alt=""/>
+	</div>	
+	
+	
+	<div class="productListWrapper">
+		<h3>Featured Military Products</h3>
+		<ul>
+			<?foreach($this->_get('array_of_products') as $product) :  ?>
+				<li>
+					<a href="/<?=$product->__get('permalink'); ?>" class="productImage" style="background-image:url('/Data/Images/<?=$product->__get('image_path'); ?>');"></a>
+					<h4 class="align_c"><?=$product->__get('product_title'); ?></h4>
+					<div class="clearfix productPrice align_c posRel">
+						<span class="fontColorRed"><?=$product->__get('product_price'); ?></span>
+						<span class="priceButtonImg show fright posAbs"></span>
+					</div>
+				</li>
+			<? endforeach; ?>
+			<li class="viewMoreProducts">
+				<a href="/">View more Featured Products</a>
+			</li>
+		</ul>
+	</div>
+</div>

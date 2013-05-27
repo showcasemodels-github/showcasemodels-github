@@ -1,0 +1,39 @@
+<!-- outer wrapper start-->
+<div id="outer_wrapper" class="clearfix posRel">
+<div id="photo_chooser"></div>
+
+	<!-- left hand nav -->
+	<div id="leftColumn" class="fleft"> 
+	%%APPLICATION_LEFT_COLUMN%%
+	<!-- left hand nav end -->
+	</div> 
+	
+	<!-- content column start -->
+	<div id="contentColumn" class="fright">
+		<form method="POST">
+			<div id="applicationContent" class="clearfix noPadding">
+				%%APPLICATION_CONTENT%%
+			
+				<div id="applicationSideBar" class="fright pBl pTl">
+					%%APPLICATION_SIDEBAR%%
+				</div>
+			</div>
+		</form>
+		
+		<?if(applicationsRoutes::getInstance()->getCurrentControllerID() == 'category'):?>
+			%%DELETE_CATEGORY_DIALOG%%
+			
+		<?elseif(applicationsRoutes::getInstance()->getCurrentControllerID() == 'subcategory'):?>
+			%%DELETE_SUBCATEGORY_DIALOG%%
+			
+		<?elseif(applicationsRoutes::getInstance()->getCurrentControllerID() == 'article'):?>
+			%%DELETE_ARTICLE_DIALOG%%
+			
+		<?endif;?>
+	<!-- content column end -->
+	</div>
+	
+</div>
+<!-- outer wrapper end-->
+%%ADD_CATEGORY_DIALOG%%%%ADD_SUBCATEGORY_DIALOG%%%%ADD_ARTICLE_DIALOG%%%%ELEMENTS_DEFAULT_TEMPLATE%%
+<div class="transparent_background hide"></div>

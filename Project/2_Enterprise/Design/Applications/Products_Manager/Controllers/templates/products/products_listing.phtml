@@ -1,0 +1,41 @@
+<table style="width:90%; margin:30px 0px 0px 30px; border:1px solid black;">
+	<thead>
+		<tr>
+			<td>Title</td>
+			<td>Product Code</td>
+			<td>Description</td>
+			<td>Price</td>
+			<td>Category</td>
+			<td>Action</td>
+		</tr>
+		<tr>
+			<td><input type="text" name="filter_title"/></td>
+			<td><input type="text" name="filter_product_code" /></td>
+			<td><input type="text" name="filter_description" /></td>
+			<td><input type="text" name="price" /></td>
+			<td>
+				<select>
+					<option>Category 1</option>
+					<option>Category 2</option>
+					<option>Category 3</option>
+					<option>Category 4</option>
+				</select>
+			</td>
+			<td></td>
+		</tr>
+	</thead>
+
+<?$i=1;?>	
+	<tbody>
+	<?for($i = 1; $i<5; $i++):?>
+		<tr>
+			<td>Product <?=$i?></td>
+			<td>P00<?=$i?></td>
+			<td>Description<?=$i?></td>
+			<td><?=$i?>00</td>
+			<td>Category <?=$i?></td>
+			<td><a href="/products-manager/product/edit?product_id=<?=$i?>">edit</a></td>
+		</tr>
+	<?endfor?>
+	</tbody>
+</table>

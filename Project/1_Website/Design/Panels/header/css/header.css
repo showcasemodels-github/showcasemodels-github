@@ -1,0 +1,153 @@
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+header {
+  height: 185px;
+  width: 100%;
+  padding-top: 50px;
+  clear: both;
+  margin: 0 auto 35px auto; }
+  header .headerInnerWrapper {
+    height: 100%;
+    width: 1060px;
+    position: relative; }
+  header a.showCaseLogo {
+    width: 394px;
+    height: 73px;
+    background-image: url("/Project/1_Website/Design/Main_Layout/images/logo-show-case-model.png"); }
+  header .rightNavs {
+    position: relative;
+    width: 435px;
+    top: -15px; }
+    header .rightNavs a {
+      float: left;
+      color: #000;
+      font-weight: bold;
+      font-size: 1.4em; }
+    header .rightNavs .secondaryNavWrapper {
+      margin-bottom: 15px;
+      color: #000; }
+      header .rightNavs .secondaryNavWrapper ul#secondary_nav li {
+        float: left; }
+        header .rightNavs .secondaryNavWrapper ul#secondary_nav li a {
+          padding-right: 15px; }
+      header .rightNavs .secondaryNavWrapper span.contactNumber {
+        top: -6px;
+        font-size: 2.3em;
+        font-weight: bold;
+        color: #58585B; }
+    header .rightNavs div.loginRegisterWrapper {
+      border-radius: 5px 5px 5px 5px;
+      height: auto;
+      overflow: auto;
+      background-color: #E8E9EA; }
+      header .rightNavs div.loginRegisterWrapper ul li {
+        float: left;
+        padding-top: 11px;
+        height: 40px;
+        border-right: 1px solid white; }
+        header .rightNavs div.loginRegisterWrapper ul li a {
+          padding-left: 15px;
+          padding-right: 15px; }
+      header .rightNavs div.loginRegisterWrapper ul li.shoppingCartLink {
+        width: 130px;
+        cursor: pointer; }
+        header .rightNavs div.loginRegisterWrapper ul li.shoppingCartLink span.cartItemQuantity {
+          background-image: url("/Project/1_Website/Design/Main_Layout/images/shop-cart-icon.png");
+          font-size: 1.5em;
+          height: 27px;
+          padding-left: 34px;
+          padding-top: 4px;
+          position: relative;
+          right: 10px;
+          top: -4px;
+          width: 60px; }
+      header .rightNavs div.loginRegisterWrapper a.placeOrder {
+        height: 30px;
+        margin-left: 18px;
+        margin-top: 5px;
+        width: 135px; }
+  header .primaryNavWrapper {
+    position: absolute;
+    bottom: 0;
+    background-color: #E8E9EA;
+    height: 41px;
+    width: 100%; }
+    header .primaryNavWrapper ul#primary_nav {
+      float: left; }
+      header .primaryNavWrapper ul#primary_nav li {
+        height: 41px;
+        float: left;
+        padding-top: 12px;
+        border-right: 1px solid white; }
+        header .primaryNavWrapper ul#primary_nav li a {
+          color: #204497;
+          font-size: 2.0em;
+          font-weight: bold;
+          padding-left: 25px;
+          padding-right: 25px; }
+      header .primaryNavWrapper ul#primary_nav li#products {
+        display: none; }
+    header .primaryNavWrapper form.searchForm {
+      width: 295px;
+      height: 30px;
+      position: relative;
+      top: 5px;
+      right: 5px; }
+      header .primaryNavWrapper form.searchForm input[type="text"] {
+        width: 280px;
+        height: 30px; }
+      header .primaryNavWrapper form.searchForm input[type="submit"] {
+        width: 72px;
+        height: 30px;
+        top: 0;
+        right: 0; }
+  header .productNavigationWrapper {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 370px;
+    background-color: #204497;
+    z-index: 3; }
+    header .productNavigationWrapper .productNavigation {
+      height: 370px;
+      width: 1060px;
+      position: relative; }
+      header .productNavigationWrapper .productNavigation .categoryWrapper {
+        width: 1060px;
+        height: 230px;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        border-bottom: 1px solid white; }
+        header .productNavigationWrapper .productNavigation .categoryWrapper .subCategoryTable {
+          width: 100%;
+          height: 100%; }
+          header .productNavigationWrapper .productNavigation .categoryWrapper .subCategoryTable td {
+            padding: 40px 0 35px 20px; }
+            header .productNavigationWrapper .productNavigation .categoryWrapper .subCategoryTable td ul li {
+              margin-bottom: 20px; }
+              header .productNavigationWrapper .productNavigation .categoryWrapper .subCategoryTable td ul li a {
+                color: #fff;
+                font-size: 1.8em;
+                font-family: 'AvenirLTStd-Roman'; }
+      header .productNavigationWrapper .productNavigation .active {
+        z-index: 5; }
+      header .productNavigationWrapper .productNavigation .headerBottomLinks {
+        position: absolute;
+        bottom: 0;
+        height: 115px;
+        width: 100%;
+        color: #fff; }
+        header .productNavigationWrapper .productNavigation .headerBottomLinks div {
+          margin-top: 24px; }
+        header .productNavigationWrapper .productNavigation .headerBottomLinks p {
+          font-size: 1.8em; }
+        header .productNavigationWrapper .productNavigation .headerBottomLinks a {
+          font-size: 1.8em;
+          text-decoration: underline;
+          float: left;
+          margin-right: 30px;
+          color: #fff; }
