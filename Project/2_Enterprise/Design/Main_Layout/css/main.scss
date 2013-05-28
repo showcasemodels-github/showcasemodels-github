@@ -88,7 +88,7 @@ span.changeTitle{
 }
 //*************************************************************************//
 .save{
-  @include sprite(81px, 31px, -843px, -37px);
+  @include sprite(81px, 31px, -904px, -38px);
 }
 .saveChanges{
   @include sprite(106px, 31px, -2275px, -38px);
@@ -202,6 +202,9 @@ span.chosen_image,span.close_photo_chooser{
 }
 .backToListing.productListing{
   @include sprite(193px, 27px, -508px, -272px, 'no-hover');
+}
+.backToListing.categoryListing{
+  @include sprite(193px, 27px, -702px, -272px, 'no-hover');
 }
 
 .unpublish{

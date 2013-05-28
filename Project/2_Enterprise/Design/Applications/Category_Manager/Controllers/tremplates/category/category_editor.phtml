@@ -1,36 +1,22 @@
-<a href="<?=$_SERVER['REQUEST_URI']?>">Add Subcategory</a>
-<table style="width:30%; margin:30px 0px 0px 30px; border:1px solid black;">
-	<tr>
-		<td>Title </td>
-		<td><input type="text" name="title" value="Product 1"></td>
-	</tr>
-	<tr>
-		<td>Description </td> 
-		<td><input type="text" name="product_code" value="P001"></td>
-	</tr>
-</table>
-<a href="<?=$_SERVER['REQUEST_URI']?>">Save</a>
-
-
-<br/>
-<br />
-<br />
-Subcategory Listing
-<div class="tableContainer pAs">
-	<table style="width:30%;">
-		<thead>
-			<tr>
-				<th>Title</th>
-				<th>Description</th>
-			</tr>
-		</thead>
-		<tbody>
-		<?php for($i = 1; $i < 5; $i++):?>
-			<tr>
-				<td>Subcategory <?=$i?></td>
-				<td>This is description <?=$i?></td>
-			</tr>
-		<?php endfor?>
-		</tbody>
-	</table>
+<div class="tableContainer">
+	<div class="clearfix mBl">
+		<h3 class="fleft posRel"><span class="editPencil">edit icon</span> EDIT CATEGORY</h3>
+		<a href="/category-manager" class="backToListing categoryListing fright">back to category listing</a>
+	</div>
+	<div class="clearfix">
+		<div class="fleft" id="productInfo">
+			<p><strong>Information</strong></p>
+			<p>Parent:<!-- for sub categories only -->
+				<select class="hiLight">
+					<option value="category 1">Category 1</option>
+					<option value="category 2" selected="true">Category 2</option>
+					<option value="category 3">Category 3</option>
+					<option value="category 4">Category 4</option>
+				</select>
+			</p>
+			<p>Title:<input type="text" name="title" value="Planes"></p>
+			<p>Description:<textarea class="hiLight" name="category_description">Plastic models, 6 colors, etc.</textarea></p>
+			<a class="save fright" href="<?=$_SERVER['REQUEST_URI']?>">Save</a>
+		</div>
+	</div>
 </div>

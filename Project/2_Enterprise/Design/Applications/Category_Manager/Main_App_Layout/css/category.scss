@@ -9,5 +9,48 @@
     table{
       width:1140px !important
     }
+    .editPencil{
+      position:relative;
+      top:-5px;
+    }
+    #productInfo{
+      width:430px;
+      p{
+        display:block;
+        margin:5px 0;
+        min-height: 27px;
+        line-height: 26px;
+        height: auto;
+        overflow: auto;
+        color:#333333;
+        input,select,textarea{
+          float:right;
+          width:340px;
+          border:1px solid #B2B2B2;
+          min-height:27px;
+          color:#808080;
+        }
+        select{
+          width: 180px;
+          margin-right: 160px;
+        }
+        textarea{
+          min-height:95px;
+        }
+        input,textarea{
+          padding:5px;
+        }
+        .hiLight{
+          background-color:#F1F1F1;
+        }
+        &#category{
+          select{
+            &:nth-of-type(even){
+              background-color:#F1F1F1;
+            }
+          }
+        }
+      }
+    }
   }
 }
