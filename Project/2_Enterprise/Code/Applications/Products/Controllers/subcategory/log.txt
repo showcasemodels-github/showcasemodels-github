@@ -45,3 +45,8 @@
 127.0.0.1: May 8, 2013, 6:23 pm - ADDED Sub-category test 2
 127.0.0.1: May 9, 2013, 9:55 am - ADDED Sub-category military aircraft subcategory
 127.0.0.1: May 9, 2013, 3:05 pm - ADDED Sub-category test 3
+127.0.0.1: May 20, 2013, 11:11 am - DELETED Sub-category 
+127.0.0.1: May 20, 2013, 11:11 am - DELETED Sub-category 
+127.0.0.1: May 20, 2013, 11:11 am - DELETED Sub-category 
+127.0.0.1: May 20, 2013, 11:11 am - DELETED Sub-category 
+127.0.0.1: May 20, 2013, 11:17 am - ADDED Sub-category Propellers

@@ -38,3 +38,12 @@
 127.0.0.1: May 7, 2013, 10:37 am - DELETED 23
 127.0.0.1: May 7, 2013, 11:17 am - ADDED Category 'test'
 127.0.0.1: May 7, 2013, 11:17 am - DELETED 24
+127.0.0.1: May 20, 2013, 11:13 am - DELETED 13
+127.0.0.1: May 20, 2013, 11:13 am - DELETED 17
+127.0.0.1: May 20, 2013, 11:13 am - DELETED 18
+127.0.0.1: May 20, 2013, 11:13 am - DELETED 19
+127.0.0.1: May 20, 2013, 11:17 am - ADDED Category 'Military Aircraft Models'
+127.0.0.1: May 20, 2013, 11:18 am - DELETED 20
+127.0.0.1: May 20, 2013, 2:01 pm - ADDED Category 'Test Category'
+127.0.0.1: May 20, 2013, 2:01 pm - DELETED 21
+127.0.0.1: May 20, 2013, 2:07 pm - ADDED Category 'Airline Models'

@@ -25,7 +25,14 @@ class productView extends applicationsSuperView
 	{
 		$content = $this->renderTemplate("Project/2_Enterprise/Design/Applications/Products_Manager/Controllers/templates/products/product_editor.phtml");
 		response::getInstance()->addContentToTree(array('APPLICATION_CONTENT'=>$content));
+		
+		//$this->displayDeleteDialog();
 	}
 	
+	public function displayDeleteDialog()
+	{
+		$content = $this->renderTemplate("Project/2_Enterprise/Design/Applications/Products_Manager/Controllers/templates/products/delete_dialog.phtml");
+		response::getInstance()->addContentToTree(array('dialogues'=>$content));
+	}
 }
 ?>

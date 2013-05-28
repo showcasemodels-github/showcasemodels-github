@@ -111,6 +111,8 @@ class productController extends applicationsSuperController
 				$product->__set('product_price', $_POST['product_price']);
 				$product->update();
 				
+				//update product and category relations
+				
 				//update tags
 // 				$orig_tags	= $product_tags->__get('array_of_tags');
 // 				$tags		= explode(',', str_replace(', ',',', $_POST['tags']));

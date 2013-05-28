@@ -7,7 +7,7 @@ $(document).ready(function(){
 	CKEDITOR.replaceAll('editor');
 	
 	//JQUNIFORM
-	$("select, input:checkbox, input:text, input:password, textarea, input:radio").uniform();
+	//$("select, input:checkbox, input:text, input:password, textarea, input:radio").uniform();
 //-------------------------------------------------------------------------------------------------
         
 //-------------------------------------------------------------------------------------------------

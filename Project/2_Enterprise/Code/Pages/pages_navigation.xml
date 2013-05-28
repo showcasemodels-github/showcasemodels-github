@@ -25,18 +25,34 @@
 				<link_text>Articles</link_text>
 		</page>
 		<!-- ***************************************************************************************** -->
+<!--
 		<page>
 				<page_id>products</page_id>
 				<url_name>products</url_name>
 				<link_title>Manage and organize your products</link_title>
 				<link_text>Products</link_text>
-		</page>
+		</page>-->
+
 		<!-- ***************************************************************************************** -->
 		<page>
                 <page_id>settings</page_id>
                 <url_name>settings</url_name>
                 <link_title>Edit settings</link_title>
                 <link_text>Settings</link_text>
+        </page>
+        
+		<page>
+                <page_id>products_manager</page_id>
+                <url_name>products-manager</url_name>
+                <link_title>Edit settings</link_title>
+                <link_text>Products Manager</link_text>
+        </page>
+		
+		<page>
+                <page_id>category_manager</page_id>
+                <url_name>category-manager</url_name>
+                <link_title>Edit settings</link_title>
+                <link_text>Category Manager</link_text>
         </page>
         <!-- ***************************************************************************************** -->
 	</navigation_group>

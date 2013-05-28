@@ -1,5 +1,5 @@
 /************************************** MAIN **************************************/
-@import 'C:/WORKSPACE/starfish/Project/2_Enterprise/Design/Main_Layout/css/global';
+@import 'C:/WORKSPACE/showcasemodels/Project/2_Enterprise/Design/Main_Layout/css/global';
 
 body{
   color:#F6F6F6;
@@ -91,7 +91,7 @@ span.changeTitle{
   @include sprite(81px, 31px, -843px, -37px);
 }
 .saveChanges{
-  @include sprite(106px, 31px, -2108px, -37px);
+  @include sprite(106px, 31px, -2275px, -38px);
 }
 .chosen_image{
   @include sprite(131px, 31px, -1976px, -37px);
@@ -120,7 +120,7 @@ span.chosen_image,span.close_photo_chooser{
 }
 
 .deleteArticle,.delete{
-  @include sprite(82px, 31px, -437px, -37px);
+  @include sprite(81px, 31px, -466px, -38px);
 }
 .cancelAlbum{
   @include sprite(81px, 31px, -355px, -37px);
@@ -163,6 +163,52 @@ span.chosen_image,span.close_photo_chooser{
 }
 .fakeInputFile{
   @include sprite(426px, 31px, -252px, -91px,'no-hover');
+}
+
+.resetFilter{
+  @include sprite(106px, 31px, -3834px, -38px, 'no-hover');
+}
+.newCategory{
+  @include sprite(174px, 37px, -508px, -231px, 'no-hover');
+}
+.newSubCategory{
+  @include sprite(198px, 37px, -684px, -231px, 'no-hover');
+}
+.pagination .showing{
+  border: 1px solid #B2B2B2;
+  padding: 5px;
+  width: 31px;
+  display: inline-block;
+  text-align: center;
+}
+.tablePencil{
+  @include sprite(23px, 23px, -1179px, -131px,'no-hover');
+}
+.editPencil{
+  @include sprite(26px, 26px, -1211px, -128px,'no-hover');
+}
+
+.addCategoryText{
+  @include sprite(120px, 19px, -917px, -321px, 'no-hover');
+}
+.makeCoverPhotoText{
+  @include sprite(148px, 19px, -507px, -321px, 'no-hover');
+}
+.addPhotoText{
+  @include sprite(93px, 19px, -815px, -321px, 'no-hover');
+}
+.deletePhotoText{
+  @include sprite(115px, 19px, -676px, -321px, 'no-hover');
+}
+.backToListing.productListing{
+  @include sprite(193px, 27px, -508px, -272px, 'no-hover');
+}
+
+.unpublish{
+  @include sprite(111px, 31px, -3942px, -38px);
+}
+.deleteProduct{
+  @include sprite(152px, 31px, -4054px, -38px);
 }
 //** END OF SPRITES AND BACKGROUNDS SCHEME ***********************************************************************//
   
@@ -444,7 +490,95 @@ span.chosen_image,span.close_photo_chooser{
     }
   }
 }
+/************************* COMMON TO PRODUCTS WITH TALBES ************************************/
+
+#products_manager,#category_manager{
+  #outer_wrapper{
     
+    background-image:none;
+    background-color:white;
+    min-height:700px;
+    color:black;
+    table, th, td
+    {
+     border: 1px solid black;
+    }
+    th,td{
+      font-size: 12px;
+      min-height: 30px;
+      height:30px;
+      display: table-cell;
+      padding: 2px 5px;
+      border: 1px solid #B2B2B2;
+      vertical-align:middle;
+      &:first-child{
+        text-align:center;
+        select{
+          width:60px;
+        }
+      }
+    }
+    th{
+      font-weight: bold;
+      text-align: left;
+      height: 35px;
+      min-width: 55px;
+      input[type="text"],select{
+        border: 1px solid #cccccc;
+        font-style: italic;
+        padding:5px 2px;
+        margin:10px 0;
+        color:#808080;
+      }
+    }
+    #applicationContent{
+      padding:50px;
+      display:inline-block;
+      .tableContainer{
+        //background-color: #F1F1F1;
+        //border: 1px solid #B2B2B2;
+        //border-radius: 5px;
+        table{
+          width:100%;
+          border:1px solid black;
+          &.fullWidth{
+            width: 1070px;
+          }
+          &.filtered{
+            thead{
+              tr{
+                color: #FFFFFF !important;
+                background-color: #242424;
+                &:last-child{
+                  background-color: #FFFFFF;
+                  //color: #333333;
+                  td{
+                    height:50px;
+                    input{
+                      width:100%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          tbody{
+            tr{
+              color: #4D4D4D;
+              &:nth-of-type(even){
+                background-color: #F1F1F1;
+              }
+              &:nth-of-type(odd){
+                background-color: #FFFFFF;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 /************************* PHOTO CHOOSER ************************************/
 #photo_chooser {
   top: 0;

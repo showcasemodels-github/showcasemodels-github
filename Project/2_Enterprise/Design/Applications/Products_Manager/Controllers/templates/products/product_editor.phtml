@@ -1,31 +1,48 @@
-<table style="width:30%; margin:30px 0px 0px 30px; border:1px solid black;">
-	<tr>
-		<td>Title </td>
-		<td><input type="text" name="title" value="Product 1"></td>
-	</tr>
-	<tr>
-		<td>Product Code</td> 
-		<td><input type="text" name="product_code" value="P001"></td>
-	</tr>
-	<tr>
-		<td>Description</td> 
-		<td> <input type="text" name="description" value="This is a description"></td>
-	</tr>
-	<tr>
-		<td>Price</td> 
-		<td> <input type="text" name="price" value="$100.00"></td>
-	</tr>
-	<tr>
-		<td>Category</td> 
-		<td>
-			<select>
-				<option>Category 1</option>
-				<option>Category 2</option>
-				<option>Category 3</option>
-				<option>Category 4</option>
-			</select>
-		</td>
-	</tr>
-</table>
-<br/>
-<a href="<?=$_SERVER['REQUEST_URI']?>">Save</a>
+<div class="tableContainer">
+	<div class="clearfix mBl">
+		<h3 class="fleft posRel"><span class="editPencil">edit icon</span> EDIT PRODUCT</h3>
+		<a href="/products-manager" class="backToListing productListing fright">back to product listing</a>
+	</div>
+	<div class="clearfix">
+		<div class="fleft" id="productInfo">
+			<p><strong>Information</strong></p>
+			<p>Title:<input type="text" name="title" value="Product 1"></p>
+			<p>Product Code:<input class="hiLight" type="text" name="product_code" value="P001"></p>
+			<p>Description:<textarea name="description">This is a description</textarea></p>
+			<p>Price:<input class="hiLight" type="text" name="price" value="$100.00"></p>
+			<p id="category">Category
+				<select name="category[]" class="mBs">
+					<option value="new category">New Category</option>
+					<option value="category 1">Category 1</option>
+					<option value="category 2">Category 2</option>
+					<option value="category 3">Category 3</option>
+					<option value="category 4">Category 4</option>
+				</select>
+			</p>
+			<span class="addCategoryText fright pointer">add category</span>
+		</div>
+		<div class="fright" id="productImages">
+			<p><strong>Photo</strong></p>
+			<div class="clearfix">
+				<?for($i=0; $i < 5; $i++):?>
+					<div class="imageContainer <?=($i == 1) ? 'selected' : ''?>">
+						<?if($i == 0):?>
+							<span class="selectedCover">COVER</span>
+						<?endif;?>
+						<span class="imageHolder" style="background-image:url('/Project/2_Enterprise/Design/Main_Layout/images/otherImages/loader.png')"></span>
+					</div>
+				<?endfor;?>
+			</div>
+			<div class="clearfix mTl mBxl">
+				<span class="addPhotoText fright pointer">add photo</span>
+				<span class="deletePhotoText fright pointer mHxl">delete photo</span>
+				<span class="makeCoverPhotoText fright pointer">make cover photo</span>
+			</div>
+		</div>
+	</div>
+	<div id="productActions" class="fright mTxxl">
+		<a class="saveChanges fright" href="<?=$_SERVER['REQUEST_URI']?>">Save</a>
+		<a class="deleteProduct fright mHl" href="<?=$_SERVER['REQUEST_URI']?>">delete product</a>
+		<a class="unpublish fright" href="<?=$_SERVER['REQUEST_URI']?>">Unpublish</a>
+	</div>
+</div>

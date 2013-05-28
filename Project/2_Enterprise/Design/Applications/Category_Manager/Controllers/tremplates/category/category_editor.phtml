@@ -16,22 +16,21 @@
 <br />
 <br />
 Subcategory Listing
-<table style="width:30%; margin:30px 0px 0px 30px; border:1px solid black;">
-	<thead>
-		<tr>
-			<td>Title</td>
-			<td>Description</td>
-		</tr>
-	</thead>
-	<tbody>
-	<?php for($i = 1; $i < 5; $i++):?>
-		<tr>
-			<td>Subcategory <?=$i?></td>
-			<td>This is description <?=$i?></td>
-		</tr>
-	<?php endfor?>
-	</tbody>
-</table>
-<br/>
-
-
+<div class="tableContainer pAs">
+	<table style="width:30%;">
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+		<?php for($i = 1; $i < 5; $i++):?>
+			<tr>
+				<td>Subcategory <?=$i?></td>
+				<td>This is description <?=$i?></td>
+			</tr>
+		<?php endfor?>
+		</tbody>
+	</table>
+</div>

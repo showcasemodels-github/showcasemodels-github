@@ -172,6 +172,6 @@
 			<link_text>backup</link_text>
 		</controller>
 	</application>
-<!-- ***************************************************************************************************************** -->	
+<!-- *************************************PROUDUCTS MANAGER ROUTING**************************************************************************** -->		<application>		<application_id>Products_Manager</application_id>		<requires_login>yes</requires_login>		<has_main_layout>yes</has_main_layout>				<controller default="true">					<controller_id>product</controller_id>					<url_name>product</url_name>					<link_text>product</link_text>				</controller>	</application>		<!-- *************************************CATEGORY MANAGER ROUTING**************************************************************************** -->		<application>		<application_id>Category_Manager</application_id>		<requires_login>yes</requires_login>		<has_main_layout>yes</has_main_layout>				<controller default="true">					<controller_id>category</controller_id>					<url_name>category</url_name>					<link_text>Category Manager</link_text>				</controller>	</application>
 </applications>
 
