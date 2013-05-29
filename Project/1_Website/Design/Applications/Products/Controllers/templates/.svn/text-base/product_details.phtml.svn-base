@@ -1,0 +1,126 @@
+<div class="productsMainWrapperDetails mAuto">
+	<div class="productDetailsTop clearfix">
+		<h1><?=$this->_get('product')->__get('product_name'); ?></h1>
+		<p class="fs-16"><?=substr($this->_get('product')->__get('description'),1,140); ?>...</p>
+		<div class="productImageWrap">
+			<!-- product image left -->
+			<div class="fleft productImageList">
+				<!-- thumbnails -->
+				<ul class="fleft productUl">
+					<li>
+						<img rel="photo1" class="thumb" src="/Project/1_Website/Design/Applications/Products/Controllers/images/product-test-image-1.png"/>
+					</li>
+					<li>
+						<img rel="photo2" class="thumb" src="/Project/1_Website/Design/Applications/Products/Controllers/images/imgTemplates.png"/>
+					</li>
+				</ul>
+				<!-- image display -->
+				<div class="projectPhotos">
+					<div class="photo1">
+						<a class="productImageHover" href="/Project/1_Website/Design/Applications/Products/Controllers/images/product-test-image-1-large.png">
+							<img src="/Project/1_Website/Design/Applications/Products/Controllers/images/product-test-image-1.png"/>
+						</a>
+					</div>
+					<div class="photo2" style="display:none;">
+						<a href="/Project/1_Website/Design/Applications/Products/Controllers/images/product-test-image-1-large.png">
+							<img src="/Project/1_Website/Design/Applications/Products/Controllers/images/product-test-image-1.png"/>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- product description right -->
+			<div class="fright productDesctipionWrapper">
+				<div class="clearfix ratingWrapper">
+					<div class="fleft rating">
+						<b class="fleft fs-14 fontDarkGray">Rating:</b>
+						<span class="1"></span>
+						<span class="2"></span>
+						<span class="3"></span>
+						<span class="4"></span>
+						<span class="5"></span>
+						<b class="fleft fs-14 fontLightGray">(87 Ratings)</b>	
+					</div>
+					<b class="fright addRarting fs-14 textUnderline fontLightGray">
+					Add Rating
+					</b>
+				</div>
+				<div class="clearfix pTxl">
+					<div class="fleft productDescription">
+						<p class="fs-14">
+						<?=substr($this->_get('product')->__get('description'),1,180); ?>...						
+						</p>
+					</div>
+					<div class="fright productPrice">
+						<div class="clearfix">
+							<? $prices =  explode('};{',$this->_get('product')->__get('pricing')) ?>
+							<? $pricing = array(); ?>
+							<? foreach($prices as $price) : ?>
+								<? $price = ltrim($price, '{') ?>
+								<? $price = rtrim($price, '}') ?>
+								<? $pricing[] = $price ?>
+							<? endforeach; ?>
+							<span class="salePrice fontColorRed">Sale Price</span>
+							<span class="fontDarkGray prevPrice posRel">$<?=$pricing[0] ?></span>
+						</div>
+						<span class="currentPrice fontColorRed">$<?=$pricing[1] ?></span>
+					</div>
+				</div>
+				<form class="addToCart clearfix">
+					<input type="hidden" name="product_name" value="<?=$this->_get('product')->__get('product_name'); ?>">
+					<input type="hidden" name="product_id" value="<?=$this->_get('product')->__get('product_id'); ?>">
+					<input type="hidden" name="category_id" value="<?=$this->_get('product')->__get('category_id');?>">
+					<input type="hidden" name="pricing" value="<?=$pricing[0] ?>">
+					<input class="btnOrLink bgBlue fright" type="submit" value="add to cart"/>
+					<div class="fright quantityWrapper">
+						<span class="fs-16">Quantity</span>
+						<select name="quantity">
+							<? for($i=1;$i<=15;$i++) : ?>
+							<option value = <?=$i ?>><?=$i ?></option>
+							<? endfor; ?>
+						</select>
+					</div>
+				</form>
+				<div class="clearfix productCode">
+					<div class="fleft">
+						<span class="fontLightGray">Code</span>
+						<b class="fs-12 fontDarkGray"><?=$this->_get('product')->__get('product_code') ?></b>
+					</div>
+					<span class="fleft mLl fontLightGray">Manufacturer ED:BX349875983746978k</span>
+				</div>
+			</div>
+		</div>
+		<div class="socialMediaLinks clearfix">
+			<span class='st_sharethis_hcount' displayText='ShareThis' st_url="http://<?=$_SERVER['SERVER_NAME'];?><?=$_SERVER['REQUEST_URI'];?>" st_title="<?=$this->_get('product')->__get('product_title'); ?>"></span>
+			<span class='st_facebook_hcount' displayText='Facebook' st_url="http://<?=$_SERVER['SERVER_NAME'];?><?=$_SERVER['REQUEST_URI'];?>" st_title="<?=$this->_get('product')->__get('product_title'); ?>"></span>
+		</div>
+	</div>
+	
+	<div class="productListWrapper">
+		<h3>Customer also viewed</h3>
+		<ul>
+			<? foreach($this->_get('array_of_random_products') as $products) : ?>
+				<li>
+					<a href="<?=$products->permalink ?>" class="productImage" style="background-image:url('/Data/Images/corona-notebook-1_album/900x1024/Toyota-Supra-2014-450x299.jpg');"></a>
+					<h4 class="align_c"><?=$products->product_name ?></h4>
+					<div class="clearfix productPrice align_c posRel">
+						<? $prices =  explode('};{',$products->pricing) ?>
+							<? $pricing = array(); ?>
+							<? foreach($prices as $price) : ?>
+								<? $price = ltrim($price, '{') ?>
+								<? $price = rtrim($price, '}') ?>
+								<? $pricing[] = $price ?>
+							<? endforeach; ?>
+						<span class="fontColorRed">$<?=$pricing[0] ?></span>
+						<span class="priceButtonImg show fright posAbs"></span>
+						<br>List Price: $<?=$pricing[1] ?>
+					</div>
+				</li>
+			<? endforeach; ?>
+			<li class="viewMoreProducts">
+				<a href="/">View more Related Products</a>
+			</li>
+		</ul>
+	</div>
+
+</div>
+	
