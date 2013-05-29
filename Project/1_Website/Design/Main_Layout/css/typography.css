@@ -1,0 +1,581 @@
+/************************************** TYPOGRAPHY **************************************/
+.sprite {
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-color: transparent; }
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+body {
+  font-family: 'GEInspira',arial,tahoma,verdana,sans-serif;
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 62.5%;
+  -ms-text-size-adjust: 62.5%; }
+
+b, strong {
+  font-weight: bold; }
+
+blockquote {
+  margin: 1em 40px; }
+
+dfn {
+  font-style: italic; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp {
+  font-family: monospace, serif;
+  _font-family: "courier new", monospace;
+  font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+small {
+  font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+strong, th, thead td {
+  font-weight: bold; }
+
+cite, em, dfn {
+  font-style: italic; }
+
+del {
+  text-decoration: line-through;
+  color: #666; }
+
+ins, dfn {
+  border-bottom: 1px solid #cccccc; }
+
+abbr, acronym {
+  text-transform: uppercase;
+  font-size: 85%;
+  letter-spacing: .1em; }
+
+a abbr, a acronym {
+  border: none; }
+
+a {
+  text-decoration: none;
+  color: #00A99D; }
+
+a:hover {
+  text-decoration: none; }
+
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px; }
+
+abbr[title], acronym[title], dfn[title] {
+  cursor: help;
+  border-bottom: 1px dotted #cccccc; }
+
+/* QUOTES */
+blockquote {
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  color: #666; }
+
+blockquote *:first-child:before {
+  content: "\201C"; }
+
+blockquote *:first-child:after {
+  content: "\201D"; }
+
+p {
+  margin: 0 0 9px;
+  font-size: 1.4em;
+  line-height: 27px;
+  word-wrap: break-word; }
+
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizelegibility;
+  font-weight: bold;
+  color: #404041;
+  margin: 0; }
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  color: #404041;
+  font-family: 'GEInspira-Bold'; }
+
+h1 {
+  font-size: 4.2em;
+  line-height: 36px; }
+
+h2 {
+  font-size: 3.5em;
+  line-height: 30px; }
+
+h3 {
+  font-size: 2.8em;
+  line-height: 24px; }
+
+h4 {
+  font-size: 2.4em;
+  line-height: 18px; }
+
+h5 {
+  font-size: 2.2em;
+  line-height: 18px; }
+
+h6 {
+  font-size: 2.1em;
+  line-height: 18px; }
+
+h1 small {
+  font-size: 0.7em !important; }
+
+h2 small {
+  font-size: 0.2em !important; }
+
+h3 small {
+  font-size: 0.65em !important; }
+
+h4 small {
+  font-size: 0.4em !important; }
+
+/* Font Sizes */
+.fs-5 {
+  font-size: 0.5em; }
+
+.fs-6 {
+  font-size: 0.6em; }
+
+.fs-7 {
+  font-size: 0.7em; }
+
+.fs-8 {
+  font-size: 0.8em; }
+
+.fs-9 {
+  font-size: 0.9em; }
+
+.fs-10 {
+  font-size: 1em; }
+
+.fs-11 {
+  font-size: 1.1em; }
+
+.fs-12 {
+  font-size: 1.2em; }
+
+.fs-13 {
+  font-size: 1.3em; }
+
+.fs-14 {
+  font-size: 1.4em; }
+
+.fs-15 {
+  font-size: 1.5em; }
+
+.fs-16 {
+  font-size: 1.6em; }
+
+.fs-17 {
+  font-size: 1.7em; }
+
+.fs-18 {
+  font-size: 1.8em; }
+
+.fs-19 {
+  font-size: 1.9em; }
+
+.fs-20 {
+  font-size: 2em; }
+
+.fs-21 {
+  font-size: 2.1em; }
+
+.fs-22 {
+  font-size: 2.2em; }
+
+.fs-23 {
+  font-size: 2.3em; }
+
+.fs-24 {
+  font-size: 2.4em; }
+
+.fs-25 {
+  font-size: 2.5em; }
+
+.fs-26 {
+  font-size: 2.6em; }
+
+.fs-27 {
+  font-size: 2.7em; }
+
+.fs-28 {
+  font-size: 2.8em; }
+
+.fs-29 {
+  font-size: 2.9em; }
+
+.fs-30 {
+  font-size: 3em; }
+
+.fs-31 {
+  font-size: 3.1em; }
+
+.fs-32 {
+  font-size: 3.2em; }
+
+.fs-33 {
+  font-size: 3.3em; }
+
+.fs-34 {
+  font-size: 3.4em; }
+
+.fs-35 {
+  font-size: 3.5em; }
+
+.fs-36 {
+  font-size: 3.6em; }
+
+.fs-37 {
+  font-size: 3.7em; }
+
+.fs-38 {
+  font-size: 3.8em; }
+
+.fs-39 {
+  font-size: 3.9em; }
+
+.fs-40 {
+  font-size: 4em; }
+
+.fs-41 {
+  font-size: 4.1em; }
+
+.fs-42 {
+  font-size: 4.2em; }
+
+.fs-43 {
+  font-size: 4.3em; }
+
+.fs-44 {
+  font-size: 4.4em; }
+
+.fs-45 {
+  font-size: 4.5em; }
+
+.fs-46 {
+  font-size: 4.6em; }
+
+.fs-47 {
+  font-size: 4.7em; }
+
+.fs-48 {
+  font-size: 4.8em; }
+
+.fs-49 {
+  font-size: 4.9em; }
+
+.fs-50 {
+  font-size: 5em; }
+
+.fs-51 {
+  font-size: 5.1em; }
+
+.fs-52 {
+  font-size: 5.2em; }
+
+.fs-53 {
+  font-size: 5.3em; }
+
+.fs-54 {
+  font-size: 5.4em; }
+
+.fs-55 {
+  font-size: 5.5em; }
+
+.fs-56 {
+  font-size: 5.6em; }
+
+.fs-57 {
+  font-size: 5.7em; }
+
+.fs-58 {
+  font-size: 5.8em; }
+
+.fs-59 {
+  font-size: 5.9em; }
+
+.fs-60 {
+  font-size: 6em; }
+
+.fs-61 {
+  font-size: 6.1em; }
+
+.fs-62 {
+  font-size: 6.2em; }
+
+.fs-63 {
+  font-size: 6.3em; }
+
+.fs-64 {
+  font-size: 6.4em; }
+
+.fs-65 {
+  font-size: 6.5em; }
+
+.fs-66 {
+  font-size: 6.6em; }
+
+.fs-67 {
+  font-size: 6.7em; }
+
+.fs-68 {
+  font-size: 6.8em; }
+
+.fs-69 {
+  font-size: 6.9em; }
+
+.fs-70 {
+  font-size: 7em; }
+
+.fs-71 {
+  font-size: 7.1em; }
+
+.fs-72 {
+  font-size: 7.2em; }
+
+.fs-73 {
+  font-size: 7.3em; }
+
+.fs-74 {
+  font-size: 7.4em; }
+
+.fs-75 {
+  font-size: 7.5em; }
+
+.fs-76 {
+  font-size: 7.6em; }
+
+.fs-77 {
+  font-size: 7.7em; }
+
+.fs-78 {
+  font-size: 7.8em; }
+
+.fs-79 {
+  font-size: 7.9em; }
+
+.fs-80 {
+  font-size: 8em; }
+
+.fs-81 {
+  font-size: 8.1em; }
+
+.fs-82 {
+  font-size: 8.2em; }
+
+.fs-83 {
+  font-size: 8.3em; }
+
+.fs-84 {
+  font-size: 8.4em; }
+
+.fs-85 {
+  font-size: 8.5em; }
+
+.fs-86 {
+  font-size: 8.6em; }
+
+.fs-87 {
+  font-size: 8.7em; }
+
+.fs-88 {
+  font-size: 8.8em; }
+
+.fs-89 {
+  font-size: 8.9em; }
+
+.fs-90 {
+  font-size: 9em; }
+
+.fs-91 {
+  font-size: 9.1em; }
+
+.fs-92 {
+  font-size: 9.2em; }
+
+.fs-93 {
+  font-size: 9.3em; }
+
+.fs-94 {
+  font-size: 9.4em; }
+
+.fs-95 {
+  font-size: 9.5em; }
+
+.fs-96 {
+  font-size: 9.6em; }
+
+.fs-97 {
+  font-size: 9.7em; }
+
+.fs-98 {
+  font-size: 9.8em; }
+
+.fs-99 {
+  font-size: 9.9em; }
+
+.fs-100 {
+  font-size: 10em; }
+
+/* Font size Increase / Decrease
+ * To increase font size by 1px follow this markup
+ *  eg. <p class="fs-s"><span class="fs-p1"></span></p> -> this results to a fonts size of 13px
+ *    <p class="fs-s"><span class="fs-x2"></span></p> -> results to a font size of 24px
+ **/
+.fs-plus1 {
+  font-size: 1.1em; }
+
+/*plus 1px to parent*/
+.fs-minus1 {
+  font-size: 0.9em; }
+
+/*minus 1px to parent*/
+.fs-double {
+  font-size: 2em; }
+
+/*times 2 to parent*/
+.fs-half {
+  font-size: 0.5em; }
+
+/*devide parent by 2*/
+/* Font Weight */
+.fwB {
+  font-weight: bold; }
+
+.fwN {
+  font-weight: normal; }
+
+.fs-10 {
+  font-size: 1.0em; }
+
+.fs-12 {
+  font-size: 1.2em; }
+
+.fs-14 {
+  font-size: 1.4em; }
+
+.fs-16 {
+  font-size: 1.6em; }
+
+.fs-18 {
+  font-size: 1.8em; }
+
+.fs-20 {
+  font-size: 2.0em; }
+
+.fs-22 {
+  font-size: 2.2em; }
+
+.fs-24 {
+  font-size: 2.4em; }
+
+.fs-26 {
+  font-size: 2.6em; }
+
+.fs-28 {
+  font-size: 2.8em; }
+
+.fs-30 {
+  font-size: 3.0em; }
+
+.textUnderline {
+  text-decoration: underline; }
+
+@font-face {
+  font-family: 'AvenirLTStd-Light';
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/avenir_light/avenirltstdlight.eot");
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/avenir_light/avenirltstdlight.eot?#iefix") format("embedded-opentype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/avenir_light/avenirltstdlight.woff") format("woff"), url("/Project/1_Website/Design/Main_Layout/css/fonts/avenir_light/avenirltstdlight.ttf") format("truetype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/avenir_light/avenirltstdlight.svg#avenirltstdlight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'AvenirLTStd-Roman';
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/avenir_roman/avenirltstdroman.eot");
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/avenir_roman/avenirltstdroman.eot?#iefix") format("embedded-opentype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/avenir_roman/avenirltstdroman.woff") format("woff"), url("/Project/1_Website/Design/Main_Layout/css/fonts/avenir_roman/avenirltstdroman.ttf") format("truetype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/avenir_roman/avenirltstdroman.svg#avenirltstdroman") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Conv_AVENIRLTSTD-MEDIUM';
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/avenir_medium/AVENIRLTSTD-MEDIUM.eot");
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/avenir_medium/AVENIRLTSTD-MEDIUM.ttf") format("truetype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/avenir_medium/AVENIRLTSTD-MEDIUM.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Conv_AVENIRLTSTD-HEAVY';
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/avenir_heavy/AVENIRLTSTD-HEAVY.eot");
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/avenir_heavy/AVENIRLTSTD-HEAVY.ttf") format("truetype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/avenir_heavy/AVENIRLTSTD-HEAVY.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Conv_DIN-MEDIUM';
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/din_medium/DIN-MEDIUM.eot");
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/din_medium/DIN-MEDIUM.ttf") format("truetype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/din_medium/DIN-MEDIUM.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Conv_MyriadPro-Regular';
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/myriad_pro/MyriadPro-Regular.eot");
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/myriad_pro/MyriadPro-Regular.ttf") format("truetype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/myriad_pro/MyriadPro-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Conv_DIN-BLACK';
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/din_black/DIN-BLACK.eot");
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/din_black/DIN-BLACK.ttf") format("truetype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/din_black/DIN-BLACK.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }

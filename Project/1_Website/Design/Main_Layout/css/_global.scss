@@ -1,0 +1,63 @@
+//** for reference go to http://sass-lang.com ***********************************************************************//
+$hover : 'hover';
+
+//Primary colors
+$darkGray       :#404041;
+$lightGray      :#939597;
+
+//** SPRITES AND BACKGROUNDS SCHEME ***********************************************************************//
+$defaultSprite      : '/Project/1_Website/Design/Main_Layout/images/sprites/main-sprite.png';
+  
+// you can add as many sprites as you deem necessary and use this to override the
+// default spriteImage and spriteButton source
+  
+.sprite {
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+  // USING THE SPRITES AND BACKGROUNDS
+  // $width and $height - defines the image dimensions
+  // $x and $y - defines the image coordinates
+  // $hover  - is used for hover effects
+  //         - you can turn this hover effect off by passing 'no-hover'
+  // $img    - defines the source
+  //         - you can easily override this to use a different source by passing a different variable from the SPRITES SCHEME above
+
+
+@mixin sprite($width, $height, $x, $y, $hover:$hover, $img:$defaultSprite) {
+  @extend .sprite;
+  width: $width !important;
+  height: $height !important;
+  background-position: $x $y;
+  background-image: url($img);
+  
+  @if $hover != 'no-hover'{
+    &:hover {
+      background-position: $x $y - $height;
+    }
+  }
+}
+
+
+@mixin centerElement($width, $height) {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: $height;
+  width: $width;
+}
+@mixin background($width,$height,$src,$repeat:no-repeat){
+  display:inline-block;
+  width:$width;
+  height:$height;
+  background:{
+    image:url($src);
+    repeat:$repeat;
+  }
+}
+
+

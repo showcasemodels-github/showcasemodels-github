@@ -1,0 +1,60 @@
+@import 'C:/WORKSPACE/showcasemodels/Project/1_Website/Design/Main_Layout/css/global';
+
+body {
+  color:#404041;
+  p {
+    line-height:22px; 
+    color:#404041;
+  }
+  a {
+    color:#404041;
+  }
+  #wrapper {
+    background-color:#ffffff;
+    margin:0 auto;  
+    width:100%;  
+    
+    section[id*='_container'] {
+      background-image:url('/Project/1_Website/Design/Main_Layout/images/stripe-body-bg.png');
+      min-height:300px;
+      width:auto;
+    }
+  }
+  //bg no repeat
+  .bgNoRepeat {
+    background-repeat:no-repeat;
+  }
+  //css for button with colors open
+  .btnOrLink {
+    padding:5px 10px;
+    display:block !important;
+    color:#fff !important;
+    font-size:1.6em !important;
+    text-align:center !important;   
+    border-radius:5px;
+  }
+  //background color
+  .bgRed {
+    background-color:#B12335;
+  }
+  .bgLightGreen {
+    background-color:#8CC63E;
+  }  
+  .bgBlue {
+    background-color:#1E4596;
+  }
+  //font colors  
+  .fontColorRed {
+    color:#B12335;
+  }
+  .fontColorBlue  {
+    color:#1E4596;
+  }  
+  .fontDarkGray {
+    color:#404041;
+  }
+  .fontLightGray {
+    color:#939597;
+  }
+  //css for button with colors closing 
+}
