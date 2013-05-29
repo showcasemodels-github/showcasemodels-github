@@ -1,30 +1,38 @@
+.sprite {
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-color: transparent; }
+
 ul, li {
   list-style: none;
   margin: 0;
   padding: 0; }
 
 header {
-  height: 185px;
+  height: auto;
   width: 100%;
-  padding-top: 50px;
+  padding-top: 25px;
   clear: both;
-  margin: 0 auto 35px auto; }
+  margin: 0 auto;
+  background-color: #fff; }
   header .headerInnerWrapper {
-    height: 100%;
-    width: 1060px;
-    position: relative; }
+    height: 90px;
+    width: 1100px;
+    position: relative;
+    margin-bottom: 25px; }
   header a.showCaseLogo {
-    width: 394px;
-    height: 73px;
-    background-image: url("/Project/1_Website/Design/Main_Layout/images/logo-show-case-model.png"); }
+    width: 293px;
+    height: 88px;
+    background-repeat: no-repeat;
+    background-image: url("/Project/1_Website/Design/Main_Layout/images/logo-show-case-model-2.png"); }
   header .rightNavs {
     position: relative;
-    width: 435px;
-    top: -15px; }
+    width: 435px; }
     header .rightNavs a {
       float: left;
       color: #000;
-      font-weight: bold;
       font-size: 1.4em; }
     header .rightNavs .secondaryNavWrapper {
       margin-bottom: 15px;
@@ -42,12 +50,12 @@ header {
       border-radius: 5px 5px 5px 5px;
       height: auto;
       overflow: auto;
-      background-color: #E8E9EA; }
+      border: 1px solid #d1d2d4; }
       header .rightNavs div.loginRegisterWrapper ul li {
         float: left;
         padding-top: 11px;
         height: 40px;
-        border-right: 1px solid white; }
+        border-right: 1px solid #d1d2d4; }
         header .rightNavs div.loginRegisterWrapper ul li a {
           padding-left: 15px;
           padding-right: 15px; }
@@ -70,53 +78,59 @@ header {
         margin-top: 5px;
         width: 135px; }
   header .primaryNavWrapper {
-    position: absolute;
-    bottom: 0;
-    background-color: #E8E9EA;
-    height: 41px;
+    background-image: url("/Project/1_Website/Design/Panels/header/images/nav-strip.png");
+    height: 37px;
     width: 100%; }
-    header .primaryNavWrapper ul#primary_nav {
-      float: left; }
-      header .primaryNavWrapper ul#primary_nav li {
-        height: 41px;
-        float: left;
-        padding-top: 12px;
-        border-right: 1px solid white; }
-        header .primaryNavWrapper ul#primary_nav li a {
-          color: #204497;
-          font-size: 2.0em;
-          font-weight: bold;
-          padding-left: 25px;
-          padding-right: 25px; }
-      header .primaryNavWrapper ul#primary_nav li#products {
-        display: none; }
-    header .primaryNavWrapper form.searchForm {
-      width: 295px;
-      height: 30px;
-      position: relative;
-      top: 5px;
-      right: 5px; }
-      header .primaryNavWrapper form.searchForm input[type="text"] {
-        width: 280px;
-        height: 30px; }
-      header .primaryNavWrapper form.searchForm input[type="submit"] {
-        width: 72px;
+    header .primaryNavWrapper .navCenterHolder {
+      width: 1100px;
+      height: 37px; }
+      header .primaryNavWrapper .navCenterHolder ul#primary_nav {
+        float: left; }
+        header .primaryNavWrapper .navCenterHolder ul#primary_nav li {
+          height: 37px;
+          float: left;
+          padding-top: 9px;
+          border-right: 2px solid rgba(255, 255, 255, 0.3); }
+          header .primaryNavWrapper .navCenterHolder ul#primary_nav li a {
+            font-family: 'Conv_DIN-MEDIUM';
+            color: #fff;
+            font-size: 2.0em;
+            padding-left: 25px;
+            padding-right: 25px; }
+        header .primaryNavWrapper .navCenterHolder ul#primary_nav li:hover {
+          background-color: #18377E; }
+        header .primaryNavWrapper .navCenterHolder ul#primary_nav li#products {
+          display: none; }
+      header .primaryNavWrapper .navCenterHolder form.searchForm {
+        width: 295px;
         height: 30px;
-        top: 0;
-        right: 0; }
+        position: relative;
+        top: 5px;
+        right: 5px; }
+        header .primaryNavWrapper .navCenterHolder form.searchForm input[type="text"] {
+          width: 280px;
+          height: 30px; }
+        header .primaryNavWrapper .navCenterHolder form.searchForm input[type="submit"] {
+          font-family: 'Conv_DIN-MEDIUM';
+          width: 72px;
+          height: 30px;
+          padding-bottom: 5px !important;
+          padding-top: 0 !important;
+          top: 0;
+          right: 0; }
   header .productNavigationWrapper {
     display: none;
     position: relative;
     width: 100%;
     height: 370px;
-    background-color: #204497;
+    background-color: #18377E;
     z-index: 3; }
     header .productNavigationWrapper .productNavigation {
       height: 370px;
-      width: 1060px;
+      width: 1100px;
       position: relative; }
       header .productNavigationWrapper .productNavigation .categoryWrapper {
-        width: 1060px;
+        width: 1100px;
         height: 230px;
         position: absolute;
         overflow: hidden;
@@ -130,6 +144,8 @@ header {
             header .productNavigationWrapper .productNavigation .categoryWrapper .subCategoryTable td ul li {
               margin-bottom: 20px; }
               header .productNavigationWrapper .productNavigation .categoryWrapper .subCategoryTable td ul li a {
+                position: relative;
+                z-index: 5;
                 color: #fff;
                 font-size: 1.8em;
                 font-family: 'AvenirLTStd-Roman'; }
@@ -151,50 +167,48 @@ header {
           float: left;
           margin-right: 30px;
           color: #fff; }
-.extendedFooter {
+footer {
+  border-top: 4px solid #d1d2d4;
+  width: 1100px;
   height: 455px;
+  padding: 30px;
+  background-color: #F1F1F2; }
+  footer .footerLinkWrapper .linkColumn {
+    float: left;
+    width: 245px;
+    min-height: 100px; }
+    footer .footerLinkWrapper .linkColumn h4 {
+      font-size: 1.8em;
+      margin-bottom: 30px; }
+    footer .footerLinkWrapper .linkColumn ul li {
+      line-height: 15px;
+      margin-bottom: 20px;
+      font-size: 1.4em; }
+    footer .footerLinkWrapper .linkColumn h4.footerLogo {
+      height: 60px;
+      width: 280px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-image: url("/Project/1_Website/Design/Main_Layout/images/logo-show-case-model.png"); }
+    footer .footerLinkWrapper .linkColumn .questionCall {
+      font-size: 1.4em;
+      margin-bottom: 20px; }
+      footer .footerLinkWrapper .linkColumn .questionCall span.contactNumber {
+        font-size: 1.7em;
+        font-weight: bold;
+        color: #58585B; }
+
+.footerBottomWrapper {
+  height: 45px;
   width: 100%;
-  background-color: #E8E9EA; }
-  .extendedFooter footer {
-    width: 1060px;
-    height: 455px;
-    padding-top: 45px; }
-    .extendedFooter footer .footerLinkWrapper .linkColumn {
-      float: left;
-      width: 245px;
-      min-height: 100px; }
-      .extendedFooter footer .footerLinkWrapper .linkColumn h4 {
-        font-size: 1.8em;
-        margin-bottom: 30px; }
-      .extendedFooter footer .footerLinkWrapper .linkColumn ul li {
-        line-height: 15px;
-        margin-bottom: 20px;
-        font-size: 1.4em; }
-      .extendedFooter footer .footerLinkWrapper .linkColumn h4.footerLogo {
-        height: 60px;
-        width: 280px;
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-image: url("/Project/1_Website/Design/Main_Layout/images/logo-show-case-model.png"); }
-      .extendedFooter footer .footerLinkWrapper .linkColumn .questionCall {
-        font-size: 1.4em;
-        margin-bottom: 20px; }
-        .extendedFooter footer .footerLinkWrapper .linkColumn .questionCall span.contactNumber {
-          font-size: 1.7em;
-          font-weight: bold;
-          color: #58585B; }
-  .extendedFooter .footerBottomWrapper {
-    height: 45px;
-    width: 100%;
-    background-color: #D1D2D4; }
-    .extendedFooter .footerBottomWrapper .footerBottomLinks {
-      height: 100%;
-      width: 1060px; }
-      .extendedFooter .footerBottomWrapper .footerBottomLinks ul#tertiary_nav li {
-        float: left; }
-        .extendedFooter .footerBottomWrapper .footerBottomLinks ul#tertiary_nav li a {
-          color: #000; }
-/************************************** MAIN **************************************/
+  background-color: #D1D2D4; }
+  .footerBottomWrapper .footerBottomLinks {
+    height: 100%;
+    width: 1060px; }
+    .footerBottomWrapper .footerBottomLinks ul#tertiary_nav li {
+      float: left; }
+      .footerBottomWrapper .footerBottomLinks ul#tertiary_nav li a {
+        color: #000; }
 .sprite {
   border: none;
   display: inline-block;
@@ -205,7 +219,8 @@ header {
 body {
   color: #404041; }
   body p {
-    line-height: 22px; }
+    line-height: 22px;
+    color: #404041; }
   body a {
     color: #404041; }
   body #wrapper {
@@ -213,23 +228,24 @@ body {
     margin: 0 auto;
     width: 100%; }
     body #wrapper section[id*='_container'] {
+      background-image: url("/Project/1_Website/Design/Main_Layout/images/stripe-body-bg.png");
       min-height: 300px;
       width: auto; }
   body .btnOrLink {
     padding: 5px 10px;
-    font-weight: bold;
     display: block !important;
     color: white !important;
     font-size: 1.6em !important;
-    font-weight: bold !important;
     text-align: center !important;
     border-radius: 5px; }
   body .bgRed {
     background-color: #B12335; }
-  body .fontColorRed {
-    color: #B12335; }
+  body .bgLightGreen {
+    background-color: #8CC63E; }
   body .bgBlue {
     background-color: #1E4596; }
+  body .fontColorRed {
+    color: #B12335; }
   body .fontColorBlue {
     color: #1E4596; }
   body .fontDarkGray {
@@ -1269,6 +1285,27 @@ h4 small {
   font-family: 'Conv_AVENIRLTSTD-HEAVY';
   src: url("/Project/1_Website/Design/Main_Layout/css/fonts/avenir_heavy/AVENIRLTSTD-HEAVY.eot");
   src: url("/Project/1_Website/Design/Main_Layout/css/fonts/avenir_heavy/AVENIRLTSTD-HEAVY.ttf") format("truetype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/avenir_heavy/AVENIRLTSTD-HEAVY.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Conv_DIN-MEDIUM';
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/din_medium/DIN-MEDIUM.eot");
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/din_medium/DIN-MEDIUM.ttf") format("truetype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/din_medium/DIN-MEDIUM.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Conv_MyriadPro-Regular';
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/myriad_pro/MyriadPro-Regular.eot");
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/myriad_pro/MyriadPro-Regular.ttf") format("truetype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/myriad_pro/MyriadPro-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Conv_DIN-BLACK';
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/din_black/DIN-BLACK.eot");
+  src: url("/Project/1_Website/Design/Main_Layout/css/fonts/din_black/DIN-BLACK.ttf") format("truetype"), url("/Project/1_Website/Design/Main_Layout/css/fonts/din_black/DIN-BLACK.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 .share {
