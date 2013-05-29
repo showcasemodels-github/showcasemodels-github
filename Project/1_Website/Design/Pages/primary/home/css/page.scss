@@ -1,7 +1,4 @@
-//@import 'C:/WORKSPACE/showcasemodels/Project/1_Website/Design/Main_Layout/css/global';
-#wrapper {
-  width:100% !important;  
-}
+@import 'C:/WORKSPACE/showcasemodels/Project/1_Website/Design/Main_Layout/css/global';
  //sliding banner css open
 .bannerWrapper {
   height:500px;
@@ -9,10 +6,15 @@
   background-repeat:no-repeat;
   background-size:cover;
   .slidingBanner {
-    width:1060px;
+    width:1100px;
     height:500px;
     position:relative;
     .bannerDetails {
+      img {
+        margin-top:30px;
+        margin-left:78px;
+      }
+      /*
       left: 460px;
       min-height: 240px;
       position: absolute;
@@ -20,6 +22,7 @@
       width:555px;
       h1 { color:#fff; margin-bottom:15px; }
       p { color:#fff; }
+      */
     }
     ul.slideIndicator {
     bottom: 11px;
@@ -49,54 +52,74 @@
 
 .midSectionWrapper {
   position: relative;
-  margin-top:30px;
-  margin-bottom:60px;
-  width: 1060px;
+  width: 1100px;
   height: auto;
   overflow: auto;
+  background-color:#fff;
+  padding:30px;
   //featured products left
   .featuredProductWrapper {
     width:670px;
     h2 {
-      font-size:2.2em; }    
+      font-family: 'Conv_DIN-BLACK';
+      font-size:2.5em; }    
     .featuredProduct {
-      border: 1px solid #CCCCCC;
+      position:relative;
+      border: 1px solid #D1D2D4;
       width:auto;   
       height:180px;
       margin-top:10px;
-      padding:10px;
+      padding:5px;
+        .newProductIndicator {
+          top:0; left:0;
+        }
         .productImage {
           height:100%;
           width:160px;
           background-size:cover;
           background-repeat:no-repeat;
-          border:1px solid #ccc;
+          border:1px solid #D1D2D4;
           margin-right:30px;
         }
         .productDesciptionWrapper  {
           width:430px;
           position:relative;
-          h3 { font-size:2.1em; }
-          span { font-size:2.1em; }
-          a { 
-            margin-top:30px;
-            clear:both; 
-          }
-        }
+          div.fleft {
+            width:70%;
+            h3 { 
+              font-family: 'Conv_DIN-MEDIUM';
+              font-size:2.1em; 
+              font-weight:normal; }
+            p { font-size:1.4em; 
+          }}
+          div.fright {
+            width:30%;
+            span { font-size:1.4em; }
+            b.productPrice { 
+              font-family: 'Conv_AVENIRLTSTD-HEAVY';
+              font-size:2.8em; }
+            a { 
+              font-family: 'Conv_DIN-MEDIUM';
+              font-size:1.8em !important;
+              margin-top:30px;
+              clear:both; 
+          }}}
     }   
     .seeMoreProducts {
+      font-family: 'Conv_DIN-MEDIUM';
+      text-decoration:underline;
       margin-top:15px;
       font-size:2.1em;
-      color:#000;
-    }  
-  }
+  }}
   //other links right
   .otherLinkWrapper {
     width:340px;
       .topLinks {
-        background-color:#F1F1F2;
-        padding:17px 17px 45px 17px;
-        h3 { 
+        border:1px solid #D1D2D4;
+        background-color:#fff;
+        padding:17px;
+        span { 
+          font-family: 'Conv_DIN-MEDIUM';
           font-size:2.1em; 
           margin-bottom:13px;
         }
@@ -106,25 +129,35 @@
           overflow:auto;
           margin-top:35px;
           .otherLinksDescription {
-            font-size:1.2em;
             line-height:20px;
             h4 { 
               font-size:1.6em; 
-              margin-bottom:13px;
-            }            
-          }
-        }
-      }
+              margin-bottom:13px; }
+            p { font-size:1.2em; }  
+            .findOutMore {
+              @include background(110px, 23px, '/Project/1_Website/Design/Main_Layout/images/go-to-link-icon.png', no-repeat);
+              font-family: 'Conv_MyriadPro-Regular';
+              background-position: 86px 1px;
+              border: 1px solid #bbbdc0;
+              border-radius: 4px;
+              font-size: 1.3em;
+              padding-left: 3px;
+            }}
+      }}
       .aboutWebsite {
+        @include sprite(300px, 300px, 1px, 1px, $hover:no-hover);
         margin-top:30px;
-        line-height: 30px;
-        background-image:url('/Project/1_Website/Design/Pages/primary/home/images/quoted-bg.png');
-        height: 207px;
-        width: auto;
-        font-size: 2.1em;
+        margin-left:21px;
+        line-height:25px;
+        font-size:1.6em;
         text-align: center;
-        padding: 20px;
+        color:#fff;
+        padding:90px 20px 55px 20px;
       }
    }
+   .otherCompanies {
+      @include sprite(1040px, 90px, 15px, -322px, $hover:no-hover);
+      margin-top:70px;
+      border:1px solid #bbbdc0;
+   }
 }
-

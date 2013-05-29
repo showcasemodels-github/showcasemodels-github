@@ -1,5 +1,9 @@
-#wrapper {
-  width: 100% !important; }
+.sprite, .midSectionWrapper .otherLinkWrapper .aboutWebsite, .midSectionWrapper .otherCompanies {
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-color: transparent; }
 
 .bannerWrapper {
   height: 500px;
@@ -7,20 +11,22 @@
   background-repeat: no-repeat;
   background-size: cover; }
   .bannerWrapper .slidingBanner {
-    width: 1060px;
+    width: 1100px;
     height: 500px;
     position: relative; }
     .bannerWrapper .slidingBanner .bannerDetails {
+      /*
       left: 460px;
       min-height: 240px;
       position: absolute;
-      top: 110px;
-      width: 555px; }
-      .bannerWrapper .slidingBanner .bannerDetails h1 {
-        color: #fff;
-        margin-bottom: 15px; }
-      .bannerWrapper .slidingBanner .bannerDetails p {
-        color: #fff; }
+      top:110px;
+      width:555px;
+      h1 { color:#fff; margin-bottom:15px; }
+      p { color:#fff; }
+      */ }
+      .bannerWrapper .slidingBanner .bannerDetails img {
+        margin-top: 30px;
+        margin-left: 78px; }
     .bannerWrapper .slidingBanner ul.slideIndicator {
       bottom: 11px;
       left: 50%;
@@ -42,48 +48,69 @@
 
 .midSectionWrapper {
   position: relative;
-  margin-top: 30px;
-  margin-bottom: 60px;
-  width: 1060px;
+  width: 1100px;
   height: auto;
-  overflow: auto; }
+  overflow: auto;
+  background-color: #fff;
+  padding: 30px; }
   .midSectionWrapper .featuredProductWrapper {
     width: 670px; }
     .midSectionWrapper .featuredProductWrapper h2 {
-      font-size: 2.2em; }
+      font-family: 'Conv_DIN-BLACK';
+      font-size: 2.5em; }
     .midSectionWrapper .featuredProductWrapper .featuredProduct {
-      border: 1px solid #cccccc;
+      position: relative;
+      border: 1px solid #d1d2d4;
       width: auto;
       height: 180px;
       margin-top: 10px;
-      padding: 10px; }
+      padding: 5px; }
+      .midSectionWrapper .featuredProductWrapper .featuredProduct .newProductIndicator {
+        top: 0;
+        left: 0; }
       .midSectionWrapper .featuredProductWrapper .featuredProduct .productImage {
         height: 100%;
         width: 160px;
         background-size: cover;
         background-repeat: no-repeat;
-        border: 1px solid #cccccc;
+        border: 1px solid #d1d2d4;
         margin-right: 30px; }
       .midSectionWrapper .featuredProductWrapper .featuredProduct .productDesciptionWrapper {
         width: 430px;
         position: relative; }
-        .midSectionWrapper .featuredProductWrapper .featuredProduct .productDesciptionWrapper h3 {
-          font-size: 2.1em; }
-        .midSectionWrapper .featuredProductWrapper .featuredProduct .productDesciptionWrapper span {
-          font-size: 2.1em; }
-        .midSectionWrapper .featuredProductWrapper .featuredProduct .productDesciptionWrapper a {
-          margin-top: 30px;
-          clear: both; }
+        .midSectionWrapper .featuredProductWrapper .featuredProduct .productDesciptionWrapper div.fleft {
+          width: 70%; }
+          .midSectionWrapper .featuredProductWrapper .featuredProduct .productDesciptionWrapper div.fleft h3 {
+            font-family: 'Conv_DIN-MEDIUM';
+            font-size: 2.1em;
+            font-weight: normal; }
+          .midSectionWrapper .featuredProductWrapper .featuredProduct .productDesciptionWrapper div.fleft p {
+            font-size: 1.4em; }
+        .midSectionWrapper .featuredProductWrapper .featuredProduct .productDesciptionWrapper div.fright {
+          width: 30%; }
+          .midSectionWrapper .featuredProductWrapper .featuredProduct .productDesciptionWrapper div.fright span {
+            font-size: 1.4em; }
+          .midSectionWrapper .featuredProductWrapper .featuredProduct .productDesciptionWrapper div.fright b.productPrice {
+            font-family: 'Conv_AVENIRLTSTD-HEAVY';
+            font-size: 2.8em; }
+          .midSectionWrapper .featuredProductWrapper .featuredProduct .productDesciptionWrapper div.fright a {
+            font-family: 'Conv_DIN-MEDIUM';
+            font-size: 1.8em !important;
+            margin-top: 30px;
+            clear: both; }
     .midSectionWrapper .featuredProductWrapper .seeMoreProducts {
+      font-family: 'Conv_DIN-MEDIUM';
+      text-decoration: underline;
       margin-top: 15px;
-      font-size: 2.1em;
-      color: #000; }
+      font-size: 2.1em; }
   .midSectionWrapper .otherLinkWrapper {
     width: 340px; }
     .midSectionWrapper .otherLinkWrapper .topLinks {
-      background-color: #F1F1F2;
-      padding: 17px 17px 45px 17px; }
-      .midSectionWrapper .otherLinkWrapper .topLinks h3 {
+      border: 1px solid #d1d2d4;
+      background-color: #fff;
+      padding: 17px; }
+      .midSectionWrapper .otherLinkWrapper .topLinks span {
+        font-family: 'Conv_DIN-MEDIUM';
         font-size: 2.1em;
         margin-bottom: 13px; }
       .midSectionWrapper .otherLinkWrapper .topLinks p {
@@ -93,17 +120,40 @@
         overflow: auto;
         margin-top: 35px; }
         .midSectionWrapper .otherLinkWrapper .topLinks .otherLinks .otherLinksDescription {
-          font-size: 1.2em;
           line-height: 20px; }
           .midSectionWrapper .otherLinkWrapper .topLinks .otherLinks .otherLinksDescription h4 {
             font-size: 1.6em;
             margin-bottom: 13px; }
+          .midSectionWrapper .otherLinkWrapper .topLinks .otherLinks .otherLinksDescription p {
+            font-size: 1.2em; }
+          .midSectionWrapper .otherLinkWrapper .topLinks .otherLinks .otherLinksDescription .findOutMore {
+            display: inline-block;
+            width: 110px;
+            height: 23px;
+            background-image: url("/Project/1_Website/Design/Main_Layout/images/go-to-link-icon.png");
+            background-repeat: no-repeat;
+            font-family: 'Conv_MyriadPro-Regular';
+            background-position: 86px 1px;
+            border: 1px solid #bbbdc0;
+            border-radius: 4px;
+            font-size: 1.3em;
+            padding-left: 3px; }
     .midSectionWrapper .otherLinkWrapper .aboutWebsite {
+      width: 300px !important;
+      height: 300px !important;
+      background-position: 1px 1px;
+      background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/main-sprite.png");
       margin-top: 30px;
-      line-height: 30px;
-      background-image: url("/Project/1_Website/Design/Pages/primary/home/images/quoted-bg.png");
-      height: 207px;
-      width: auto;
-      font-size: 2.1em;
+      margin-left: 21px;
+      line-height: 25px;
+      font-size: 1.6em;
       text-align: center;
-      padding: 20px; }
+      color: #fff;
+      padding: 90px 20px 55px 20px; }
+  .midSectionWrapper .otherCompanies {
+    width: 1040px !important;
+    height: 90px !important;
+    background-position: 15px -322px;
+    background-image: url("/Project/1_Website/Design/Main_Layout/images/sprites/main-sprite.png");
+    margin-top: 70px;
+    border: 1px solid #bbbdc0; }

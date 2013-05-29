@@ -1,34 +1,36 @@
-//@import 'C:/WORKSPACE/showcasemodels/Project/1_Website/Design/Main_Layout/css/global';
+@import 'C:/WORKSPACE/showcasemodels/Project/1_Website/Design/Main_Layout/css/global';
+
 ul, li {
   list-style:none;
   margin:0;
   padding:0;
 }
 header {
-  height:185px;
+  height:auto;
   width:100%;  
-  padding-top:50px;
+  padding-top:25px;
   clear:both;
-  margin:0 auto 35px auto;
+  margin:0 auto;
+  background-color:#fff;
   //logo css
   .headerInnerWrapper {
-  height:100%;
-  width:1060px;
+  height:90px;
+  width:1100px;
   position:relative;
+  margin-bottom:25px;
   }
   a.showCaseLogo {
-    width:394px;
-    height:73px;
-    background-image:url('/Project/1_Website/Design/Main_Layout/images/logo-show-case-model.png');
+    width:293px;
+    height:88px;
+    background-repeat:no-repeat;
+    background-image:url('/Project/1_Website/Design/Main_Layout/images/logo-show-case-model-2.png');
   } 
   .rightNavs {
     position:relative;
     width:435px;
-    top:-15px;
     a { 
       float:left; 
       color:#000;
-      font-weight: bold;
       font-size:1.4em;
     }    
     //secondary navs css opening
@@ -56,13 +58,13 @@ header {
       border-radius: 5px 5px 5px 5px;
       height:auto;
       overflow:auto;
-      background-color:#E8E9EA; 
+      border:1px solid #D1D2D4;
       ul {
         li {
           float:left;
           padding-top:11px;
           height:40px;
-          border-right:1px solid #fff;
+          border-right:1px solid #D1D2D4;
           a {
             padding-left:15px;
             padding-right:15px;
@@ -95,25 +97,29 @@ header {
   }
    //primary nav css
   .primaryNavWrapper {
-    position:absolute;
-    bottom:0;
-    background-color:#E8E9EA;
-    height:41px;
+    background-image:url('/Project/1_Website/Design/Panels/header/images/nav-strip.png');
+    height:37px;
     width:100%;
+    .navCenterHolder {
+     width: 1100px;
+     height: 37px;
      ul#primary_nav {
        float:left;
        li {
-         height:41px;
+         height:37px;
          float:left;
-         padding-top:12px;
-         border-right:1px solid #fff;
+         padding-top:9px;
+         border-right:2px solid rgba(255,255,255, 0.3);
            a {
-            color: #204497;
+            font-family: 'Conv_DIN-MEDIUM';
+            color: #fff;
             font-size:2.0em;
-            font-weight: bold;
             padding-left: 25px;
             padding-right: 25px;  
            }
+        }
+        li:hover {
+          background-color:#18377E;
         }
         li#products {
           display:none;
@@ -131,11 +137,15 @@ header {
           height:30px;
         }
         input[type="submit"] {
+          font-family: 'Conv_DIN-MEDIUM';
           width:72px;
           height:30px;
+          padding-bottom: 5px !important;
+          padding-top: 0 !important;
           top:0; right:0;
         }
-     }     
+      }     
+    }
   }   
   //product drop down navigation css//
   .productNavigationWrapper {
@@ -143,15 +153,14 @@ header {
     position:relative;
     width:100%;
     height:370px;
-    background-color:#204497;
+    background-color:#18377E;
     z-index:3;
     .productNavigation {
       height:370px;
-      width:1060px;
+      width:1100px;
       position:relative;
-      
         .categoryWrapper {
-          width: 1060px;
+          width: 1100px;
           height: 230px;
           position: absolute;
           overflow: hidden;
@@ -166,6 +175,8 @@ header {
                   li {
                     margin-bottom:20px;
                     a {
+                    	position:relative;
+                    	z-index:5;
                       color:#fff;
                       font-size:1.8em;
                       font-family: 'AvenirLTStd-Roman';
