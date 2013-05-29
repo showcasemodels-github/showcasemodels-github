@@ -1,3 +1,4 @@
+var items = {}
 $(document).ready(function() { 
 	//add class active
 	$('.productNavigation div:first-of-type').addClass('active');
@@ -10,4 +11,15 @@ $(document).ready(function() {
 		$('.productNavigationWrapper').hide();
 	});
 	
+	
+	
+	
+	items.getItems = function () 
+	{
+		$.php('/ajax/shop/fetchNumberOfItems');
+	}
+
+	items.interval = setInterval(items.getItems, 1000);
 });	
+
+
