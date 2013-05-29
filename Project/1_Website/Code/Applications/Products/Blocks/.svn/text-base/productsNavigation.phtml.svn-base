@@ -1,0 +1,47 @@
+<div class="productNavigationWrapper">
+	<div class="productNavigation mAuto">
+		<? $listOfCategories = $this->_get('array_of_categories'); ?>
+		<? $listOfSubcategories = $this->_get('array_of_subcategories') ?>
+		<!-- category opening -->
+		<? foreach ($listOfCategories as $categoryKey=>$categories) { ?> 
+		<div class="categoryWrapper category_<?=$categories['category_id']; ?>">
+			<table class="subCategoryTable">
+				<tr>
+					<td>
+						<!-- subcategory -->
+							<ul class="subCategoryWrapper">
+								<? $i=1; ?>
+								<!-- 
+									divide subcategory array result by 15, if equal to 1 close the 
+									table column and ul tag, and open a new table column and ulWrapper 
+								-->					
+								<? foreach ($listOfSubcategories[$categoryKey] as $subcategoryKey=>$subcategories) { ?> 
+									<? if(($i % 4) == 1 && $i != 1) { ?>
+									</td></ul><td><ul class="ulSubcat">
+									<? } ?>
+									<li class="subCategoryList" id="<?=str_replace('-','_',lcfirst(str_replace('/','',$categories['category_name']))); ?>">
+										<a href="/<?=$categories['permalink']; ?>/<?=$subcategories['permalink']; ?>">
+											<?=$subcategories['category_name']; ?>
+										</a>
+									</li>
+									<? $i++; ?>
+								<? } ?>
+							</ul>
+						<!-- subcategory end -->
+					</td>
+				</tr>
+			</table>
+		</div>
+		<? } ?>
+		<!-- category closing -->
+		<div class="headerBottomLinks">
+			<p>Can't find what you're looking for? Maybe we can build it for you.</p>
+			<div class="clearfix">
+				<a href="/">About Us</a>
+				<a href="/">Get a custom plane</a>
+				<a href="/">Customer Service: 0299 3039 11202 (open 24/7)</a>
+			</div>
+		</div>
+	</div>
+</div>
+
