@@ -1,16 +1,23 @@
 <div class="tableContainer">
 	<div class="clearfix mBl">
-		<h3 class="fleft posRel"><span class="editPencil">edit icon</span> EDIT PRODUCT</h3>
+		<h3 class="fleft posRel">
+			<span class="editPencil">edit icon</span> EDIT PRODUCT
+			<!-- if new PRODUCT use this -> <span class="editPencil">edit icon</span> NEW PRODUCT -->
+		</h3>
 		<a href="/products-manager" class="backToListing productListing fright">back to product listing</a>
 	</div>
 	<div class="clearfix">
 		<div class="fleft" id="productInfo">
-			<p><strong>Information</strong></p>
-			<p>Title:<input type="text" name="title" value="Product 1"></p>
-			<p>Product Code:<input class="hiLight" type="text" name="product_code" value="P001"></p>
-			<p>Description:<textarea name="description">This is a description</textarea></p>
-			<p>Price:<input class="hiLight" type="text" name="price" value="$100.00"></p>
-			<p id="category">Category
+			<p><strong>Details</strong></p>
+			<p>Title:<input type="text" name="product_title" value="Product 1"></p>
+			<p>Product Code:<input type="text" name="product_code" value="P001"></p>
+			<div><p>Description:</p>
+				<div class="fright"><textarea class="editor" name="description">This is a description</textarea></div>
+			</div>
+			<p id="specifications">Specifications:<input type="text" name="product_specification[]" value="P001"></p>
+			<span class="addSpecificationText fright pointer mBl">add category</span>
+			<p>Price:<input type="text" name="price" value="$100.00"></p>
+			<p id="category"><span class="fleft">Category/<br/>Subcategory</span>
 				<select name="category[]" class="mBs">
 					<option value="new category">New Category</option>
 					<option value="category 1">Category 1</option>
@@ -26,10 +33,12 @@
 			<div class="clearfix">
 				<?for($i=0; $i < 5; $i++):?>
 					<div class="imageContainer <?=($i == 1) ? 'selected' : ''?>">
+						<?$image = '';?>
 						<?if($i == 0):?>
 							<span class="selectedCover">COVER</span>
+							<?$image = '/Project/2_Enterprise/Design/Main_Layout/images/temporary/product-image.jpg'?>
 						<?endif;?>
-						<span class="imageHolder" style="background-image:url('/Project/2_Enterprise/Design/Main_Layout/images/otherImages/loader.png')"></span>
+						<span class="imageHolder" style="background-image:url('<?=$image?>')"></span>
 					</div>
 				<?endfor;?>
 			</div>

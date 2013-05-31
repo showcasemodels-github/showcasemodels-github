@@ -13,7 +13,7 @@ class categoryController extends applicationsSuperController
 	public function editAction()
 	{
 		$categoryView = new categoryView();
-		$categoryView->displayCategoryEditor();
+		$categoryView->displaySubcategoryEditor();
 	}
 }	
 	

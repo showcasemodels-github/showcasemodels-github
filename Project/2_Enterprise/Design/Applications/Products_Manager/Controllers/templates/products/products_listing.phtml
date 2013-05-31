@@ -1,19 +1,36 @@
-<div class="tableContainer pAs">
-	<table class="fullWidth filtered">
+<div class="mBl" id="actionHolder">
+	<div class="clearfix">
+		<p class="fright fwB fs-s pagination"><strong>Total Products</strong> <span class="showing inventory">1524</span></p>
+	</div>
+	<div class="clearfix">
+		<h2 class="fleft">Pruduct Listing</h2>
+		<a href="#" class="newCategory fright" id="newProduct">new category</a>
+	</div>
+</div>
+<div class="tableContainer">
+	<table class="filtered">
 		<thead>
 			<tr>
-				<th>Title</th>
-				<th>Product Code</th>
-				<th>Description</th>
-				<th>Price</th>
-				<th>Category</th>
-				<th>Action</th>
+				<th width="226px">Product Name</th>
+				<th width="108px">Product Code</th>
+				<th width="301px">Product Description</th>
+				<th width="151px">Range</th>
+				<th width="199px">Category/Subcategory</th>
+				<th width="47px" class="align_c">Edit</th>
+				<th width="60px" class="align_c">Delete</th>
 			</tr>
 			<tr>
-				<td><input type="text" name="filter_title"/></td>
-				<td><input type="text" name="filter_product_code" /></td>
-				<td><input type="text" name="filter_description" /></td>
-				<td><input type="text" name="price" /></td>
+				<td><input type="text" name="filter_title" placeholder="Search Product Name"/></td>
+				<td><input type="text" name="filter_product_code" placeholder="Search Code" /></td>
+				<td><input type="text" name="filter_description" placeholder="Search Description"/></td>
+				<td>
+					<select>
+						<option>$ 0000 to $ 0000</option>
+						<option>$ 0001 to $ 1000</option>
+						<option>$ 1001 to $ 1100</option>
+						<option>$ 1101 to $ 1110</option>
+					</select>
+				</td>
 				<td>
 					<select>
 						<option>Category 1</option>
@@ -23,19 +40,21 @@
 					</select>
 				</td>
 				<td></td>
+				<td></td>
 			</tr>
 		</thead>
 	
 	<?$i=1;?>	
 		<tbody>
-		<?for($i = 1; $i<5; $i++):?>
+		<?for($i = 1; $i<25; $i++):?>
 			<tr>
 				<td>Product <?=$i?></td>
 				<td>P00<?=$i?></td>
 				<td>Description<?=$i?></td>
 				<td><?=$i?>00</td>
 				<td>Category <?=$i?></td>
-				<td><a href="/products-manager/product/edit?product_id=<?=$i?>">edit</a></td>
+				<td class="align_c"><a class="tablePencil" href="/products-manager/product/edit?product_id=<?=$i?>">Edit</a></td>
+				<td class="align_c"><a href="/products-manager/product/delete?product_id=<?=$i?>">Delete</a></td>
 			</tr>
 		<?endfor?>
 		</tbody>

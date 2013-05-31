@@ -5,8 +5,8 @@
 	<!-- end of notification-->
 	<div class="clearfix mBl">
 		<h3 class="fleft posRel">
-			<span class="editPencil">edit icon</span> EDIT CATEGORY
-			<!-- if new CATEGORY use this -> <span class="editPencil">edit icon</span> NEW CATEGORY -->
+			<span class="editPencil">edit icon</span> EDIT SUBCATEGORY
+			<!-- if new CATEGORY use this -> <span class="editPencil">edit icon</span> NEW SUBCATEGORY -->
 		</h3>
 		<a href="/category-manager" class="backToListing categoryListing fright">back to category listing</a>
 	</div>
@@ -28,26 +28,23 @@
 			<div><p>Description:</p>
 				<div class="fright"><textarea class="editor" name="description">Plastic models, 6 colors, etc.</textarea></div>
 			</div>
-			<p id="subcategory"><span class="fleft">Subcategory</span>
-				<select name="subcategory[]" class="mBs">
-					<option value="new category">New Subcategory</option>
-					<option value="category 1">Subcategory 1</option>
-					<option value="category 2">Subcategory 2</option>
-					<option value="category 3">Subcategory 3</option>
-					<option value="category 4">Subcategory 4</option>
-				</select>
-			</p>
-			<span class="addSubcategoryText fright pointer mBl">add Subcategory</span>
 			<a class="save fright" href="<?=$_SERVER['REQUEST_URI']?>">Save</a>
 		</div>
 		
 		<div class="fleft" id="productImages">
-			<p><strong>Photo</strong></p>
-			<p class="mTm">Banner Photo</p>
 			<div class="clearfix">
-				<span id="bannerPhoto" style="background-image: url('')"></span>
+				<p><strong>Photo</strong></p>
+				<p class="mTm">Banner Photo</p>
+				<div class="clearfix">
+					<span id="bannerPhoto" style="background-image: url('')"></span>
+				</div>
+				<span class="browse fright pointer">browse</span>
 			</div>
-			<span class="browse fright pointer">browse</span>
+			<div class="clearfix mTxl">
+				<p><strong>Icon Photo</strong></p>
+				<span id="iconPhoto" class="fleft" style="background-image: url('')"></span>
+				<span class="browse icon fleft pointer mLl">browse</span>
+			</div>
 		</div>
 	</div>
 </div>

@@ -1,40 +1,17 @@
 <div class="mBl" id="actionHolder">
 	<div class="clearfix">
-		<p class="fright fwB fs-s pagination">Showing <span class="showing">1</span> of 3 Pages</p>
-		<input class="fright resetFilter mRs" type="submit" value="rest filter" name="reset filter"/>
-	</div>
-	<div class="clearfix">
 		<h2 class="fleft">Category Listing</h2>
-		<span class="newSubCategory fright" id="newSubcategory">new subcategory</span>
-		<span class="newCategory fright mHs" id="newCategory">new category</span>
+		<a href="#" class="newCategory fright" id="newCategory">new category</a>
 	</div>
 </div>
 <div class="tableContainer">
 	<table class="fullWidth filtered mBl">
 		<thead>
 			<tr>
-				<th width="72px"></th>
-				<th width="275px">Category Name</th>
-				<th width="125px">Parent</th>
-				<th width="580px">Category Description</th>
-				<th width="55px">edit</th>
-			</tr>
-			<tr>
-				<th>
-					<select>
-						<option>None</option>
-						<option>All</option>
-					</select>
-				</th>
-				<th><input class="w100" type="text" name="category_search" value="Search Categories"/></th>
-				<th>
-					<select>
-						<option>Parent</option>
-						<option>Child</option>
-					</select>
-				</th>
-				<th><input class="w100" type="text" name="description_search" value="Search Description"/></th>
-				<th></th>
+				<th class="align_l" width="306px">Category Name</th>
+				<th class="align_l" width="680px">Category Description</th>
+				<th class="align_c" width="47px">Edit</th>
+				<th class="align_c" width="60px">Delete</th>
 			</tr>
 		</thead>
 	
@@ -42,17 +19,12 @@
 		<tbody>
 		<?for($i = 1; $i<5; $i++):?>
 			<tr>
-				<td><input type="checkbox" name="selection"/></td>
-				<td>Category <?=$i?></td>
 				<td>Category <?=$i?></td>
 				<td>This is description <?=$i?></td>
 				<td class="align_c"><a class="tablePencil" href="/category-manager/category/edit?category_id=<?=$i?>">edit</a></td>
+				<td class="align_c"><a class="" href="/category-manager/category/delete?category_id=<?=$i?>">Delete</a></td>
 			</tr>
 		<?endfor?>
 		</tbody>
 	</table>
-	<div class="fright">
-		<input class="saveChanges" type="submit" value="save changes" name="save changes"/>
-		<span class="delete">delete</span>
-	</div>
 </div>

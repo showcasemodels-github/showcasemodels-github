@@ -26,6 +26,12 @@ class categoryView extends applicationsSuperView
 		$content = $this->renderTemplate("Project/2_Enterprise/Design/Applications/Category_Manager/Controllers/tremplates/category/category_editor.phtml");
 		response::getInstance()->addContentToTree(array('APPLICATION_CONTENT'=>$content));
 	}
+
+	public function displaySubcategoryEditor()
+	{
+		$content = $this->renderTemplate("Project/2_Enterprise/Design/Applications/Category_Manager/Controllers/tremplates/category/subcategory_editor.phtml");
+		response::getInstance()->addContentToTree(array('APPLICATION_CONTENT'=>$content));
+	}
 	
 }
 ?>
